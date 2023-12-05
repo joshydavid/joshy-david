@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "framer-motion": "^10.16.12",
     "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-icons": "^4.12.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
@@ -24,6 +26,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "daisyui": "^4.4.19",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "husky": "^8.0.0",

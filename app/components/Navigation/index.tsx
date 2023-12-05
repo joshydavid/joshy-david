@@ -5,19 +5,18 @@ import ToggleSwitch from "@/components/ToggleSwitch/ToggleSwitch";
 import { usePathname } from "next/navigation";
 
 const Navigation = () => {
-  const path = usePathname();
-  const currentRoute = path.slice(1, path.length);
+  const currRoute = usePathname();
 
   return (
-    <nav className="z-10 flex flex-row gap-4 bg-white dark:bg-black w-full justify-center items-center fixed pt-12 py-6">
+    <nav className="z-10 hidden md:flex flex-row gap-4 bg-white dark:bg-black w-full justify-center items-center fixed pt-12 py-6">
       {navLinks.map(({ label, path }) => (
         <Link
           key={label}
           href={path}
           className={`px-5 py-2.5 text-sm ${
-            currentRoute === label.toLowerCase()
-              ? "bg-gray rounded-md text-white "
-              : null
+            currRoute === path
+              ? "bg-gray rounded-md text-white"
+              : "hover:text-gray dark:hover:text-lightGray"
           }`}
         >
           {label}

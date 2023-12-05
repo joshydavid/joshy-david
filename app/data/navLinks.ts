@@ -6,15 +6,15 @@ type navLinks = {
 export const navLinks: navLinks[] = [
   {
     label: "About",
-    path: "/about",
+    path: "/",
   },
   {
     label: "Project",
     path: "/project",
   },
   {
-    label: "EDC",
-    path: "/edc",
+    label: "Tech",
+    path: "/tech",
   },
   {
     label: "Contact",

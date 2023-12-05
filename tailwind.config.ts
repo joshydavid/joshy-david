@@ -6,6 +6,9 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  daisyui: {
+    logs: false,
+  },
   darkMode: "class",
   theme: {
     extend: {
@@ -13,13 +16,13 @@ const config: Config = {
         black: "#000000",
         white: "#FFFFFF",
         gray: "#1F1D1D",
-        lightGray: "#BFBABA",
+        lightGray: "#E8E8E8",
       },
     },
     fontFamily: {
       sans: ["ui-sans-serif", "system-ui"],
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;
