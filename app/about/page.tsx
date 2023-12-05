@@ -5,22 +5,13 @@ import { urls } from "@/data/urls";
 import Layout from "@/page";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import AnimatedSection from "@/components/Animation";
 
 const About = () => {
   return (
     <Layout>
       <div className="flex flex-col gap-10">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.1,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-          className="flex flex-row gap-5"
-        >
+        <AnimatedSection delay={0.1} className="flex flex-col gap-5">
           <div>
             <Image
               src="/joshua.png"
@@ -40,17 +31,9 @@ const About = () => {
             </h4>
             <h4>Aspiring Software Engineer</h4>
           </div>
-        </motion.div>
+        </AnimatedSection>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.2,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-        >
+        <AnimatedSection delay={0.2}>
           <h4 className="leading-relaxed">
             Hi, I'm Joshua! I'm passionate about web/app development and all
             things tech. Outside of coding, you can find me hitting the gym or
@@ -83,18 +66,9 @@ const About = () => {
               </span>
             ))}
           </div>
-        </motion.div>
+        </AnimatedSection>
 
-        <motion.div
-          className="mt-7"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.3,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-        >
+        <AnimatedSection delay={0.3}>
           <h1>Experience</h1>
           <div className="flex flex-col gap-12 mt-6">
             {internships.map(({ company, position, timeline, icon }) => (
@@ -116,7 +90,7 @@ const About = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </AnimatedSection>
       </div>
     </Layout>
   );

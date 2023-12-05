@@ -9,7 +9,7 @@ const Navigation = () => {
   const currentRoute = path.slice(1, path.length);
 
   return (
-    <nav className="flex flex-row gap-4 bg-white dark:bg-black w-full justify-center items-center fixed pt-12 py-6">
+    <nav className="z-10 flex flex-row gap-4 bg-white dark:bg-black w-full justify-center items-center fixed pt-12 py-6">
       {navLinks.map(({ label, path }) => (
         <Link
           key={label}
