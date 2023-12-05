@@ -9,8 +9,8 @@ export const navLinks: navLinks[] = [
     path: "/about",
   },
   {
-    label: "Projects",
-    path: "/projects",
+    label: "Project",
+    path: "/project",
   },
   {
     label: "EDC",
