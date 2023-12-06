@@ -1,4 +1,4 @@
-import Sayless from "@/public/projects/Sayless-All.svg";
+import Sayless from "@/public/projects/Sayless-All.png";
 import CodingPortfolio01 from "@/public/projects/Coding-Portfolio-v1.png";
 import Client01 from "@/public/projects/Client01.png";
 import Sayocode from "@/public/projects/Sayocode.png";

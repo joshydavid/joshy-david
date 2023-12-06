@@ -58,7 +58,7 @@ export default function Contact() {
       className="flex flex-col gap-5 w-screen md:w-11/12"
     >
       <h1>Contact</h1>
-      <h3>Let's Chat.</h3>
+      <h4>Let's Chat.</h4>
       <form className="flex flex-col gap-5">
         <input
           type="text"
