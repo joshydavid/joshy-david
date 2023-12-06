@@ -1,8 +1,8 @@
 ## Coding Portfolio
 
-![Issue](https://img.shields.io/github/issues/joshuadavidang/joshua-david)
-![Pull Request](https://img.shields.io/github/issues-pr/joshuadavidang/joshua-david)
-![Release Badge](https://img.shields.io/github/v/release/joshuadavidang/joshua-david)
+![Issue](https://img.shields.io/github/issues/joshuadavidang/joshuadavid)
+![Pull Request](https://img.shields.io/github/issues-pr/joshuadavidang/joshuadavid)
+![Release Badge](https://img.shields.io/github/v/release/joshuadavidang/joshuadavid)
 <img src="https://github.com/joshuadavidang/joshua-david/assets/54788382/6e3e2d11-4660-4b4a-bce1-da992e8b8e1b" alt="Apple" width="760" />
 
 - [View Project](https://joshuadavid.dev)
@@ -21,7 +21,7 @@
 1. Clone the project
 
    ```
-   git clone https://github.com/joshuadavidang/joshua-david.git
+   git clone https://github.com/joshuadavidang/joshuadavid.git
    ```
 
 2. Install dependencies

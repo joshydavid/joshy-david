@@ -50,7 +50,7 @@ export default function About() {
         <div className="flex flex-row gap-4 mt-6">
           {urls.map(({ label, isPDF, path }) => (
             <span
-              className="flex items-center gap-1 cursor-pointer dark:text-lightGray hover:text-gray dark:hover:text-white"
+              className="flex items-center gap-1 text-sm cursor-pointer dark:text-lightGray hover:text-gray dark:hover:text-white"
               key={label}
             >
               <ArrowUpRightIcon className="w-5 h-5" />
