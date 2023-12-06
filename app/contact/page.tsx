@@ -55,7 +55,7 @@ export default function Contact() {
   return (
     <AnimatedSection
       delay={0.1}
-      className="flex flex-col gap-5 w-screen px-8 md:px-0 md:w-11/12"
+      className="flex flex-col gap-5 w-screen md:w-11/12"
     >
       <h1>Contact</h1>
       <h3>Let's Chat.</h3>
@@ -98,14 +98,14 @@ export default function Contact() {
         </button>
 
         {error ? (
-          <div role="alert" className="alert alert-error">
+          <div role="alert" className="flex justify-center alert alert-error">
             <XMarkIcon className="w-5 h-5" />
             <span>Please fill in the fields</span>
           </div>
         ) : null}
 
         {success ? (
-          <div role="alert" className="alert alert-success">
+          <div role="alert" className="flex justify-center alert alert-success">
             <CheckIcon className="w-5 h-5" />
             <span>Success! I'll get back to you.</span>
           </div>
