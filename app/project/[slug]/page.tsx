@@ -11,11 +11,18 @@ export default function ProjectData() {
   const data = path.split("/");
   const id = Number(data.slice(-1)[0]);
   const project = projects.find((project) => project.id === id);
-  const { name, icon, description, detailedDescription, year, link }: any =
-    project;
+  const {
+    name,
+    icon,
+    description,
+    detailedDescription,
+    detailedImage,
+    year,
+    link,
+  }: any = project;
 
   return (
-    <div className="flex flex-col gap-5 w-screen px-8 md:px-0 md:w-11/12">
+    <div className="flex flex-col gap-5 w-screen md:w-11/12">
       <div className="text-sm breadcrumbs">
         <ul>
           <li onClick={() => router.back()}>
@@ -26,13 +33,24 @@ export default function ProjectData() {
       </div>
 
       <div className="flex flex-col gap-8">
-        <Image src={icon} width={400} height={400} alt={name} priority />
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <Image
+            alt={name}
+            src={detailedImage ? detailedImage : icon}
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
+        </div>
         <h1>
           {name} ({year})
         </h1>
       </div>
-      <p>{description}</p>
-      <p className="leading-relaxed">{detailedDescription}</p>
+
+      <p className="text-sm">{description}</p>
+      <p className="leading-relaxed text-sm">{detailedDescription}</p>
 
       <button
         className="btn btn-default text-white w-fit mt-10 text-sm"

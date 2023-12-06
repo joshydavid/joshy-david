@@ -1,13 +1,16 @@
-import Sayless from "@/public/projects/Sayless.png";
+import Sayless from "@/public/projects/Sayless-All.svg";
 import CodingPortfolio01 from "@/public/projects/Coding-Portfolio-v1.png";
 import Client01 from "@/public/projects/Client01.png";
 import Sayocode from "@/public/projects/Sayocode.png";
+import CodingPortfolio02 from "@/public/projects/Coding-Portfolio-v2.png";
+import v2Portfolio from "@/public/projects/v2Portfolio.png";
 
 type Projects = {
   id: number;
   name: string;
   description: string;
   detailedDescription?: string;
+  detailedImage?: any;
   year: number;
   icon: any;
   link: string;
@@ -57,7 +60,8 @@ export const projects: Projects[] = [
     detailedDescription:
       "Version 2.0 - Redesigned and redeveloped an updated version of my coding portfolio, built on top of Next.js 14.0, Tailwind CSS, DaisyUI, HeadlessUI deployed to Vercel.",
     year: 2024,
-    icon: CodingPortfolio01,
+    icon: CodingPortfolio02,
+    detailedImage: v2Portfolio,
     link: "https://github.com/joshuadavidang/joshuadavid",
   },
 ];
