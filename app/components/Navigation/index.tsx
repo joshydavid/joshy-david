@@ -3,7 +3,7 @@
 import { navLinks } from "@/data/navLinks";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ToggleSwitch from "../ToggleSwitch";
+import ToggleSwitch from "@/components/ToggleSwitch";
 
 export default function Navigation() {
   const currRoute = usePathname();

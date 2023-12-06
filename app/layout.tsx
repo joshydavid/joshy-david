@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Raleway } from "next/font/google";
+import { ThemeProvider } from "./ThemeProvider";
 
-const openSans = Raleway({
+const raleway = Raleway({
   subsets: ["latin"],
 });
 
@@ -17,8 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={openSans.className}>
-      <body className="dark">{children}</body>
+    <html
+      lang="en"
+      className={raleway.className}
+      suppressHydrationWarning={true}
+    >
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
