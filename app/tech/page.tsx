@@ -3,7 +3,7 @@ import Layout from "@/page";
 import Image from "next/image";
 import { techProducts } from "@/data/techProducts";
 
-const Tech = () => {
+export default function Tech() {
   return (
     <Layout>
       <AnimatedSection delay={0.1} className="flex flex-col gap-5">
@@ -25,6 +25,4 @@ const Tech = () => {
       </AnimatedSection>
     </Layout>
   );
-};
-
-export default Tech;
+}

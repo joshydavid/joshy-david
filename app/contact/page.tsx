@@ -1,8 +1,9 @@
 "use client";
+
 import AnimatedSection from "@/components/Animation";
 import Layout from "@/page";
 
-const Contact = () => {
+export default function Contact() {
   const sendMessage = (e: any) => {
     e.preventDefault();
   };
@@ -39,6 +40,4 @@ const Contact = () => {
       </AnimatedSection>
     </Layout>
   );
-};
-
-export default Contact;
+}

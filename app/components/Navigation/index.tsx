@@ -1,10 +1,11 @@
 "use client";
+
 import { navLinks } from "@/data/navLinks";
 import Link from "next/link";
-import ToggleSwitch from "@/components/ToggleSwitch/ToggleSwitch";
 import { usePathname } from "next/navigation";
+import ToggleSwitch from "../ToggleSwitch";
 
-const Navigation = () => {
+export default function Navigation() {
   const currRoute = usePathname();
 
   return (
@@ -25,6 +26,4 @@ const Navigation = () => {
       <ToggleSwitch />
     </nav>
   );
-};
-
-export default Navigation;
+}

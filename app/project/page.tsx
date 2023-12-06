@@ -1,11 +1,12 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 import Layout from "@/page";
 import AnimatedSection from "@/components/Animation";
 import Image from "next/image";
 import { projects } from "@/data/projects";
 
-const Project = () => {
+export default function Project() {
   const router = useRouter();
   const showProjectDetails = (id: number) => {
     router.push(`/project/${id}`);
@@ -44,6 +45,4 @@ const Project = () => {
       </AnimatedSection>
     </Layout>
   );
-};
-
-export default Project;
+}

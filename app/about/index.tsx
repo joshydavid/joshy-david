@@ -94,7 +94,7 @@ const About = () => {
                   </div>
                 </div>
 
-                <Modal id={id} modalTitle={company}>
+                <Modal id={id} modalTitle={company} image={icon}>
                   {achievements.map((achievement) => (
                     <li key={achievement} className="py-1">
                       {achievement}

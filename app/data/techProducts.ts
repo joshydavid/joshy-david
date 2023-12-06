@@ -24,7 +24,7 @@ export const techProducts: techProducts[] = [
   },
   {
     id: 2,
-    product: "Apple Pencil",
+    product: "Apple Pencil (2018)",
     icon: ApplePencil,
   },
   {

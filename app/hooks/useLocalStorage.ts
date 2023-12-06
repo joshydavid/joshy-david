@@ -1,29 +1,37 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const useLocalStorage = (key: string, initialValue: string) => {
-  const [storedValue, setStoredValue] = useState(() => {
-    try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      return initialValue;
-    }
-  });
+export default function useLocalStorage(key: string, initialValue: any) {
+  const [storedValue, setStoredValue] = useState(initialValue);
+  const [firstLoadDone, setFirstLoadDone] = useState(false);
 
   useEffect(() => {
-    try {
-      const valueToStore =
-        typeof storedValue === "function"
-          ? storedValue(storedValue)
-          : storedValue;
+    const fromLocal = () => {
+      if (typeof window === "undefined") {
+        return initialValue;
+      }
+      try {
+        const item = window.localStorage.getItem(key);
+        return item ? JSON.parse(item) : initialValue;
+      } catch (error) {
+        return initialValue;
+      }
+    };
 
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
-    } catch (error) {
-      throw error;
+    setStoredValue(fromLocal);
+    setFirstLoadDone(true);
+  }, [initialValue, key]);
+
+  useEffect(() => {
+    if (!firstLoadDone) {
+      return;
     }
-  }, [key, storedValue]);
+
+    try {
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem(key, JSON.stringify(storedValue));
+      }
+    } catch (error) {}
+  }, [storedValue, firstLoadDone, key]);
 
   return [storedValue, setStoredValue];
-};
-
-export default useLocalStorage;
+}
