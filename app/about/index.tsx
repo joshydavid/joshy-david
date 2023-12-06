@@ -1,3 +1,5 @@
+"use client";
+
 import { NAME } from "@/constant";
 import { internships } from "@/data/internship";
 import { urls } from "@/data/urls";
@@ -7,7 +9,7 @@ import AnimatedSection from "@/components/Animation";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import Modal from "@/components/Modal";
 
-const About = () => {
+export default function About() {
   const openModal = (id: number) => {
     const modalId = `my_modal_${id}`;
     const modal = document.getElementById(modalId) as HTMLDialogElement;
@@ -102,12 +104,10 @@ const About = () => {
                   ))}
                 </Modal>
               </div>
-            ),
+            )
           )}
         </div>
       </AnimatedSection>
     </div>
   );
-};
-
-export default About;
+}
