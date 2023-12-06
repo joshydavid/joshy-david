@@ -12,9 +12,9 @@ export default function Project() {
   };
 
   return (
-    <AnimatedSection delay={0.1} className="flex flex-col gap-5">
+    <AnimatedSection delay={0.1} className="flex flex-col gap-3">
       <h1>Projects</h1>
-      <h3>Projects I have done over the years.</h3>
+      <h4 className="mb-4">Projects I have done over the years.</h4>
 
       {projects
         .slice()

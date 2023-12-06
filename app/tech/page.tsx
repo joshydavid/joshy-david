@@ -4,9 +4,9 @@ import { techProducts } from "@/data/techProducts";
 
 export default function Tech() {
   return (
-    <AnimatedSection delay={0.1} className="flex flex-col gap-5">
+    <AnimatedSection delay={0.1} className="flex flex-col gap-3">
       <h1>Tech</h1>
-      <h3>Some of my favourite tech products.</h3>
+      <h4 className="mb-4">Some of my favourite tech products.</h4>
       {techProducts.map(({ id, product, icon }, index) => (
         <div className="avatar flex items-center gap-8" key={index}>
           <div className="w-24 rounded-xl">
