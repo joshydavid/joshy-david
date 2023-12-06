@@ -17,7 +17,7 @@ export default function Tech() {
               priority
             />
           </div>
-          <p>{product}</p>
+          <p className="text-sm">{product}</p>
         </div>
       ))}
     </AnimatedSection>

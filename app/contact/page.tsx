@@ -22,7 +22,7 @@ export default function Contact() {
       setTimeout(() => {
         setLoading(false);
         setError(true);
-      }, 1500);
+      }, 1300);
     } else {
       setError(false);
       await addFormToDB(randomId(), name, email, message).then(() => {

@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-
 import AnimatedSection from "@/components/Animation";
 import Image from "next/image";
 import { projects } from "@/data/projects";
@@ -28,8 +27,6 @@ export default function Project() {
           >
             <Image
               src={icon}
-              width={150}
-              height={150}
               alt={name}
               className="bg-lightGray dark:bg-gray rounded-xl p-5 md:w-1/3 w-screen"
               priority
