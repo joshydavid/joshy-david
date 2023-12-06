@@ -14,7 +14,9 @@ export default function ToggleSwitch() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <Switch.Group>
