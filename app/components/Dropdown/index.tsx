@@ -5,7 +5,7 @@ import ToggleSwitch from "../ToggleSwitch";
 
 export default function Dropdown() {
   return (
-    <div className="flex justify-end items-center gap-7 w-full md:hidden mt-5 mr-12">
+    <div className="flex justify-end items-center gap-7 w-full md:hidden pt-5 pr-8">
       <ToggleSwitch />
       <div className="dropdown dropdown-left">
         <div

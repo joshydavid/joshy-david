@@ -14,7 +14,7 @@ export default function Navigation() {
         <Link
           key={label}
           href={path}
-          className={`px-5 py-2.5 text-sm ${
+          className={`px-5 py-2.5 text-sm text-black dark:text-white ${
             currRoute === path
               ? "bg-gray rounded-md text-white"
               : "hover:text-gray dark:hover:text-lightGray"
