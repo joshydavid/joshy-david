@@ -33,7 +33,7 @@ export const projects: Projects[] = [
       "Designed and developed a responsive coding portfolio, built on top of Next.js & Tailwind CSS, deployed to Vercel.",
     year: 2022,
     icon: CodingPortfolio01,
-    link: "https://github.com/SMU-IS/SayLess",
+    link: "https://github.com/joshuadavidang/joshua-david",
   },
   {
     id: 3,
