@@ -1,9 +1,9 @@
-import iPhone15 from "@/public/apple-products/iPhone-15.png";
-import AppleWatch from "@/public/apple-products/Apple-Watch.png";
-import ApplePencil from "@/public/apple-products/Apple-Pencil.png";
-import iPadAir from "@/public/apple-products/iPad-Air.png";
-import MacBookPro from "@/public/apple-products/MacBook-Pro.png";
-import AirPodsPro from "@/public/apple-products/AirPods-Pro.png";
+import iPhone15 from "@/public/apple/iPhone-15.png";
+import AppleWatch from "@/public/apple/Apple-Watch.png";
+import ApplePencil from "@/public/apple/Apple-Pencil.png";
+import iPadAir from "@/public/apple/iPad-Air.png";
+import MacBookPro from "@/public/apple/MacBook-Pro.png";
+import AirPodsPro from "@/public/apple/AirPods-Pro.png";
 
 type techProducts = {
   id: number;

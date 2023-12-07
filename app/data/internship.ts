@@ -1,5 +1,5 @@
-import GovTech from "@/public/GovTech.png";
-import PigeonLab from "@/public/PigeonLab.png";
+import GovTech from "@/public/companies/GovTech.png";
+import PigeonLab from "@/public/companies/PigeonLab.png";
 
 type internships = {
   id: number;
