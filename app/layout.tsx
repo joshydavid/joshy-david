@@ -10,6 +10,7 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
+  title: "Joshua David",
   openGraph: {
     title: "Joshua David",
     description:
