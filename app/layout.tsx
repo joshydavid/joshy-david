@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "Sophomore at the School of Computing and Information Systems, Singapore Management University",
     authors: "Joshua David",
-    images: "https://joshuadavidraj.com/og.png",
+    images: "https://joshuadavid.dev/og.png",
   },
 };
 
