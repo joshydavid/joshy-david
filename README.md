@@ -3,7 +3,9 @@
 ![Issue](https://img.shields.io/github/issues/joshuadavidang/joshuadavid)
 ![Pull Request](https://img.shields.io/github/issues-pr/joshuadavidang/joshuadavid)
 ![Release Badge](https://img.shields.io/github/v/release/joshuadavidang/joshuadavid)
-<img src="https://github.com/joshuadavidang/joshua-david/assets/54788382/6e3e2d11-4660-4b4a-bce1-da992e8b8e1b" alt="Apple" width="760" />
+<img src="https://github.com/joshuadavidang/joshuadavid/assets/54788382/59e7eb45-722b-45b2-a24b-ce3d090c928e" alt="portfolio" width="760" />
+<br />
+<br />
 
 - [View Project](https://joshuadavid.dev)
 - [Report Bug](https://github.com/joshuadavidang/joshua-david/issues/new/choose)
