@@ -10,6 +10,7 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://joshuadavid.dev"),
   title: "Joshua David",
   openGraph: {
     title: "Joshua David",

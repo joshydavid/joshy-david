@@ -24,7 +24,7 @@ export const internships: internships[] = [
   },
   {
     id: 2,
-    company: "Pigeohole Live (PigeonLab)",
+    company: "Pigeonhole Live (PigeonLab)",
     position: "Software Engineer Intern",
     timeline: "Jan 2023 - Mar 2023",
     icon: PigeonLab,
