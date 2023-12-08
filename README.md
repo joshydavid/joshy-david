@@ -3,7 +3,7 @@
 ![Issue](https://img.shields.io/github/issues/joshuadavidang/joshuadavid)
 ![Pull Request](https://img.shields.io/github/issues-pr/joshuadavidang/joshuadavid)
 ![Release Badge](https://img.shields.io/github/v/release/joshuadavidang/joshuadavid)
-<img src="https://github.com/joshuadavidang/joshuadavid/assets/54788382/59e7eb45-722b-45b2-a24b-ce3d090c928e" alt="portfolio" width="760" />
+<img src="https://github.com/joshuadavidang/joshuadavid/assets/54788382/59e7eb45-722b-45b2-a24b-ce3d090c928e" alt="portfolio" width="650" />
 <br />
 <br />
 
