@@ -55,7 +55,7 @@ export default function About() {
             >
               <ArrowUpRightIcon className="w-5 h-5" />
               {!isPDF ? (
-                <Link key={label} href={path}>
+                <Link key={label} href={path} target="_blank">
                   {label}
                 </Link>
               ) : (
