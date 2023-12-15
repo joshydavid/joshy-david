@@ -21,7 +21,7 @@ export default function Project() {
         .sort((a, b) => b.id - a.id)
         .map(({ id, name, icon, description }) => (
           <div
-            className="flex flex-col md:flex-row md:items-center gap-8 mb-12 md:m-0 cursor-pointer hover:opacity-90 dark:bg-black dark:text-white rounded-xl"
+            className="flex flex-col md:flex-row md:items-center gap-8 mb-12 md:mb-3 cursor-pointer hover:opacity-90 dark:bg-black dark:text-white rounded-xl"
             onClick={() => showProjectDetails(id)}
             key={id}
           >

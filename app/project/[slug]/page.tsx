@@ -4,6 +4,8 @@ import { usePathname, useRouter } from "next/navigation";
 import { projects } from "@/data/projects";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
+import { TbExternalLink } from "react-icons/tb";
+import Link from "next/link";
 
 export default function ProjectData() {
   const router = useRouter();
@@ -18,7 +20,10 @@ export default function ProjectData() {
     detailedDescription,
     detailedImage,
     year,
-    link,
+    techStack,
+    gitHub,
+    isDeployed,
+    deployedLink,
   }: any = project;
 
   return (
@@ -44,20 +49,47 @@ export default function ProjectData() {
             }}
           />
         </div>
+
         <h1>
           {name} ({year})
         </h1>
+
+        <p className="text-sm">{description}</p>
+        <p className="leading-relaxed text-sm">{detailedDescription}</p>
+
+        <h1>Tech Stack</h1>
+        <div className="flex flex-wrap items-center gap-2 w-full">
+          {techStack.map((tech: string, index: number) => (
+            <span
+              className="bg-lightGray dark:bg-gray py-2 px-3 rounded-lg text-xs"
+              key={index}
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <h1>View Project</h1>
+        <div className="flex gap-4">
+          <Link
+            className="btn btn-default text-white w-fit text-xs"
+            href={gitHub}
+            target="_blank"
+          >
+            <FaGithub className="w-4 h-4" /> GitHub
+          </Link>
+
+          {isDeployed ? (
+            <Link
+              className="btn btn-default text-white w-fit text-xs"
+              href={deployedLink}
+              target="_blank"
+            >
+              <TbExternalLink className="w-4 h-4" /> Demo
+            </Link>
+          ) : null}
+        </div>
       </div>
-
-      <p className="text-sm">{description}</p>
-      <p className="leading-relaxed text-sm">{detailedDescription}</p>
-
-      <button
-        className="btn btn-default text-white w-fit mt-10 text-sm"
-        onClick={() => router.push(link)}
-      >
-        <FaGithub className="w-5 h-5" /> GitHub
-      </button>
     </div>
   );
 }
