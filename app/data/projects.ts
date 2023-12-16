@@ -109,8 +109,8 @@ export const projects: Projects[] = [
     year: 2024,
     icon: Placeholder,
     detailedImage: Placeholder,
-    gitHub: "https://github.com/joshuadavidang/joshuadavid",
-    techStack: ["SwiftUI", "Journal Suggestions API"],
+    gitHub: "https://github.com/joshuadavidang/journal",
+    techStack: ["Swift", "SwiftUI", "Journal Suggestions API"],
     isDeployed: false,
   },
 ];
