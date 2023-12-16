@@ -1,16 +1,11 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import AnimatedSection from "@/components/Animation";
 import Image from "next/image";
 import { projects } from "@/data/projects";
+import Link from "next/link";
 
 export default function Project() {
-  const router = useRouter();
-  const showProjectDetails = (id: number) => {
-    router.push(`/project/${id}`);
-  };
-
   return (
     <AnimatedSection delay={0.1} className="flex flex-col gap-3">
       <h1>Projects</h1>
@@ -20,23 +15,21 @@ export default function Project() {
         .slice()
         .sort((a, b) => b.id - a.id)
         .map(({ id, name, icon, description }) => (
-          <div
-            className="flex flex-col md:flex-row md:items-center gap-8 mb-12 md:mb-3 cursor-pointer hover:opacity-90 dark:bg-black dark:text-white rounded-xl"
-            onClick={() => showProjectDetails(id)}
-            key={id}
-          >
-            <Image
-              src={icon}
-              alt={name}
-              className="bg-lightGray dark:bg-gray rounded-xl p-5 md:w-1/3 w-screen"
-              priority
-            />
+          <Link href={`/project/${id}`} key={id}>
+            <div className="flex flex-col md:flex-row md:items-center gap-8 mb-12 md:mb-3 cursor-pointer hover:opacity-90 dark:bg-black dark:text-white rounded-xl">
+              <Image
+                src={icon}
+                alt={name}
+                className="bg-lightGray dark:bg-gray rounded-xl p-5 md:w-1/3 w-screen"
+                priority
+              />
 
-            <div className="dark:text-lightGray">
-              <h2>{name}</h2>
-              <p className="text-sm mt-2">{description}</p>
+              <div className="dark:text-lightGray">
+                <h2>{name}</h2>
+                <p className="text-sm mt-2">{description}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
     </AnimatedSection>
   );
