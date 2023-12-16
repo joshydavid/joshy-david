@@ -1,27 +1,19 @@
 "use client";
 
 import { navLinks } from "@/data/navLinks";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import ToggleSwitch from "@/components/ToggleSwitch";
+import Link from "next/link";
 
 export default function Navigation() {
   const currRoute = usePathname();
-  const router = useRouter();
-
-  const handleRoute = (path: string) => {
-    router.push(path);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <nav className="z-10 hidden md:flex flex-row gap-4 bg-white dark:bg-black w-full justify-center items-center fixed pt-12 py-6">
       {navLinks.map(({ label, path }) => (
-        <div
+        <Link
+          href={path}
           key={label}
-          onClick={() => handleRoute(path)}
           className={`px-5 py-2.5 text-sm cursor-pointer text-black dark:text-white ${
             currRoute === path
               ? "bg-gray rounded-md text-white"
@@ -29,7 +21,7 @@ export default function Navigation() {
           }`}
         >
           {label}
-        </div>
+        </Link>
       ))}
       <ToggleSwitch />
     </nav>

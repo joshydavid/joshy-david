@@ -4,6 +4,7 @@ import { Raleway } from "next/font/google";
 import { ThemeProvider } from "./ThemeProvider";
 import Navigation from "./components/Navigation";
 import Dropdown from "./components/Dropdown";
+import ScrollToTop from "./components/ScrollToTop";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
     >
       <body className="bg-white dark:bg-black">
         <ThemeProvider attribute="class" defaultTheme="dark">
+          <ScrollToTop />
           <Navigation />
           <Dropdown />
           <div className="flex min-h-screen px-6 py-8 md:mx-auto md:py-36 md:w-1/2 lg:w-1/3 bg-white text-black dark:bg-black dark:text-white">
