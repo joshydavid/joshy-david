@@ -23,6 +23,6 @@ const config: Config = {
       sans: ["ui-sans-serif", "system-ui"],
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("@tailwindcss/forms")],
 };
 export default config;

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { TbExternalLink } from "react-icons/tb";
 import Link from "next/link";
+import Button from "@/components/Button";
 
 export default function ProjectData() {
   const router = useRouter();
@@ -71,21 +72,21 @@ export default function ProjectData() {
 
         <h1>View Project</h1>
         <div className="flex gap-4">
-          <Link
-            className="btn btn-default text-white w-fit text-xs"
-            href={gitHub}
-            target="_blank"
-          >
-            <FaGithub className="w-4 h-4" /> GitHub
+          <Link href={gitHub} target="_blank">
+            <Button intent="black">
+              <span className="flex items-center gap-3">
+                <FaGithub className="w-5 h-5" /> GitHub
+              </span>
+            </Button>
           </Link>
 
           {isDeployed ? (
-            <Link
-              className="btn btn-default text-white w-fit text-xs"
-              href={deployedLink}
-              target="_blank"
-            >
-              <TbExternalLink className="w-4 h-4" /> Demo
+            <Link href={deployedLink} target="_blank">
+              <Button intent="black">
+                <span className="flex items-center gap-3">
+                  <TbExternalLink className="w-5 h-5" /> Demo
+                </span>
+              </Button>
             </Link>
           ) : null}
         </div>
