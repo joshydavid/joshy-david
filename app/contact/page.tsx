@@ -6,6 +6,7 @@ import { randomId } from "@/helpers/randomId";
 import { useState } from "react";
 import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import Button from "@/components/Button";
+import { TextInput, TextArea } from "@/components/Input";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -61,29 +62,25 @@ export default function Contact() {
       <h4>Let's Chat.</h4>
 
       <form className="flex flex-col gap-5">
-        <input
+        <TextInput
           type="text"
           name="name"
           value={form.name}
           placeholder="Name"
-          className="form-input px-4 py-3 rounded-lg border-0 dark:bg-slate-900 dark:text-white bg-slate-100"
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-        ></input>
-
-        <input
-          type="email"
-          name="email"
-          value={form.email}
-          placeholder="Email"
-          className="form-input px-4 py-3 rounded-lg border-0 dark:bg-slate-900 dark:text-white bg-slate-100"
           onChange={handleChange}
           onKeyDown={handleKeyDown}
         />
 
-        <textarea
-          name="message"
-          className="form-input px-4 py-3 rounded-lg border-0 dark:bg-slate-900 dark:text-white bg-slate-100"
+        <TextInput
+          type="email"
+          name="email"
+          value={form.email}
+          placeholder="Email"
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
+        />
+
+        <TextArea
           placeholder="Message"
           value={form.message}
           onChange={handleChange}
