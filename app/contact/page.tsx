@@ -3,9 +3,9 @@
 import AnimatedSection from "@/components/Animation";
 import { addFormToDB, validateDetails } from "@/helpers/form";
 import { randomId } from "@/helpers/randomId";
-
 import { useState } from "react";
 import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import Button from "@/components/Button";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -59,43 +59,44 @@ export default function Contact() {
     >
       <h1>Contact</h1>
       <h4>Let's Chat.</h4>
+
       <form className="flex flex-col gap-5">
         <input
           type="text"
           name="name"
           value={form.name}
           placeholder="Name"
-          className="input input-bordered text-white"
+          className="form-input px-4 py-3 rounded-lg border-0 dark:bg-slate-900 dark:text-white bg-slate-100"
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-        />
+        ></input>
 
         <input
           type="email"
           name="email"
           value={form.email}
           placeholder="Email"
-          className="input input-bordered text-white"
+          className="form-input px-4 py-3 rounded-lg border-0 dark:bg-slate-900 dark:text-white bg-slate-100"
           onChange={handleChange}
           onKeyDown={handleKeyDown}
         />
 
         <textarea
           name="message"
-          className="textarea textarea-bordered text-white"
+          className="form-input px-4 py-3 rounded-lg border-0 dark:bg-slate-900 dark:text-white bg-slate-100"
           placeholder="Message"
           value={form.message}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-        ></textarea>
+        />
 
-        <button className="btn btn-neutral text-white" onClick={sendMessage}>
+        <Button intent="black" onClick={sendMessage}>
           {loading ? (
-            <span className="loading loading-dots loading-lg"></span>
+            <span className="loading loading-dots loading-md"></span>
           ) : (
             "Send"
           )}
-        </button>
+        </Button>
 
         {error ? (
           <div role="alert" className="flex justify-center alert alert-error">
