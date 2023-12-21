@@ -8,6 +8,7 @@ import Link from "next/link";
 import AnimatedSection from "@/components/Animation";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import Modal from "@/components/Modal";
+import { useEffect, useState } from "react";
 
 export default function About() {
   const openModal = (id: number) => {
@@ -15,6 +16,13 @@ export default function About() {
     const modal = document.getElementById(modalId) as HTMLDialogElement;
     modal.showModal();
   };
+
+  const [isChrome, setIsChrome] = useState(false);
+
+  useEffect(() => {
+    const chromeAgent = navigator.userAgent.indexOf("Chrome") > -1;
+    chromeAgent ? setIsChrome(true) : setIsChrome(false);
+  }, []);
 
   return (
     <div className="flex flex-col gap-10">
@@ -32,7 +40,7 @@ export default function About() {
 
         <div className="flex flex-col gap-1.5">
           <h1>{NAME}</h1>
-          <h4>iOS Developer </h4>
+          <h4>iOS Developer {isChrome ? "" : null}</h4>
           <h4>
             Information Systems Sophomore @ Singapore Management University
           </h4>
