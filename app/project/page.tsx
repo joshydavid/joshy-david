@@ -1,8 +1,8 @@
 "use client";
 
 import AnimatedSection from "@/components/Animation";
+import { projects } from "@/data";
 import Image from "next/image";
-import { projects } from "@/data/projects";
 import Link from "next/link";
 
 export default function Project() {

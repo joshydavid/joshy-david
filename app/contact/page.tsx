@@ -1,12 +1,11 @@
 "use client";
 
 import AnimatedSection from "@/components/Animation";
-import { addFormToDB, validateDetails } from "@/helpers/form";
-import { randomId } from "@/helpers/randomId";
 import { useState } from "react";
 import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import Button from "@/components/Button";
 import { TextInput, TextArea } from "@/components/Input";
+import { addFormToDB, randomId, validateDetails } from "@/helpers";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
