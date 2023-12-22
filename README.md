@@ -1,9 +1,9 @@
 ## Coding Portfolio
 
-![Issue](https://img.shields.io/github/issues/joshuadavidang/joshuadavid)
-![Pull Request](https://img.shields.io/github/issues-pr/joshuadavidang/joshuadavid)
-![Release Badge](https://img.shields.io/github/v/release/joshuadavidang/joshuadavid)
-<img src="https://github.com/joshuadavidang/joshuadavid/assets/54788382/59e7eb45-722b-45b2-a24b-ce3d090c928e" alt="portfolio" width="650" />
+![Issue](https://img.shields.io/github/issues/joshuadavidang/joshua-david)
+![Pull Request](https://img.shields.io/github/issues-pr/joshuadavidang/joshua-david)
+![Release Badge](https://img.shields.io/github/v/release/joshuadavidang/joshua-david)
+<img src="https://github.com/joshuadavidang/joshua-david/assets/54788382/d62d2a96-b32f-4148-908b-7019a409d679" alt="portfolio" width="600" />
 <br />
 <br />
 
@@ -17,13 +17,14 @@
 - [HeadlessUI](https://headlessui.com)
 - [Supabase](https://supabase.com)
 - [Vercel](https://vercel.com)
+- [Class Variance Authority](https://cva.style/docs)
 
 ## Getting Started
 
 1. Clone the project
 
    ```
-   git clone https://github.com/joshuadavidang/joshuadavid.git
+   git clone https://github.com/joshuadavidang/joshua-david.git
    ```
 
 2. Install dependencies

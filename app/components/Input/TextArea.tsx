@@ -3,6 +3,7 @@ function TextArea({
   placeholder,
   onChange,
   onKeyDown,
+  ...props
 }: {
   value: string;
   placeholder: string;
@@ -17,6 +18,7 @@ function TextArea({
       value={value}
       onChange={onChange}
       onKeyDown={onKeyDown}
+      {...props}
     />
   );
 }
