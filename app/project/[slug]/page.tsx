@@ -1,12 +1,12 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { projects } from "@/data/projects";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { TbExternalLink } from "react-icons/tb";
 import Link from "next/link";
 import Button from "@/components/Button";
+import { projects } from "@/data";
 
 export default function ProjectData() {
   const router = useRouter();

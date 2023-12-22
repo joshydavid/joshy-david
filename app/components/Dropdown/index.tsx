@@ -1,9 +1,9 @@
 "use client";
 
-import { navLinks } from "@/data/navLinks";
 import Link from "next/link";
 import { Bars2Icon } from "@heroicons/react/20/solid";
 import ToggleSwitch from "../ToggleSwitch";
+import { navLinks } from "@/data";
 
 export default function Dropdown() {
   const handleClick = (): void => {

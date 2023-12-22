@@ -1,6 +1,6 @@
 import AnimatedSection from "@/components/Animation";
+import { techProducts } from "@/data";
 import Image from "next/image";
-import { techProducts } from "@/data/techProducts";
 
 export default function Tech() {
   return (

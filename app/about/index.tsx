@@ -1,14 +1,13 @@
 "use client";
 
 import { NAME } from "@/constant";
-import { internships } from "@/data/internship";
-import { urls } from "@/data/urls";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/Animation";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import Modal from "@/components/Modal";
 import { useEffect, useState } from "react";
+import { internships, urls } from "@/data";
 
 export default function About() {
   const openModal = (id: number) => {
