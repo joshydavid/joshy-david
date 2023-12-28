@@ -1,16 +1,13 @@
 import Image from "next/image";
 
-export default function Modal({
-  id,
-  modalTitle,
-  children,
-  image,
-}: {
+type ModalProps = {
   id: number;
   modalTitle: string;
   children: React.ReactNode;
   image: string;
-}) {
+};
+
+export default function Modal({ id, modalTitle, children, image }: ModalProps) {
   return (
     <dialog id={`my_modal_${id}`} className="modal">
       <div className="flex flex-col items-center modal-box bg-white text-black dark:bg-gray dark:text-white">

@@ -2,15 +2,17 @@
 
 import { motion } from "framer-motion";
 
+type AnimatedSectionProps = {
+  children: React.ReactNode;
+  className?: string;
+  delay: number;
+};
+
 export default function AnimatedSection({
   children,
   className,
   delay = 0.1,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  delay: number;
-}) {
+}: AnimatedSectionProps) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}

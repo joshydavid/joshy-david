@@ -1,3 +1,12 @@
+type TextInputProps = {
+  type: string;
+  name: string;
+  value: string;
+  placeholder: string;
+  onChange: any;
+  onKeyDown: any;
+};
+
 function TextInput({
   type,
   name,
@@ -6,14 +15,7 @@ function TextInput({
   onChange,
   onKeyDown,
   ...props
-}: {
-  type: string;
-  name: string;
-  value: string;
-  placeholder: string;
-  onChange: any;
-  onKeyDown: any;
-}) {
+}: TextInputProps) {
   return (
     <input
       type={type}

@@ -1,15 +1,17 @@
+type TextAreaProps = {
+  value: string;
+  placeholder: string;
+  onChange: any;
+  onKeyDown: any;
+};
+
 function TextArea({
   value,
   placeholder,
   onChange,
   onKeyDown,
   ...props
-}: {
-  value: string;
-  placeholder: string;
-  onChange: any;
-  onKeyDown: any;
-}) {
+}: TextAreaProps) {
   return (
     <textarea
       name="message"
