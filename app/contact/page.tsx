@@ -1,7 +1,7 @@
 "use client";
 
 import AnimatedSection from "@/components/Animation";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import Button from "@/components/Button";
 import { TextInput, TextArea } from "@/components/Input";
@@ -13,7 +13,7 @@ export default function Contact() {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const sendMessage = async (e: any) => {
+  async function sendMessage(e: any) {
     e.preventDefault();
     const { name, email, message } = form;
     setLoading(true);
@@ -37,15 +37,13 @@ export default function Contact() {
         }, 5000);
       });
     }
+  }
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    event.key === "Enter" ? sendMessage(event) : null;
   };
 
-  const handleKeyDown = (event: any) => {
-    if (event.key === "Enter") {
-      sendMessage(event);
-    }
-  };
-
-  const handleChange = (event: any) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setForm({
       ...form,
       [event.target.name]: event.target.value,
