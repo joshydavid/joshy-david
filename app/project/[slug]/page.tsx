@@ -6,14 +6,17 @@ import { FaGithub } from "react-icons/fa";
 import { TbExternalLink } from "react-icons/tb";
 import Link from "next/link";
 import Button from "@/components/Button";
-import { projects } from "@/data";
+import { projects, ProjectType } from "@/data";
 
 export default function ProjectData() {
   const router = useRouter();
   const path = usePathname();
   const data = path.split("/");
   const id = Number(data.slice(-1)[0]);
-  const project = projects.find((project) => project.id === id);
+  const project: ProjectType | undefined = projects.find(
+    (project) => project.id === id
+  );
+
   const {
     name,
     icon,
@@ -23,9 +26,9 @@ export default function ProjectData() {
     year,
     techStack,
     gitHub,
-    isDeployed,
+    deploymentStatus,
     deployedLink,
-  }: any = project;
+  } = project || {};
 
   return (
     <div className="flex flex-col gap-5 w-screen md:w-11/12">
@@ -60,7 +63,7 @@ export default function ProjectData() {
 
         <h1>Tech Stack</h1>
         <div className="flex flex-wrap items-center gap-2 w-full">
-          {techStack.map((tech: string, index: number) => (
+          {techStack?.map((tech: string, index: number) => (
             <span
               className="bg-lightGray dark:bg-gray py-2 px-3 rounded-lg text-xs"
               key={index}
@@ -80,7 +83,7 @@ export default function ProjectData() {
             </Button>
           </Link>
 
-          {isDeployed ? (
+          {deploymentStatus === 1 ? (
             <Link href={deployedLink} target="_blank">
               <Button intent="black">
                 <span className="flex items-center gap-3">

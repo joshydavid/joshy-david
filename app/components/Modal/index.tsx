@@ -4,7 +4,7 @@ type ModalProps = {
   id: number;
   modalTitle: string;
   children: React.ReactNode;
-  image: string;
+  image: any;
 };
 
 export default function Modal({ id, modalTitle, children, image }: ModalProps) {

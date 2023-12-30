@@ -1,8 +1,8 @@
 type TextAreaProps = {
   value: string;
   placeholder: string;
-  onChange: any;
-  onKeyDown: any;
+  onChange: React.ChangeEventHandler<HTMLTextAreaElement>;
+  onKeyDown: React.KeyboardEventHandler<HTMLTextAreaElement>;
 };
 
 function TextArea({
