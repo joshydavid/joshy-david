@@ -17,8 +17,8 @@ const buttonStyles = cva("rounded-lg px-4 py-3 w-full text-sm", {
 });
 
 interface ButtonProps extends VariantProps<typeof buttonStyles> {
-  children: any;
-  onClick?: any;
+  children: React.ReactNode;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export default function Button({ intent, children, ...props }: ButtonProps) {

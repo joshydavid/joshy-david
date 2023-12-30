@@ -3,8 +3,8 @@ type TextInputProps = {
   name: string;
   value: string;
   placeholder: string;
-  onChange: any;
-  onKeyDown: any;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  onKeyDown: React.KeyboardEventHandler<HTMLInputElement>;
 };
 
 function TextInput({

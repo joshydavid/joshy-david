@@ -13,7 +13,7 @@ export default function Contact() {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  async function sendMessage(e: any) {
+  async function sendMessage(e: React.FormEvent) {
     e.preventDefault();
     const { name, email, message } = form;
     setLoading(true);
@@ -39,11 +39,13 @@ export default function Contact() {
     }
   }
 
-  const handleKeyDown = (event: KeyboardEvent) => {
+  const handleKeyDown = (event: React.KeyboardEvent) => {
     event.key === "Enter" ? sendMessage(event) : null;
   };
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({
       ...form,
       [event.target.name]: event.target.value,

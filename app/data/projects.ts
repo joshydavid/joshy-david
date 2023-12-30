@@ -1,4 +1,3 @@
-import Placeholder from "@/public/projects/placeholder.png";
 import Sayocode from "@/public/projects/sayocode.png";
 import LegacyCodingPortfolio from "@/public/projects/legacy-portfolio.png";
 import Client from "@/public/projects/client.png";
@@ -6,21 +5,27 @@ import Sayless from "@/public/projects/sayless-ecosystem.png";
 import CodingPortfolio from "@/public/projects/portfolio-2.0.png";
 import CodingPortfolioAll from "@/public/projects/portfolio-2.0-ecosystem.png";
 
-type Projects = {
+enum DeploymentStatus {
+  InProgress,
+  Deployed,
+  NotDeployed,
+}
+
+export type ProjectType = {
   id: number;
-  name: string;
+  name: any;
   description: string;
   detailedDescription?: string;
   detailedImage?: any;
   year: number;
   icon: any;
-  gitHub: string;
+  gitHub: any;
   techStack: string[];
-  isDeployed: boolean;
-  deployedLink?: string;
+  deploymentStatus: DeploymentStatus;
+  deployedLink?: any;
 };
 
-export const projects: Projects[] = [
+export const projects: ProjectType[] = [
   {
     id: 0,
     name: "Project Sayocode",
@@ -29,7 +34,7 @@ export const projects: Projects[] = [
     icon: Sayocode,
     gitHub: "https://github.com/joshuadavidang/",
     techStack: ["React", "Express.js", "MongoDB", "Bootstrap"],
-    isDeployed: false,
+    deploymentStatus: DeploymentStatus.NotDeployed,
   },
   {
     id: 2,
@@ -41,7 +46,7 @@ export const projects: Projects[] = [
     icon: LegacyCodingPortfolio,
     gitHub: "https://github.com/joshuadavidang/joshua-david",
     techStack: ["Next.js", "Tailwind CSS", "Vercel", "Supabase", "GitHub"],
-    isDeployed: true,
+    deploymentStatus: DeploymentStatus.Deployed,
     deployedLink: "https://legacy.joshuadavid.dev",
   },
   {
@@ -52,7 +57,7 @@ export const projects: Projects[] = [
     icon: Client,
     gitHub: "https://celineongjw.com",
     techStack: ["Next.js", "Tailwind CSS", "Vercel", "Supabase", "GitHub"],
-    isDeployed: true,
+    deploymentStatus: DeploymentStatus.Deployed,
     deployedLink: "https://celineongjw.com",
   },
   {
@@ -74,7 +79,7 @@ export const projects: Projects[] = [
       "MongoDB",
       "GitHub",
     ],
-    isDeployed: true,
+    deploymentStatus: DeploymentStatus.Deployed,
     deployedLink: "https://sayless.space",
   },
   {
@@ -97,20 +102,7 @@ export const projects: Projects[] = [
       "DaisyUI",
       "Framer",
     ],
-    isDeployed: true,
+    deploymentStatus: DeploymentStatus.Deployed,
     deployedLink: "https://joshuadavid.dev",
-  },
-  {
-    id: 6,
-    name: "Journal (Coming Soon)",
-    description: "iOS 17.2 Journal app clone",
-    detailedDescription:
-      "Built an iOS journal app clone over the winter break using SwiftUI and Apple's latest  Journal Suggestions API. The app allows users to reflect and record their thoughts and emotions.",
-    year: 2024,
-    icon: Placeholder,
-    detailedImage: Placeholder,
-    gitHub: "https://github.com/joshuadavidang/journal",
-    techStack: ["Swift", "SwiftUI", "Journal Suggestions API"],
-    isDeployed: false,
   },
 ];
