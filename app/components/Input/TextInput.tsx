@@ -1,10 +1,12 @@
+import { ChangeEvent, KeyDownEvent } from "@/helpers/type";
+
 type TextInputProps = {
   type: string;
   name: string;
   value: string;
   placeholder: string;
-  onChange: React.ChangeEventHandler<HTMLInputElement>;
-  onKeyDown: React.KeyboardEventHandler<HTMLInputElement>;
+  onChange: ChangeEvent;
+  onKeyDown: KeyDownEvent;
 };
 
 function TextInput({

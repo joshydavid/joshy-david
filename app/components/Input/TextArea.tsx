@@ -1,8 +1,10 @@
+import { ChangeEvent, KeyDownEvent } from "@/helpers/type";
+
 type TextAreaProps = {
   value: string;
   placeholder: string;
-  onChange: React.ChangeEventHandler<HTMLTextAreaElement>;
-  onKeyDown: React.KeyboardEventHandler<HTMLTextAreaElement>;
+  onChange: ChangeEvent;
+  onKeyDown: KeyDownEvent;
 };
 
 function TextArea({

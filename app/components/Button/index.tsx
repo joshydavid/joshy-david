@@ -1,3 +1,4 @@
+import { ClickHandler } from "@/helpers/type";
 import { cva, VariantProps } from "class-variance-authority";
 
 const buttonStyles = cva("rounded-lg px-4 py-3 w-full text-sm", {
@@ -18,7 +19,7 @@ const buttonStyles = cva("rounded-lg px-4 py-3 w-full text-sm", {
 
 interface ButtonProps extends VariantProps<typeof buttonStyles> {
   children: React.ReactNode;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: ClickHandler;
 }
 
 export default function Button({ intent, children, ...props }: ButtonProps) {
