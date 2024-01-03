@@ -15,11 +15,11 @@ export default function Tech() {
             key={id}
             delay={delay}
           >
-            <div className="w-24 rounded-xl">
+            <div className="w-24">
               <Image
                 src={icon}
                 alt={`Product ${id}`}
-                className="dark:bg-white bg-lightGray hover:opacity-80"
+                className="dark:bg-white bg-lightGray hover:opacity-80 rounded-xl"
                 priority
               />
             </div>

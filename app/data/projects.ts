@@ -87,7 +87,7 @@ export const projects: ProjectType[] = [
     name: "Coding Portfolio 2.0",
     description: "Minimalist coding portfolio.",
     detailedDescription:
-      "Version 2.0 - Redesigned and redeveloped an updated version of my coding portfolio, built on top of Next.js 14.0, Tailwind CSS, DaisyUI, HeadlessUI deployed to Vercel.",
+      "Version 2.0 - Redesigned and redeveloped an updated version of my coding portfolio, built on top of Next.js 14.0, Tailwind CSS, Shadcn deployed to Vercel.",
     year: 2024,
     icon: CodingPortfolio,
     detailedImage: CodingPortfolioAll,
@@ -98,8 +98,7 @@ export const projects: ProjectType[] = [
       "Vercel",
       "Supabase",
       "GitHub",
-      "HeadlessUI",
-      "DaisyUI",
+      "Shadcn UI",
       "Framer",
     ],
     deploymentStatus: DeploymentStatus.Deployed,

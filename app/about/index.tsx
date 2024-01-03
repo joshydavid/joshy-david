@@ -4,18 +4,20 @@ import { NAME } from "@/constant";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/Animation";
-import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
-import Modal from "@/components/Modal";
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
 import { useEffect, useState } from "react";
 import { internships, urls } from "@/data";
 
 export default function About() {
-  const openModal = (id: number) => {
-    const modalId = `my_modal_${id}`;
-    const modal = document.getElementById(modalId) as HTMLDialogElement;
-    modal.showModal();
-  };
-
   const [isChrome, setIsChrome] = useState(false);
 
   useEffect(() => {
@@ -60,7 +62,7 @@ export default function About() {
               className="flex items-center gap-1 text-sm cursor-pointer dark:text-lightGray hover:text-gray dark:hover:text-white"
               key={label}
             >
-              <ArrowUpRightIcon className="w-5 h-5" />
+              <ArrowTopRightIcon className="w-5 h-5" />
               {!isPDF ? (
                 <Link key={label} href={path} target="_blank">
                   {label}
@@ -81,12 +83,9 @@ export default function About() {
         <h1>Experience</h1>
         <div className="flex flex-col gap-12 mt-6">
           {internships.map(
-            ({ id, company, position, timeline, icon, achievements }) => (
-              <div key={company}>
-                <div
-                  className="flex flex-row gap-7 cursor-pointer hover:opacity-90"
-                  onClick={() => openModal(id)}
-                >
+            ({ company, position, timeline, icon, achievements }) => (
+              <Dialog key={company}>
+                <DialogTrigger className="flex flex-row gap-7 cursor-pointer hover:opacity-90 text-left">
                   <div>
                     <Image
                       src={icon}
@@ -101,16 +100,32 @@ export default function About() {
                     <h4>{company}</h4>
                     <h4 className="dark:text-lightGray">{timeline}</h4>
                   </div>
-                </div>
+                </DialogTrigger>
 
-                <Modal id={id} modalTitle={company} image={icon}>
-                  {achievements.map((achievement) => (
-                    <li key={achievement} className="py-1">
-                      {achievement}
-                    </li>
-                  ))}
-                </Modal>
-              </div>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>
+                      <div className="flex gap-5 items-center justify-center pb-5">
+                        <Image
+                          src={icon}
+                          width={50}
+                          height={50}
+                          className="rounded-full"
+                          alt={company}
+                        />
+                        {company}
+                      </div>
+                    </DialogTitle>
+                    <DialogDescription>
+                      {achievements.map((achievement) => (
+                        <li key={achievement} className="py-1">
+                          {achievement}
+                        </li>
+                      ))}
+                    </DialogDescription>
+                  </DialogHeader>
+                </DialogContent>
+              </Dialog>
             )
           )}
         </div>
