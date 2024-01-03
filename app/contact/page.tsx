@@ -2,16 +2,16 @@
 
 import AnimatedSection from "@/components/Animation";
 import { ChangeEvent, useState } from "react";
-import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
-import Button from "@/components/Button";
+import { DotsHorizontalIcon } from "@radix-ui/react-icons";
 import { TextInput, TextArea } from "@/components/Input";
 import { addFormToDB, randomId, validateDetails } from "@/helpers";
+import { Toaster } from "@/components/ui/sonner";
+import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   async function sendMessage(e: React.FormEvent) {
     e.preventDefault();
@@ -19,22 +19,15 @@ export default function Contact() {
     setLoading(true);
 
     if (!validateDetails(name, email, message)) {
-      setTimeout(() => {
-        setLoading(false);
-        setError(true);
-      }, 1300);
+      setLoading(false);
+      toast("Please fill in the fields.");
     } else {
-      setError(false);
       await addFormToDB(randomId(), name, email, message).then(() => {
         setTimeout(() => {
           setForm({ name: "", email: "", message: "" });
           setLoading(false);
-          setSuccess(true);
-        }, 1500);
-
-        setTimeout(() => {
-          setSuccess(false);
-        }, 5000);
+          toast("Get back to you soon!");
+        }, 1000);
       });
     }
   }
@@ -86,27 +79,15 @@ export default function Contact() {
           onKeyDown={handleKeyDown}
         />
 
-        <Button intent="black" onClick={sendMessage}>
+        <Button variant="secondary" size="lg" onClick={sendMessage}>
           {loading ? (
-            <span className="loading loading-dots loading-md"></span>
+            <DotsHorizontalIcon className="w-9 h-9 animate-pulse" />
           ) : (
             "Send"
           )}
         </Button>
 
-        {error ? (
-          <div role="alert" className="flex justify-center alert alert-error">
-            <XMarkIcon className="w-5 h-5" />
-            <span>Please fill in the fields</span>
-          </div>
-        ) : null}
-
-        {success ? (
-          <div role="alert" className="flex justify-center alert alert-success">
-            <CheckIcon className="w-5 h-5" />
-            <span>Success! I'll get back to you.</span>
-          </div>
-        ) : null}
+        <Toaster />
       </form>
     </AnimatedSection>
   );
