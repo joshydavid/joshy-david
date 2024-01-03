@@ -4,7 +4,10 @@ import { NAME } from "@/constant";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/Animation";
+import { useEffect, useState } from "react";
+import { internships, urls } from "@/data";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
   DialogContent,
@@ -13,9 +16,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-
-import { useEffect, useState } from "react";
-import { internships, urls } from "@/data";
 
 export default function About() {
   const [isChrome, setIsChrome] = useState(false);
@@ -28,16 +28,10 @@ export default function About() {
   return (
     <div className="flex flex-col gap-10">
       <AnimatedSection delay={0.1} className="flex flex-col gap-5">
-        <div>
-          <Image
-            src="/joshua.png"
-            width={100}
-            height={100}
-            className="rounded-full"
-            alt="Display Picture"
-            priority
-          />
-        </div>
+        <Avatar>
+          <AvatarImage src="/joshua.png" />
+          <AvatarFallback>Joshua</AvatarFallback>
+        </Avatar>
 
         <div className="flex flex-col gap-1.5">
           <h1>{NAME}</h1>
