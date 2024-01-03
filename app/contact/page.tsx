@@ -1,48 +1,31 @@
 "use client";
 
 import AnimatedSection from "@/components/Animation";
-import { ChangeEvent, useState } from "react";
-import { DotsHorizontalIcon } from "@radix-ui/react-icons";
+import { useRef } from "react";
 import { TextInput, TextArea } from "@/components/Input";
-import { addFormToDB, randomId, validateDetails } from "@/helpers";
 import { Toaster } from "@/components/ui/sonner";
+import { sendMessage } from "@/actions/formAction";
+import SubmitForm from "./submitForm";
 import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [loading, setLoading] = useState(false);
+  const ref = useRef<HTMLFormElement>(null);
 
-  async function sendMessage(e: React.FormEvent) {
-    e.preventDefault();
-    const { name, email, message } = form;
-    setLoading(true);
-
-    if (!validateDetails(name, email, message)) {
-      setLoading(false);
-      toast("Please fill in the fields.");
+  const sendForm = async (formData: FormData) => {
+    const response = await sendMessage(formData);
+    if (response) {
+      toast("Get back to you soon!");
+      ref.current?.reset();
     } else {
-      await addFormToDB(randomId(), name, email, message).then(() => {
-        setTimeout(() => {
-          setForm({ name: "", email: "", message: "" });
-          setLoading(false);
-          toast("Get back to you soon!");
-        }, 1000);
-      });
+      toast("Please fill in the blanks");
     }
-  }
-
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    event.key === "Enter" ? sendMessage(event) : null;
   };
 
-  const handleChange = (
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm({
-      ...form,
-      [event.target.name]: event.target.value,
-    });
+  const handleKeyDown = (event: React.KeyboardEvent<any>) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      event.currentTarget.form?.requestSubmit();
+    }
   };
 
   return (
@@ -53,40 +36,23 @@ export default function Contact() {
       <h1>Contact</h1>
       <h4>Let's Chat.</h4>
 
-      <form className="flex flex-col gap-5">
+      <form ref={ref} className="flex flex-col gap-5" action={sendForm}>
         <TextInput
           type="text"
           name="name"
-          value={form.name}
           placeholder="Name"
-          onChange={handleChange}
           onKeyDown={handleKeyDown}
         />
 
         <TextInput
           type="email"
           name="email"
-          value={form.email}
           placeholder="Email"
-          onChange={handleChange}
           onKeyDown={handleKeyDown}
         />
 
-        <TextArea
-          placeholder="Message"
-          value={form.message}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-        />
-
-        <Button variant="secondary" size="lg" onClick={sendMessage}>
-          {loading ? (
-            <DotsHorizontalIcon className="w-9 h-9 animate-pulse" />
-          ) : (
-            "Send"
-          )}
-        </Button>
-
+        <TextArea placeholder="Message" onKeyDown={handleKeyDown} />
+        <SubmitForm />
         <Toaster />
       </form>
     </AnimatedSection>
