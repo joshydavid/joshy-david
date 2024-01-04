@@ -3,7 +3,7 @@
 import { addFormToDB, randomId, validateDetails } from "@/helpers";
 import { revalidatePath } from "next/cache";
 
-export async function sendMessage(formData: FormData) {
+export async function sendMessage(formData: FormData): Promise<boolean> {
   const { name, email, message } = Object.fromEntries(formData.entries());
   const isValid = validateDetails(
     name as string,
