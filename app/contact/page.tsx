@@ -11,7 +11,7 @@ import { toast } from "sonner";
 export default function Contact() {
   const ref = useRef<HTMLFormElement>(null);
 
-  const sendForm = async (formData: FormData) => {
+  const sendForm = async (formData: FormData): Promise<void> => {
     const response = await sendMessage(formData);
     if (response) {
       toast("Get back to you soon!");
@@ -21,7 +21,7 @@ export default function Contact() {
     }
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent<any>) => {
+  const handleKeyDown = (event: React.KeyboardEvent<any>): void => {
     if (event.key === "Enter") {
       event.preventDefault();
       event.currentTarget.form?.requestSubmit();
