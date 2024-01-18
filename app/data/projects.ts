@@ -4,12 +4,8 @@ import Client from "@/public/projects/client.png";
 import Sayless from "@/public/projects/sayless-ecosystem.png";
 import CodingPortfolio from "@/public/projects/portfolio-2.0.png";
 import CodingPortfolioAll from "@/public/projects/portfolio-2.0-ecosystem.png";
-
-enum DeploymentStatus {
-  InProgress,
-  Deployed,
-  NotDeployed,
-}
+import ShortenSG from "@/public/projects/ShortenSG.png";
+import { DeploymentStatus } from "@/helpers/deploymentStatus";
 
 export type ProjectType = {
   id: number;
@@ -29,7 +25,7 @@ export const projects: ProjectType[] = [
   {
     id: 0,
     name: "Project Sayocode",
-    description: "Web builder that automates the process of app creation.",
+    description: "Web builder that automates the process of app creation",
     year: 2019,
     icon: Sayocode,
     gitHub: "https://github.com/joshuadavidang/",
@@ -103,5 +99,26 @@ export const projects: ProjectType[] = [
     ],
     deploymentStatus: DeploymentStatus.Deployed,
     deployedLink: "https://joshuadavid.dev",
+  },
+  {
+    id: 6,
+    name: "ShortenSG",
+    description: "URL shortener web app",
+    detailedDescription:
+      "Your go-to URL shortener web app, designed to transform long URLs into neat and shareable links.",
+    year: 2024,
+    icon: ShortenSG,
+    gitHub: "https://github.com/joshuadavidang/",
+    techStack: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Koa.js",
+      "TypeORM",
+      "PostgreSQL",
+      "Vercel",
+    ],
+    deploymentStatus: DeploymentStatus.NotDeployed,
   },
 ];
