@@ -108,7 +108,7 @@ export const projects: ProjectType[] = [
       "Your go-to URL shortener web app, designed to transform long URLs into neat and shareable links.",
     year: 2024,
     icon: ShortenSG,
-    gitHub: "https://github.com/joshuadavidang/",
+    gitHub: "https://github.com/joshuadavidang/ShortenSG",
     techStack: [
       "TypeScript",
       "Next.js",
