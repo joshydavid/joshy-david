@@ -45,9 +45,9 @@ export default function About() {
 
       <AnimatedSection delay={0.2}>
         <h4 className="leading-relaxed">
-          Hi, I'm Joshua! I'm passionate about web/app development and all
-          things tech. Outside of coding, you can find me hitting the gym or
-          going for a quick run.
+          Hey, I'm Joshua! I'm interested in web/app development and all things
+          tech. Outside of work, I enjoy working out at the gym and going for a
+          quick run around the city.
         </h4>
 
         <div className="flex flex-row gap-4 mt-6">
