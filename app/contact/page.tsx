@@ -1,12 +1,11 @@
 "use client";
 
-import AnimatedSection from "@/components/Animation";
-import { useRef } from "react";
-import { TextInput, TextArea } from "@/components/Input";
-import { Toaster } from "@/components/ui/sonner";
 import { sendMessage } from "@/actions/formAction";
-import SubmitForm from "./submitForm";
+import { TextArea, TextInput } from "@/components/Input";
+import { Toaster } from "@/components/ui/sonner";
+import { useRef } from "react";
 import { toast } from "sonner";
+import SubmitForm from "./submitForm";
 
 export default function Contact() {
   const ref = useRef<HTMLFormElement>(null);
@@ -29,10 +28,7 @@ export default function Contact() {
   };
 
   return (
-    <AnimatedSection
-      delay={0.1}
-      className="flex flex-col gap-5 w-screen md:w-11/12"
-    >
+    <div className="flex flex-col gap-5 w-screen md:w-11/12">
       <h1>Contact</h1>
       <h4>Let's Chat.</h4>
 
@@ -55,6 +51,6 @@ export default function Contact() {
         <SubmitForm />
         <Toaster />
       </form>
-    </AnimatedSection>
+    </div>
   );
 }

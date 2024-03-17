@@ -1,6 +1,5 @@
 "use client";
 
-import AnimatedSection from "@/components/Animation";
 import { projects } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,10 +12,9 @@ export default function Project() {
       {projects
         .slice()
         .sort((a, b) => b.id - a.id)
-        .map(({ id, name, icon, description }, delay) => {
-          delay *= 0.1;
+        .map(({ id, name, icon, description }) => {
           return (
-            <AnimatedSection delay={delay} key={id}>
+            <div key={id}>
               <Link href={`/project/${id}`}>
                 <div className="flex flex-col md:flex-row md:items-center gap-8 mb-12 md:mb-3 cursor-pointer hover:opacity-90 dark:bg-black dark:text-white rounded-xl">
                   <Image
@@ -32,7 +30,7 @@ export default function Project() {
                   </div>
                 </div>
               </Link>
-            </AnimatedSection>
+            </div>
           );
         })}
     </div>
