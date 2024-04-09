@@ -16,7 +16,7 @@ export default function Project() {
           return (
             <div key={id}>
               <Link href={`/project/${id}`}>
-                <div className="flex flex-col md:flex-row md:items-center gap-8 mb-12 md:mb-3 cursor-pointer hover:opacity-90 dark:bg-black dark:text-white rounded-xl">
+                <div className="flex flex-col md:flex-row md:items-center items-start gap-8 mb-12 md:mb-3 cursor-pointer hover:opacity-90 dark:bg-black dark:text-white rounded-xl">
                   <Image
                     src={icon}
                     alt={name}
