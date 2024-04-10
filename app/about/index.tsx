@@ -1,5 +1,6 @@
 "use client";
 
+import Ping from "@/components/Ping";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
@@ -19,19 +20,23 @@ import Link from "next/link";
 export default function About() {
   return (
     <div className="flex flex-col gap-10">
-      <Avatar>
-        <AvatarImage src="/joshua.png" />
-        <AvatarFallback>Joshua</AvatarFallback>
-      </Avatar>
+      <div>
+        <Avatar>
+          <AvatarImage src="/joshua.png" />
+          <AvatarFallback>Joshua</AvatarFallback>
+        </Avatar>
 
-      <div className="flex flex-col gap-1.5">
-        <h1>{NAME}</h1>
-        <h4>Information Systems Sophomore @ Singapore Management University</h4>
-        <h4>Aspiring Software Engineer</h4>
+        <div className="flex flex-col gap-1.5 mt-8">
+          <h1>{NAME}</h1>
+          <h4>
+            Information Systems Sophomore @ Singapore Management University
+          </h4>
+          <h4>Aspiring Software Engineer</h4>
+        </div>
       </div>
 
       <h4 className="leading-relaxed">
-        Hey, I'm Joshua! I'm interested in web/app development and all things
+        Hey, I'm Joshua! I'm interested in back-end development and all things
         tech. Outside of work, I enjoy working out at the gym and going for a
         quick run around the city.
       </h4>
@@ -65,10 +70,13 @@ export default function About() {
           .map(({ company, position, timeline, icon, achievements }) => (
             <Dialog key={company}>
               <DialogTrigger className="flex flex-row gap-7 cursor-pointer hover:opacity-90 text-left">
-                <div className="flex flex-col gap-1">
-                  <h4>
-                    {position} @ {company}
-                  </h4>
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex items-center gap-2">
+                    <Ping />
+                    <h4>
+                      {position} @ {company}
+                    </h4>
+                  </div>
                   <h4 className="dark:text-lightGray">{timeline}</h4>
                 </div>
               </DialogTrigger>
@@ -105,7 +113,7 @@ export default function About() {
           .map(({ company, position, timeline, icon, achievements }) => (
             <Dialog key={company}>
               <DialogTrigger className="flex flex-row gap-7 cursor-pointer hover:opacity-90 text-left">
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1.5">
                   <h4>
                     {position} @ {company}
                   </h4>
