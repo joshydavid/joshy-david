@@ -1,13 +1,14 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { ProjectType, projects } from "@/data";
+import { DeploymentStatus } from "@/helpers/deploymentStatus";
+import { CaretRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { FaGithub } from "react-icons/fa";
 import { TbExternalLink } from "react-icons/tb";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { projects, ProjectType } from "@/data";
-import { CaretRightIcon } from "@radix-ui/react-icons";
 
 export default function ProjectData() {
   const router = useRouter();
@@ -90,7 +91,7 @@ export default function ProjectData() {
             </Button>
           </Link>
 
-          {deploymentStatus === 1 ? (
+          {deploymentStatus === DeploymentStatus.DEPLOYED ? (
             <Link href={deployedLink} target="_blank">
               <Button variant="secondary">
                 <span className="flex items-center gap-3">

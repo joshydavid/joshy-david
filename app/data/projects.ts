@@ -1,11 +1,12 @@
-import Sayocode from "@/public/projects/sayocode.png";
-import LegacyCodingPortfolio from "@/public/projects/legacy-portfolio.png";
-import Client from "@/public/projects/client.png";
-import Sayless from "@/public/projects/sayless-ecosystem.png";
-import CodingPortfolio from "@/public/projects/portfolio-2.0.png";
-import CodingPortfolioAll from "@/public/projects/portfolio-2.0-ecosystem.png";
-import ShortenSG from "@/public/projects/ShortenSG.png";
 import { DeploymentStatus } from "@/helpers/deploymentStatus";
+import BookLah from "@/public/projects/BookLah.png";
+import ShortenSG from "@/public/projects/ShortenSG.png";
+import Client from "@/public/projects/client.png";
+import LegacyCodingPortfolio from "@/public/projects/legacy-portfolio.png";
+import CodingPortfolioAll from "@/public/projects/portfolio-2.0-ecosystem.png";
+import CodingPortfolio from "@/public/projects/portfolio-2.0.png";
+import Sayless from "@/public/projects/sayless-ecosystem.png";
+import Sayocode from "@/public/projects/sayocode.png";
 
 export type ProjectType = {
   id: number;
@@ -30,7 +31,7 @@ export const projects: ProjectType[] = [
     icon: Sayocode,
     gitHub: "https://github.com/joshuadavidang/",
     techStack: ["React", "Express.js", "MongoDB", "Bootstrap"],
-    deploymentStatus: DeploymentStatus.NotDeployed,
+    deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
   },
   {
     id: 2,
@@ -42,7 +43,7 @@ export const projects: ProjectType[] = [
     icon: LegacyCodingPortfolio,
     gitHub: "https://github.com/joshuadavidang/joshua-david",
     techStack: ["Next.js", "Tailwind CSS", "Vercel", "Supabase", "GitHub"],
-    deploymentStatus: DeploymentStatus.Deployed,
+    deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://legacy.joshuadavid.dev",
   },
   {
@@ -53,7 +54,7 @@ export const projects: ProjectType[] = [
     icon: Client,
     gitHub: "https://celineongjw.com",
     techStack: ["Next.js", "Tailwind CSS", "Vercel", "Supabase", "GitHub"],
-    deploymentStatus: DeploymentStatus.Deployed,
+    deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://celineongjw.com",
   },
   {
@@ -75,7 +76,7 @@ export const projects: ProjectType[] = [
       "MongoDB",
       "GitHub",
     ],
-    deploymentStatus: DeploymentStatus.Deployed,
+    deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://sayless.space",
   },
   {
@@ -97,7 +98,7 @@ export const projects: ProjectType[] = [
       "Shadcn UI",
       "Framer",
     ],
-    deploymentStatus: DeploymentStatus.Deployed,
+    deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://joshuadavid.dev",
   },
   {
@@ -119,6 +120,28 @@ export const projects: ProjectType[] = [
       "PostgreSQL",
       "Vercel",
     ],
-    deploymentStatus: DeploymentStatus.NotDeployed,
+    deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
+  },
+  {
+    id: 7,
+    name: "BookLah!",
+    description: "Concert booking web app",
+    detailedDescription:
+      "Full-stack concert booking web app, utilising Microservice architecture.",
+    year: 2024,
+    icon: BookLah,
+    gitHub: "https://github.com/joshuadavidang/BookLah",
+    techStack: [
+      "TypeScript",
+      "Next.js",
+      "Flask",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Koa.js",
+      "TypeORM",
+      "PostgreSQL",
+      "RabbitMQ",
+    ],
+    deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
   },
 ];
