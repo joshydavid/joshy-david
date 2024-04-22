@@ -12,7 +12,6 @@ export type ProjectType = {
   id: number;
   name: any;
   description: string;
-  detailedDescription?: string;
   detailedImage?: any;
   year: number;
   icon: any;
@@ -36,8 +35,7 @@ export const projects: ProjectType[] = [
   {
     id: 2,
     name: "Coding Portfolio",
-    description: "Coding portfolio (Legacy)",
-    detailedDescription:
+    description:
       "Designed and developed a responsive coding portfolio, built on top of Next.js & Tailwind CSS, deployed to Vercel.",
     year: 2022,
     icon: LegacyCodingPortfolio,
@@ -60,8 +58,7 @@ export const projects: ProjectType[] = [
   {
     id: 4,
     name: "Sayless",
-    description: "Gamified web app connecting people to share excess food.",
-    detailedDescription:
+    description:
       "A gamified web app connecting people to share excess food. Upload receipts to add items to inventory or complete quests to earn vouchers.",
     year: 2023,
     icon: Sayless,
@@ -82,8 +79,7 @@ export const projects: ProjectType[] = [
   {
     id: 5,
     name: "Coding Portfolio 2.0",
-    description: "Minimalist coding portfolio.",
-    detailedDescription:
+    description:
       "Version 2.0 - Redesigned and redeveloped an updated version of my coding portfolio, built on top of Next.js 14.0, Tailwind CSS, Shadcn deployed to Vercel.",
     year: 2024,
     icon: CodingPortfolio,
@@ -104,8 +100,7 @@ export const projects: ProjectType[] = [
   {
     id: 6,
     name: "ShortenSG",
-    description: "URL shortener web app",
-    detailedDescription:
+    description:
       "Full-stack URL shortener web app, designed to transform long URLs into neat and shareable links.",
     year: 2024,
     icon: ShortenSG,
@@ -125,8 +120,7 @@ export const projects: ProjectType[] = [
   {
     id: 7,
     name: "BookLah!",
-    description: "Concert booking web app",
-    detailedDescription:
+    description:
       "Full-stack concert booking web app, utilising Microservice architecture.",
     year: 2024,
     icon: BookLah,

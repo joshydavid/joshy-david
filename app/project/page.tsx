@@ -1,5 +1,6 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +13,7 @@ export default function Project() {
       {projects
         .slice()
         .sort((a, b) => b.id - a.id)
-        .map(({ id, name, icon, description }) => {
+        .map(({ id, name, icon, year }) => {
           return (
             <div key={id}>
               <Link href={`/project/${id}`}>
@@ -24,9 +25,9 @@ export default function Project() {
                     priority
                   />
 
-                  <div className="dark:text-lightGray">
+                  <div className="flex flex-col gap-2 dark:text-lightGray">
                     <h2>{name}</h2>
-                    <p className="text-sm mt-2">{description}</p>
+                    <Badge>{year}</Badge>
                   </div>
                 </div>
               </Link>
