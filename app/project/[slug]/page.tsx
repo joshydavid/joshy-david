@@ -15,15 +15,12 @@ export default function ProjectData() {
   const path = usePathname();
   const data = path.split("/");
   const id = Number(data.slice(-1)[0]);
-  const project: ProjectType | undefined = projects.find(
-    (project) => project.id === id
-  );
+  const project: ProjectType = projects.find((project) => project.id === id)!;
 
   const {
     name,
     icon,
     description,
-    detailedDescription,
     detailedImage,
     year,
     techStack,
@@ -48,7 +45,7 @@ export default function ProjectData() {
       </div>
 
       <div className="flex flex-col gap-8">
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div className="flex flex-col">
           <Image
             alt={name}
             src={detailedImage ? detailedImage : icon}
@@ -60,12 +57,12 @@ export default function ProjectData() {
           />
         </div>
 
-        <h1>
-          {name} ({year})
-        </h1>
-
-        <p className="text-sm">{description}</p>
-        <p className="leading-relaxed text-sm">{detailedDescription}</p>
+        <div className="flex flex-col gap-3">
+          <h1>
+            {name} ({year})
+          </h1>
+          <p className="text-sm">{description}</p>
+        </div>
 
         <h1>Tech Stack</h1>
         <div className="flex flex-wrap items-center gap-2 w-full">
@@ -76,7 +73,7 @@ export default function ProjectData() {
               key={index}
               className="cursor-text"
             >
-              <span className="text-xs"> {tech}</span>
+              <span className="text-xs">{tech}</span>
             </Button>
           ))}
         </div>
