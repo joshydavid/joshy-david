@@ -29,16 +29,16 @@ export default function About() {
         <div className="flex flex-col gap-1.5 mt-8">
           <h1>{NAME}</h1>
           <h4>
-            Information Systems Sophomore @ Singapore Management University
+            Information Systems Penultimate @ Singapore Management University
           </h4>
           <h4>Aspiring Software Engineer</h4>
         </div>
       </div>
 
       <h4 className="leading-relaxed">
-        Hey, I'm Joshua! I'm interested in back-end development and all things
-        tech. Outside of work, I enjoy working out at the gym and going for a
-        quick run around the city.
+        Hey I'm Joshua! I enjoy back-end development, with a strong interest in
+        building and scaling large, complex systems. Outside of work, I enjoy
+        working out at the gym and going for a quick run around the city.
       </h4>
 
       <div className="flex flex-row gap-4">
