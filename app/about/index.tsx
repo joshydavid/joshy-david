@@ -37,7 +37,7 @@ export default function About() {
 
       <h4 className="leading-relaxed">
         Hey I'm Joshua! I enjoy back-end development, with a strong interest in
-        building complex and large-scale systems . Outside of work, I enjoy
+        building complex and large-scale systems. Outside of work, I enjoy
         working out at the gym and going for a quick run around the city.
       </h4>
 
