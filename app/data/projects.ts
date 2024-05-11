@@ -1,21 +1,17 @@
-import Sayocode from "@/public/projects/sayocode.png";
-import LegacyCodingPortfolio from "@/public/projects/legacy-portfolio.png";
+import { DeploymentStatus } from "@/helpers/deploymentStatus";
+import BookLah from "@/public/projects/BookLah.png";
+import ShortenSG from "@/public/projects/ShortenSG.png";
 import Client from "@/public/projects/client.png";
-import Sayless from "@/public/projects/sayless-ecosystem.png";
-import CodingPortfolio from "@/public/projects/portfolio-2.0.png";
+import LegacyCodingPortfolio from "@/public/projects/legacy-portfolio.png";
 import CodingPortfolioAll from "@/public/projects/portfolio-2.0-ecosystem.png";
-
-enum DeploymentStatus {
-  InProgress,
-  Deployed,
-  NotDeployed,
-}
+import CodingPortfolio from "@/public/projects/portfolio-2.0.png";
+import Sayless from "@/public/projects/sayless-ecosystem.png";
+import Sayocode from "@/public/projects/sayocode.png";
 
 export type ProjectType = {
   id: number;
   name: any;
   description: string;
-  detailedDescription?: string;
   detailedImage?: any;
   year: number;
   icon: any;
@@ -29,24 +25,23 @@ export const projects: ProjectType[] = [
   {
     id: 0,
     name: "Project Sayocode",
-    description: "Web builder that automates the process of app creation.",
+    description: "Web builder that automates the process of app creation",
     year: 2019,
     icon: Sayocode,
     gitHub: "https://github.com/joshuadavidang/",
     techStack: ["React", "Express.js", "MongoDB", "Bootstrap"],
-    deploymentStatus: DeploymentStatus.NotDeployed,
+    deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
   },
   {
     id: 2,
     name: "Coding Portfolio",
-    description: "Coding portfolio (Legacy)",
-    detailedDescription:
+    description:
       "Designed and developed a responsive coding portfolio, built on top of Next.js & Tailwind CSS, deployed to Vercel.",
     year: 2022,
     icon: LegacyCodingPortfolio,
     gitHub: "https://github.com/joshuadavidang/joshua-david",
     techStack: ["Next.js", "Tailwind CSS", "Vercel", "Supabase", "GitHub"],
-    deploymentStatus: DeploymentStatus.Deployed,
+    deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://legacy.joshuadavid.dev",
   },
   {
@@ -57,14 +52,13 @@ export const projects: ProjectType[] = [
     icon: Client,
     gitHub: "https://celineongjw.com",
     techStack: ["Next.js", "Tailwind CSS", "Vercel", "Supabase", "GitHub"],
-    deploymentStatus: DeploymentStatus.Deployed,
+    deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://celineongjw.com",
   },
   {
     id: 4,
     name: "Sayless",
-    description: "Gamified web app connecting people to share excess food.",
-    detailedDescription:
+    description:
       "A gamified web app connecting people to share excess food. Upload receipts to add items to inventory or complete quests to earn vouchers.",
     year: 2023,
     icon: Sayless,
@@ -79,15 +73,14 @@ export const projects: ProjectType[] = [
       "MongoDB",
       "GitHub",
     ],
-    deploymentStatus: DeploymentStatus.Deployed,
+    deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://sayless.space",
   },
   {
     id: 5,
     name: "Coding Portfolio 2.0",
-    description: "Minimalist coding portfolio.",
-    detailedDescription:
-      "Version 2.0 - Redesigned and redeveloped an updated version of my coding portfolio, built on top of Next.js 14.0, Tailwind CSS, DaisyUI, HeadlessUI deployed to Vercel.",
+    description:
+      "Version 2.0 - Redesigned and redeveloped an updated version of my coding portfolio, built on top of Next.js 14.0, Tailwind CSS, Shadcn deployed to Vercel.",
     year: 2024,
     icon: CodingPortfolio,
     detailedImage: CodingPortfolioAll,
@@ -98,11 +91,51 @@ export const projects: ProjectType[] = [
       "Vercel",
       "Supabase",
       "GitHub",
-      "HeadlessUI",
-      "DaisyUI",
+      "Shadcn UI",
       "Framer",
     ],
-    deploymentStatus: DeploymentStatus.Deployed,
+    deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://joshuadavid.dev",
+  },
+  {
+    id: 6,
+    name: "ShortenSG",
+    description:
+      "Full-stack URL shortener web app, designed to transform long URLs into neat and shareable links.",
+    year: 2024,
+    icon: ShortenSG,
+    gitHub: "https://github.com/joshuadavidang/ShortenSG",
+    techStack: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Koa.js",
+      "TypeORM",
+      "PostgreSQL",
+      "Vercel",
+    ],
+    deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
+  },
+  {
+    id: 7,
+    name: "BookLah!",
+    description:
+      "Full-stack concert booking web app, utilising Microservice architecture.",
+    year: 2024,
+    icon: BookLah,
+    gitHub: "https://github.com/joshuadavidang/BookLah",
+    techStack: [
+      "TypeScript",
+      "Next.js",
+      "Flask",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Koa.js",
+      "TypeORM",
+      "PostgreSQL",
+      "RabbitMQ",
+    ],
+    deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
   },
 ];

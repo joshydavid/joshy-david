@@ -14,7 +14,7 @@
 
 - [Next.js](https://nextjs.org)
 - [Tailwind CSS](https://tailwindcss.com)
-- [HeadlessUI](https://headlessui.com)
+- [Shadcn UI](https://ui.shadcn.com/)
 - [Supabase](https://supabase.com)
 - [Vercel](https://vercel.com)
 - [Class Variance Authority](https://cva.style/docs)
