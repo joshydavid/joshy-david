@@ -19,6 +19,8 @@ export const internships: internships[] = [
     icon: GovTech,
     achievements: [
       "Government Digital Services (GDS) - CrowdTaskSG",
+      "Contributed to 3 projects, with 2 being greenfield initiatives that I helped conceptualised and developed.",
+      "Lead front-end engineer for Spark portal.",
       "Technologies: TypeScript, Next.js, Tailwind CSS, TypeORM, Koa.js, PostgreSQL, AWS",
     ],
   },
