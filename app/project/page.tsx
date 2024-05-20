@@ -13,7 +13,7 @@ export default function Project() {
       {projects
         .slice()
         .sort((a, b) => b.id - a.id)
-        .map(({ id, name, icon, year }) => {
+        .map(({ id, name, icon, tags }) => {
           return (
             <div key={id}>
               <Link href={`/project/${id}`}>
@@ -27,7 +27,11 @@ export default function Project() {
 
                   <div className="flex flex-col gap-2 dark:text-lightGray">
                     <h2>{name}</h2>
-                    <Badge>{year}</Badge>
+                    <div className="flex gap-2">
+                      {tags.map((tag, index) => (
+                        <Badge key={index}>{tag}</Badge>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </Link>

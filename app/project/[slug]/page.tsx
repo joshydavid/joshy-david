@@ -21,8 +21,9 @@ export default function ProjectData() {
     name,
     icon,
     description,
+    achievements,
     detailedImage,
-    year,
+    tags,
     techStack,
     gitHub,
     deploymentStatus,
@@ -44,7 +45,7 @@ export default function ProjectData() {
         <p>{name}</p>
       </div>
 
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-10">
         <div className="flex flex-col">
           <Image
             alt={name}
@@ -57,46 +58,79 @@ export default function ProjectData() {
           />
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4 mt-4">
           <h1>
-            {name} ({year})
+            {name} ({tags[0]})
           </h1>
-          <p className="text-sm">{description}</p>
+          <p className="text-sm leading-relaxed">{description}</p>
         </div>
 
-        <h1>Tech Stack</h1>
-        <div className="flex flex-wrap items-center gap-2 w-full">
-          {techStack?.map((tech: string, index: number) => (
-            <Button
-              variant="secondary"
-              size="sm"
-              key={index}
-              className="cursor-text"
-            >
-              <span className="text-xs">{tech}</span>
-            </Button>
-          ))}
-        </div>
+        {achievements && (
+          <div className="flex flex-col gap-4">
+            <h1>Achievements</h1>
+            <ul className="list-disc pl-5 text-sm">
+              {achievements.map((achievement, index) => (
+                <li key={index}>{achievement}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
-        <h1>View Project</h1>
-        <div className="flex gap-4">
-          <Link href={gitHub} target="_blank">
-            <Button variant="secondary">
-              <span className="flex items-center gap-3">
-                <FaGithub className="w-5 h-5" /> GitHub
-              </span>
-            </Button>
-          </Link>
-
-          {deploymentStatus === DeploymentStatus.DEPLOYED ? (
-            <Link href={deployedLink} target="_blank">
-              <Button variant="secondary">
-                <span className="flex items-center gap-3">
-                  <TbExternalLink className="w-5 h-5" /> Demo
-                </span>
+        <div className="flex flex-col gap-4">
+          <h1>Tech Stack</h1>
+          <div className="flex flex-wrap items-center gap-2 w-full">
+            {techStack?.map((tech: string, index: number) => (
+              <Button
+                variant="secondary"
+                size="sm"
+                key={index}
+                className="cursor-text"
+              >
+                <span className="text-xs">{tech}</span>
               </Button>
-            </Link>
-          ) : null}
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          <h1>View Project</h1>
+          <div className="flex gap-4">
+            {gitHub && (
+              <Link href={gitHub} target="_blank">
+                <Button variant="secondary">
+                  <span className="flex items-center gap-3">
+                    <FaGithub className="w-5 h-5" /> GitHub
+                  </span>
+                </Button>
+              </Link>
+            )}
+
+            {deploymentStatus === DeploymentStatus.DEPLOYED ? (
+              <Link href={deployedLink} target="_blank">
+                <Button variant="secondary">
+                  <span className="flex items-center gap-3">
+                    <TbExternalLink className="w-5 h-5" /> Demo
+                  </span>
+                </Button>
+              </Link>
+            ) : null}
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          <h1>Tags</h1>
+          <div className="flex flex-wrap items-center gap-2 w-full">
+            {tags?.map((tag, index) => (
+              <Button
+                variant="secondary"
+                size="sm"
+                key={index}
+                className="cursor-text"
+              >
+                <span className="text-xs">{tag}</span>
+              </Button>
+            ))}
+          </div>
         </div>
       </div>
     </div>
