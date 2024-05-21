@@ -11,6 +11,7 @@ import Sparks from "@/public/projects/sparks.png";
 
 export type ProjectType = {
   id: number;
+  slug: string;
   name: any;
   description: string;
   achievements?: string[];
@@ -25,8 +26,9 @@ export type ProjectType = {
 
 export const projects: ProjectType[] = [
   {
-    id: 0,
+    id: 1,
     name: "Project Sayocode",
+    slug: "sayocode",
     description: "Web builder that automates the process of app creation",
     tags: [2019, "School Project"],
     icon: Sayocode,
@@ -37,6 +39,7 @@ export const projects: ProjectType[] = [
   {
     id: 2,
     name: "Coding Portfolio",
+    slug: "portfolio",
     description:
       "Designed and developed a responsive coding portfolio, built on top of Next.js & Tailwind CSS, deployed to Vercel.",
     tags: [2022, "Personal Project", "Legacy"],
@@ -49,6 +52,7 @@ export const projects: ProjectType[] = [
   {
     id: 3,
     name: "Custom Web App",
+    slug: "cwa",
     description: "Developed a custom personal brand web app for clients.",
     tags: [2023, "Personal Project"],
     icon: Client,
@@ -60,8 +64,10 @@ export const projects: ProjectType[] = [
   {
     id: 4,
     name: "Sayless",
+    slug: "sayless",
     description:
       "A gamified web app connecting people to share excess food. Upload receipts to add items to inventory or complete quests to earn vouchers.",
+    achievements: ["Grade: A+"],
     tags: [2023, "School Project"],
     icon: Sayless,
     gitHub: "https://github.com/SMU-IS/SayLess",
@@ -81,6 +87,7 @@ export const projects: ProjectType[] = [
   {
     id: 5,
     name: "Coding Portfolio 2.0",
+    slug: "portfolio-v2",
     description:
       "Version 2.0 - Redesigned and redeveloped an updated version of my coding portfolio, built on top of Next.js 14.0, Tailwind CSS, Shadcn deployed to Vercel.",
     tags: [2024, "Personal Project"],
@@ -102,6 +109,7 @@ export const projects: ProjectType[] = [
   {
     id: 6,
     name: "ShortenSG",
+    slug: "shortensg",
     description:
       "Full-stack URL shortener web app, designed to transform long URLs into neat and shareable links.",
     tags: [2024, "GovTech Internship Project"],
@@ -122,8 +130,10 @@ export const projects: ProjectType[] = [
   {
     id: 7,
     name: "BookLah!",
+    slug: "booklah",
     description:
       "Full-stack concert booking web app, utilising Microservice architecture.",
+    achievements: ["Grade: A"],
     tags: [2024, "School Project"],
     icon: BookLah,
     gitHub: "https://github.com/joshuadavidang/BookLah",
@@ -143,19 +153,18 @@ export const projects: ProjectType[] = [
   {
     id: 8,
     name: "Sparks Portal",
+    slug: "sparks",
     description:
       "One of the GovTech internship projects I've worked on - Sparks is a product recommender application that helps government agency users to discover a suite of products built in-house via AI.",
     achievements: [
       "Lead front-end engineer",
-      "Collaborated with 2 software engineers and 1 UX designer to developed within 3 months",
+      "Collaborated with 2 software engineers and 1 UX designer to develop within 2 months",
     ],
     tags: [2024, "GovTech Internship Project"],
     icon: Sparks,
-    //gitHub: "https://github.com/joshuadavidang/BookLah",
     techStack: [
       "TypeScript",
       "Next.js",
-      "Flask",
       "Tailwind CSS",
       "Shadcn UI",
       "Koa.js",
