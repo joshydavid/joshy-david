@@ -13,10 +13,10 @@ export default function Project() {
       {projects
         .slice()
         .sort((a, b) => b.id - a.id)
-        .map(({ id, name, icon, tags }) => {
+        .map(({ id, slug, name, icon, tags }) => {
           return (
             <div key={id}>
-              <Link href={`/project/${id}`}>
+              <Link href={`/project/${slug}`}>
                 <div className="flex flex-col md:flex-row md:items-center items-start gap-8 mb-12 md:mb-3 cursor-pointer hover:opacity-90 dark:bg-black dark:text-white rounded-xl">
                   <Image
                     src={icon}

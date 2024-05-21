@@ -14,8 +14,10 @@ export default function ProjectData() {
   const router = useRouter();
   const path = usePathname();
   const data = path.split("/");
-  const id = Number(data.slice(-1)[0]);
-  const project: ProjectType = projects.find((project) => project.id === id)!;
+  const slug = data.slice(-1)[0];
+  const project: ProjectType = projects.find(
+    (project) => project.slug === slug
+  )!;
 
   const {
     name,
@@ -68,7 +70,7 @@ export default function ProjectData() {
         {achievements && (
           <div className="flex flex-col gap-4">
             <h1>Achievements</h1>
-            <ul className="list-disc pl-5 text-sm">
+            <ul className="flex flex-col gap-2 list-disc pl-5 text-sm">
               {achievements.map((achievement, index) => (
                 <li key={index}>{achievement}</li>
               ))}
