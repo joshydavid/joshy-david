@@ -155,10 +155,11 @@ export const projects: ProjectType[] = [
     name: "Sparks Portal",
     slug: "sparks",
     description:
-      "One of the GovTech internship projects I've worked on - Sparks is a product recommender application that helps government agency users to discover a suite of products built in-house via AI.",
+      "One of the GovTech internship projects I've worked on - Sparks is a product recommender app that helps government agency users discover a suite of products built in-house via AI.",
     achievements: [
-      "Lead front-end engineer",
-      "Collaborated with 2 software engineers and 1 UX designer to develop within 2 months",
+      "Lead front-end engineer.",
+      "Collaborated with 2 software engineers and 1 UX designer to develop and launch Sparks within 2 months.",
+      "Presented Sparks to public officers from the Ministry of Culture, Community and Youth (MCCY) at a tech showcase held at GovTech Hive office.",
     ],
     tags: [2024, "GovTech Internship Project"],
     icon: Sparks,
