@@ -8,6 +8,7 @@ import { CaretRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { useMemo } from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbExternalLink } from "react-icons/tb";
 
@@ -16,9 +17,9 @@ export default function ProjectData() {
   const path = usePathname();
   const data = path.split("/");
   const slug = data.slice(-1)[0];
-  const project: ProjectType = projects.find(
-    (project) => project.slug === slug
-  )!;
+  const project: ProjectType = useMemo(() => {
+    return projects.find((project) => project.slug === slug)!;
+  }, [slug]);
 
   const {
     name,
