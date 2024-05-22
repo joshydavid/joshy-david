@@ -4,6 +4,7 @@ import { ThemeProvider } from "./ThemeProvider";
 import Navigation from "./components/Navigation";
 import ScrollToTop from "./components/ScrollToTop";
 import "./globals.css";
+
 const raleway = Raleway({
   subsets: ["latin"],
 });
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Joshua David",
     description:
-      "Sophomore at the School of Computing and Information Systems, Singapore Management University",
+      "Information Systems Penultimate @ Singapore Management University",
     authors: "Joshua David",
     images: "https://joshuadavid.dev/og.png",
   },

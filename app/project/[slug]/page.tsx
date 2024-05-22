@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ProjectType, projects } from "@/data";
 import { DeploymentStatus } from "@/helpers/deploymentStatus";
+import { cn } from "@/lib/utils";
 import { CaretRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
@@ -70,7 +71,12 @@ export default function ProjectData() {
         {achievements && (
           <div className="flex flex-col gap-4">
             <h1>Achievements</h1>
-            <ul className="flex flex-col gap-2 list-disc pl-5 text-sm">
+            <ul
+              className={cn(
+                "flex flex-col gap-1.5 text-sm",
+                achievements.length > 1 && "list-disc pl-5"
+              )}
+            >
               {achievements.map((achievement, index) => (
                 <li key={index}>{achievement}</li>
               ))}

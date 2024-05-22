@@ -85,13 +85,7 @@ export default function About() {
                 <DialogHeader>
                   <DialogTitle>
                     <div className="flex gap-5 items-center justify-center pb-5">
-                      <Image
-                        src={icon}
-                        width={50}
-                        height={50}
-                        className="rounded-full"
-                        alt={company}
-                      />
+                      <Image src={icon} width={50} height={50} alt={company} />
                       {company}
                     </div>
                   </DialogTitle>
