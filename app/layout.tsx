@@ -36,7 +36,7 @@ export default function RootLayout({ children }: ChildrenProps) {
         <ThemeProvider attribute="class" defaultTheme="dark">
           <ScrollToTop />
           <Navigation />
-          <div className="flex min-h-screen px-6 py-8 md:mx-auto md:pt-12 md:pb-24 md:w-1/2 lg:w-1/3 bg-white text-black dark:bg-black dark:text-white">
+          <div className="flex min-h-screen px-6 py-8 md:mx-auto md:pt-12 pb-24 md:w-1/2 lg:w-1/3 bg-white text-black dark:bg-black dark:text-white">
             {children}
           </div>
         </ThemeProvider>
