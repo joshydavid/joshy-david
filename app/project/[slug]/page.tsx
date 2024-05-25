@@ -34,6 +34,9 @@ export default function ProjectData() {
     deployedLink,
   } = project || {};
 
+  const achievementLabel =
+    achievements?.length === 1 ? "Achievement" : "Achievements";
+
   return (
     <div className="flex flex-col gap-5 w-screen md:w-11/12">
       <div className="flex gap-1 text-sm">
@@ -71,7 +74,7 @@ export default function ProjectData() {
 
         {achievements && (
           <div className="flex flex-col gap-4">
-            <h1>Achievements</h1>
+            <h1>{achievementLabel}</h1>
             <ul
               className={cn(
                 "flex flex-col gap-1.5 text-sm",
@@ -108,7 +111,7 @@ export default function ProjectData() {
               <Link href={gitHub} target="_blank">
                 <Button variant="secondary">
                   <span className="flex items-center gap-3">
-                    <FaGithub className="w-5 h-5" /> GitHub
+                    <FaGithub className="w-4 h-4" /> GitHub
                   </span>
                 </Button>
               </Link>
@@ -117,8 +120,8 @@ export default function ProjectData() {
             {deploymentStatus === DeploymentStatus.DEPLOYED ? (
               <Link href={deployedLink} target="_blank">
                 <Button variant="secondary">
-                  <span className="flex items-center gap-3">
-                    <TbExternalLink className="w-5 h-5" /> Demo
+                  <span className="flex items-center gap-2">
+                    <TbExternalLink className="w-4 h-4" /> Demo
                   </span>
                 </Button>
               </Link>
