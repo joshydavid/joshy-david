@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ProjectType, projects } from "@/data";
-import { DeploymentStatus } from "@/helpers/deploymentStatus";
+import { projects } from "@/data";
 import { cn } from "@/lib/utils";
+import { DeploymentStatus, ProjectType } from "@/models/projects";
 import { CaretRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";

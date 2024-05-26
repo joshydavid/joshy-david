@@ -1,16 +1,9 @@
+import { Internships } from "@/models/internships";
+import { TechStack } from "@/models/projects";
 import GovTech from "@/public/companies/GovTech.png";
 import PigeonLab from "@/public/companies/PigeonLab.png";
 
-type internships = {
-  id: number;
-  company: string;
-  position: string;
-  timeline: string;
-  icon: any;
-  achievements: string[];
-};
-
-export const internships: internships[] = [
+export const internships: Internships[] = [
   {
     id: 1,
     company: "GovTech Singapore",
@@ -21,7 +14,7 @@ export const internships: internships[] = [
       "Government Digital Services (GDS) - CrowdTaskSG",
       "Contributed to 4 projects, with 2 being greenfield initiatives that I helped conceptualised and developed.",
       "Lead front-end engineer for Sparks portal.",
-      "Technologies: TypeScript, Next.js, Tailwind CSS, TypeORM, Koa.js, PostgreSQL, AWS",
+      `Technologies: ${TechStack.TYPESCRIPT}, ${TechStack.NEXT_JS}, ${TechStack.TAILWIND_CSS}, ${TechStack.TYPEORM}, ${TechStack.KOA_JS}, ${TechStack.POSTGRESQL}, ${TechStack.AMAZON_WEB_SERVICES}`,
     ],
   },
   {
@@ -33,7 +26,7 @@ export const internships: internships[] = [
     achievements: [
       "Developed responsive webpages across different devices and screen sizes.",
       "Developed comprehensive unit test cases using Jest to ensure code quality and identify potential issues early in the development cycle.",
-      "Technologies: Vue.js, Jest, JavaScript, Docker, GitLab",
+      `Technologies: ${TechStack.VUE_JS}, ${TechStack.JAVASCRIPT}, ${TechStack.JEST}, ${TechStack.DOCKER}`,
     ],
   },
 ];
