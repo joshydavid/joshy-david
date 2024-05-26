@@ -1,6 +1,6 @@
 export enum DeploymentStatus {
-  IN_PROGRESS = "IN_PROGRESS",
   DEPLOYED = "DEPLOYED",
+  IN_PROGRESS = "IN_PROGRESS",
   NOT_DEPLOYED = "NOT_DEPLOYED",
 }
 
@@ -12,26 +12,28 @@ export enum ProjectTag {
 }
 
 export enum TechStack {
-  TYPESCRIPT = "TypeScript",
-  JAVASCRIPT = "JavaScript",
-  JEST = "Jest",
-  DOCKER = "Docker",
-  REACT = "React",
-  NEXT_JS = "Next.js",
-  VUE_JS = "Vue.js",
-  TAILWIND_CSS = "Tailwind CSS",
-  SHADCN_UI = "Shadcn UI",
-  EXPRESS_JS = "Express.js",
-  KOA_JS = "Koa.js",
-  TYPEORM = "TypeORM",
-  POSTGRESQL = "PostgreSQL",
-  MONGODB = "MongoDB",
-  OPENAI = "Open AI",
-  RABBITMQ = "RabbitMQ",
-  FLASK = "Flask",
-  VERCEL = "Vercel",
-  SUPABASE = "Supabase",
   AMAZON_WEB_SERVICES = "Amazon Web Services",
+  DOCKER = "Docker",
+  EXPRESS_JS = "Express.js",
+  FLASK = "Flask",
+  JAVASCRIPT = "JavaScript",
+  JAVA = "Java",
+  JEST = "Jest",
+  KOA_JS = "Koa.js",
+  MONGODB = "MongoDB",
+  NEXT_JS = "Next.js",
+  OPENAI = "Open AI",
+  POSTGRESQL = "PostgreSQL",
+  PYTHON = "Python",
+  RABBITMQ = "RabbitMQ",
+  REACT = "React",
+  SHADCN_UI = "Shadcn UI",
+  SUPABASE = "Supabase",
+  TAILWIND_CSS = "Tailwind CSS",
+  TYPEORM = "TypeORM",
+  TYPESCRIPT = "TypeScript",
+  VERCEL = "Vercel",
+  VUE_JS = "Vue.js",
 }
 
 export interface ProjectType {
