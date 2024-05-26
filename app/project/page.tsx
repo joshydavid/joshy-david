@@ -1,7 +1,8 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { ProjectType, projects } from "@/data";
+import { projects } from "@/data";
+import { ProjectType } from "@/models/projects";
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
