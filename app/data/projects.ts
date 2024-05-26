@@ -1,4 +1,9 @@
-import { DeploymentStatus } from "@/helpers/deploymentStatus";
+import {
+  DeploymentStatus,
+  ProjectTag,
+  ProjectType,
+  TechStack,
+} from "@/models/projects";
 import BookLah from "@/public/projects/BookLah.png";
 import ShortenSG from "@/public/projects/ShortenSG.png";
 import Client from "@/public/projects/client.png";
@@ -9,31 +14,21 @@ import Sayless from "@/public/projects/sayless-ecosystem.png";
 import Sayocode from "@/public/projects/sayocode.png";
 import Sparks from "@/public/projects/sparks.png";
 
-export type ProjectType = {
-  id: number;
-  slug: string;
-  name: any;
-  description: string;
-  achievements?: string[];
-  detailedImage?: any;
-  tags: any[];
-  icon: any;
-  gitHub?: string;
-  techStack: string[];
-  deploymentStatus: DeploymentStatus;
-  deployedLink?: any;
-};
-
 export const projects: ProjectType[] = [
   {
     id: 1,
     name: "Project Sayocode",
     slug: "sayocode",
     description: "Web builder that automates the process of app creation",
-    tags: [2019, "School Project"],
+    tags: [2019, ProjectTag.SCHOOL_PROJECT],
     icon: Sayocode,
     gitHub: "https://github.com/joshuadavidang/",
-    techStack: ["React", "Express.js", "MongoDB", "Bootstrap"],
+    techStack: [
+      TechStack.REACT,
+      TechStack.EXPRESS_JS,
+      TechStack.MONGODB,
+      "Bootstrap",
+    ],
     deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
   },
   {
@@ -42,10 +37,15 @@ export const projects: ProjectType[] = [
     slug: "portfolio",
     description:
       "Designed and developed a responsive coding portfolio, built on top of Next.js & Tailwind CSS, deployed to Vercel.",
-    tags: [2022, "Personal Project", "Legacy"],
+    tags: [2022, ProjectTag.PERSONAL_PROJECT, ProjectTag.LEGACY],
     icon: LegacyCodingPortfolio,
     gitHub: "https://github.com/joshuadavidang/joshua-david",
-    techStack: ["Next.js", "Tailwind CSS", "Vercel", "Supabase", "GitHub"],
+    techStack: [
+      TechStack.TYPESCRIPT,
+      TechStack.NEXT_JS,
+      TechStack.TAILWIND_CSS,
+      TechStack.SUPABASE,
+    ],
     deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://legacy.joshuadavid.dev",
   },
@@ -54,10 +54,16 @@ export const projects: ProjectType[] = [
     name: "Custom Web App",
     slug: "cwa",
     description: "Developed a custom personal brand web app for clients.",
-    tags: [2023, "Personal Project"],
+    tags: [2023, ProjectTag.PERSONAL_PROJECT],
     icon: Client,
     gitHub: "https://celineongjw.com",
-    techStack: ["Next.js", "Tailwind CSS", "Vercel", "Supabase", "GitHub"],
+    techStack: [
+      TechStack.TYPESCRIPT,
+      TechStack.NEXT_JS,
+      TechStack.TAILWIND_CSS,
+      TechStack.VERCEL,
+      TechStack.SUPABASE,
+    ],
     deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://celineongjw.com",
   },
@@ -68,18 +74,17 @@ export const projects: ProjectType[] = [
     description:
       "A gamified web app connecting people to share excess food. Upload receipts to add items to inventory or complete quests to earn vouchers.",
     achievements: ["Grade: A+"],
-    tags: [2023, "School Project"],
+    tags: [2023, ProjectTag.SCHOOL_PROJECT],
     icon: Sayless,
     gitHub: "https://github.com/SMU-IS/SayLess",
     techStack: [
-      "Vue.js",
-      "Express.js",
-      "Tailwind CSS",
+      TechStack.VUE_JS,
+      TechStack.EXPRESS_JS,
+      TechStack.TAILWIND_CSS,
+      TechStack.MONGODB,
       "DaisyUI",
       "OCR API",
       "Firebase API",
-      "MongoDB",
-      "GitHub",
     ],
     deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://sayless.space",
@@ -90,18 +95,17 @@ export const projects: ProjectType[] = [
     slug: "portfolio-v2",
     description:
       "Version 2.0 - Redesigned and redeveloped an updated version of my coding portfolio, built on top of Next.js 14.0, Tailwind CSS, Shadcn deployed to Vercel.",
-    tags: [2024, "Personal Project"],
+    tags: [2024, ProjectTag.PERSONAL_PROJECT],
     icon: CodingPortfolio,
     detailedImage: CodingPortfolioAll,
     gitHub: "https://github.com/joshuadavidang/joshuadavid",
     techStack: [
-      "Next.js",
-      "Tailwind CSS",
-      "Vercel",
-      "Supabase",
-      "GitHub",
-      "Shadcn UI",
-      "Framer",
+      TechStack.TYPESCRIPT,
+      TechStack.NEXT_JS,
+      TechStack.TAILWIND_CSS,
+      TechStack.SHADCN_UI,
+      TechStack.VERCEL,
+      TechStack.SUPABASE,
     ],
     deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://joshuadavid.dev",
@@ -112,18 +116,18 @@ export const projects: ProjectType[] = [
     slug: "shortensg",
     description:
       "Full-stack URL shortener web app, designed to transform long URLs into neat and shareable links.",
-    tags: [2024, "GovTech Internship Project"],
+    tags: [2024, ProjectTag.PERSONAL_PROJECT],
     icon: ShortenSG,
     gitHub: "https://github.com/joshuadavidang/ShortenSG",
     techStack: [
-      "TypeScript",
-      "Next.js",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "Koa.js",
-      "TypeORM",
-      "PostgreSQL",
-      "Vercel",
+      TechStack.TYPESCRIPT,
+      TechStack.NEXT_JS,
+      TechStack.TAILWIND_CSS,
+      TechStack.SHADCN_UI,
+      TechStack.KOA_JS,
+      TechStack.TYPEORM,
+      TechStack.POSTGRESQL,
+      TechStack.VERCEL,
     ],
     deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
   },
@@ -134,19 +138,19 @@ export const projects: ProjectType[] = [
     description:
       "Full-stack concert booking web app, utilising Microservice architecture.",
     achievements: ["Grade: A"],
-    tags: [2024, "School Project"],
+    tags: [2024, ProjectTag.SCHOOL_PROJECT],
     icon: BookLah,
     gitHub: "https://github.com/joshuadavidang/BookLah",
     techStack: [
-      "TypeScript",
-      "Next.js",
-      "Flask",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "Koa.js",
-      "TypeORM",
-      "PostgreSQL",
-      "RabbitMQ",
+      TechStack.TYPESCRIPT,
+      TechStack.NEXT_JS,
+      TechStack.TAILWIND_CSS,
+      TechStack.SHADCN_UI,
+      TechStack.FLASK,
+      TechStack.KOA_JS,
+      TechStack.TYPEORM,
+      TechStack.POSTGRESQL,
+      TechStack.RABBITMQ,
     ],
     deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
   },
@@ -161,17 +165,17 @@ export const projects: ProjectType[] = [
       "Collaborated with 2 software engineers and 1 UX designer to develop and launch Sparks within 2 months.",
       "Presented Sparks to public officers from the Ministry of Culture, Community and Youth (MCCY) at a tech showcase held at GovTech Hive office.",
     ],
-    tags: [2024, "GovTech Internship Project"],
+    tags: [2024, ProjectTag.GOVTECH_INTERNSHIP_PROJECT],
     icon: Sparks,
     techStack: [
-      "TypeScript",
-      "Next.js",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "Koa.js",
-      "TypeORM",
-      "PostgreSQL",
-      "Open AI",
+      TechStack.TYPESCRIPT,
+      TechStack.NEXT_JS,
+      TechStack.TAILWIND_CSS,
+      TechStack.SHADCN_UI,
+      TechStack.KOA_JS,
+      TechStack.TYPEORM,
+      TechStack.POSTGRESQL,
+      TechStack.OPENAI,
     ],
     deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://sparks.crowdtask.gov.sg",
