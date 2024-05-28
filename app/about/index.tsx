@@ -33,32 +33,34 @@ export default function About() {
         </div>
       </div>
 
-      <h4 className="leading-relaxed">
-        Hey I'm Joshua! I enjoy back-end development, with a strong interest in
-        building complex and large-scale systems. Outside of work, I enjoy
-        working out at the gym and going for a quick run around the city.
-      </h4>
+      <div className="flex flex-col gap-4">
+        <h4 className="leading-relaxed">
+          Hey I'm Joshua! I enjoy back-end development, with a strong interest
+          in building complex and large-scale systems. Outside of work, I enjoy
+          working out at the gym and going for a quick run around the city.
+        </h4>
 
-      <div className="flex flex-row gap-4">
-        {urls.map(({ label, isPDF, path }) => (
-          <span
-            className="flex items-center gap-1 text-sm cursor-pointer dark:text-lightGray hover:text-gray dark:hover:text-white"
-            key={label}
-          >
-            <ArrowTopRightIcon className="w-5 h-5" />
-            {!isPDF ? (
-              <Link key={label} href={path} target="_blank">
-                {label}
-              </Link>
-            ) : (
-              <span>
-                <a download href={path}>
+        <div className="flex flex-row gap-4">
+          {urls.map(({ label, isPDF, path }) => (
+            <div
+              className="flex items-center gap-1 text-sm cursor-pointer dark:text-lightGray hover:text-gray dark:hover:text-white"
+              key={label}
+            >
+              <ArrowTopRightIcon className="w-5 h-5" />
+              {!isPDF ? (
+                <Link key={label} href={path} target="_blank">
                   {label}
-                </a>
-              </span>
-            )}
-          </span>
-        ))}
+                </Link>
+              ) : (
+                <span>
+                  <a download href={path}>
+                    {label}
+                  </a>
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="flex flex-col gap-4">
