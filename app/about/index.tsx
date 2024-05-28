@@ -28,10 +28,8 @@ export default function About() {
 
         <div className="flex flex-col gap-1.5 mt-8">
           <h1>{NAME}</h1>
-          <h4>
-            Information Systems Penultimate @ Singapore Management University
-          </h4>
-          <h4>Aspiring Software Engineer</h4>
+          <h4>Junior @ Singapore Management University</h4>
+          <h4>Software Engineer</h4>
         </div>
       </div>
 
@@ -63,7 +61,7 @@ export default function About() {
         ))}
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
         <h1>Currently</h1>
         {internships
           .slice(0, 1)

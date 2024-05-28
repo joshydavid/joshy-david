@@ -41,7 +41,7 @@ export default function ProjectData() {
     <div className="flex flex-col gap-5 w-screen md:w-11/12">
       <div className="flex gap-1 text-sm">
         <p
-          className="hover:underline cursor-pointer"
+          className="hover:underline underline-offset-4 cursor-pointer"
           onClick={() => router.back()}
         >
           Project
