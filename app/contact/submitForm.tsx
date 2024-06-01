@@ -7,7 +7,7 @@ export default function SubmitForm() {
   return (
     <Button variant="secondary" size="lg">
       {pending ? (
-        <DotsHorizontalIcon className="w-9 h-9 animate-pulse" />
+        <DotsHorizontalIcon className="h-9 w-9 animate-pulse" />
       ) : (
         "Send"
       )}
