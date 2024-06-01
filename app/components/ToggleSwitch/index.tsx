@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
 import { Switch } from "@/components/ui/switch";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function ToggleSwitch() {
   const [mounted, setMounted] = useState(false);

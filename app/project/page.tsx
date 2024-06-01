@@ -23,11 +23,11 @@ export default function Project() {
       {sortedProjects.map(({ id, slug, name, icon, tags }: ProjectType) => {
         return (
           <Link href={`/project/${slug}`} key={id}>
-            <div className="flex flex-col md:flex-row md:items-center items-start gap-8 mb-12 md:mb-3 cursor-pointer dark:bg-black dark:text-white rounded-xl hover:opacity-90">
+            <div className="mb-12 flex cursor-pointer flex-col items-start gap-8 rounded-xl hover:opacity-90 dark:bg-black dark:text-white md:mb-3 md:flex-row md:items-center">
               <Image
                 src={icon}
                 alt={name}
-                className="bg-lightGray dark:bg-gray rounded-xl p-5 md:w-1/3 w-screen"
+                className="w-screen rounded-xl bg-lightGray p-5 dark:bg-gray md:w-1/3"
                 priority
               />
 

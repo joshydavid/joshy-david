@@ -3,7 +3,7 @@ import { supabase } from "../../superbase";
 function validateDetails(
   name: string,
   email: string,
-  message: string
+  message: string,
 ): boolean {
   if (name === "" || email === "" || message === "") {
     return false;
@@ -15,7 +15,7 @@ async function addFormToDB(
   uuid: string,
   name: string,
   email: string,
-  message: string
+  message: string,
 ): Promise<boolean> {
   const result = await supabase.from("form").insert({
     uuid: uuid,
@@ -29,4 +29,4 @@ async function addFormToDB(
   return error === null;
 }
 
-export { validateDetails, addFormToDB };
+export { addFormToDB, validateDetails };

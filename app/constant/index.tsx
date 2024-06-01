@@ -1,2 +1,5 @@
-export const NAME: string = "Joshua David";
-export const POSITION: string = "Software Engineer";
+export const NAME = "Joshua David";
+export const POSITION = "Software Engineer";
+export const RESUME_URL = "/Joshua_David.pdf";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/joshuadavidang/";
+export const GITHUB_URL = "https://github.com/joshuadavidang";
