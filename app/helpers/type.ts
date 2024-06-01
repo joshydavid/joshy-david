@@ -6,4 +6,4 @@ type KeyDownEvent = React.KeyboardEventHandler<
 >;
 type ClickHandler = React.MouseEventHandler<HTMLButtonElement>;
 
-export type { ChangeEvent, KeyDownEvent, ClickHandler };
+export type { ChangeEvent, ClickHandler, KeyDownEvent };

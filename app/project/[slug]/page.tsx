@@ -38,16 +38,16 @@ export default function ProjectData() {
     achievements?.length === 1 ? "Achievement" : "Achievements";
 
   return (
-    <div className="flex flex-col gap-5 w-screen md:w-11/12">
+    <div className="flex w-screen flex-col gap-5 md:w-11/12">
       <div className="flex gap-1 text-sm">
         <p
-          className="hover:underline underline-offset-4 cursor-pointer"
+          className="cursor-pointer underline-offset-4 hover:underline"
           onClick={() => router.back()}
         >
           Project
         </p>
         <p>
-          <CaretRightIcon className="w-5 h-5 text-slate-400" />
+          <CaretRightIcon className="h-5 w-5 text-slate-400" />
         </p>
         <p>{name}</p>
       </div>
@@ -65,7 +65,7 @@ export default function ProjectData() {
           />
         </div>
 
-        <div className="flex flex-col gap-4 mt-4">
+        <div className="mt-4 flex flex-col gap-4">
           <h1>
             {name} ({tags[0]})
           </h1>
@@ -78,7 +78,7 @@ export default function ProjectData() {
             <ul
               className={cn(
                 "flex flex-col gap-1.5 text-sm",
-                achievements.length > 1 && "list-disc pl-5"
+                achievements.length > 1 && "list-disc pl-5",
               )}
             >
               {achievements.map((achievement, index) => (
@@ -90,7 +90,7 @@ export default function ProjectData() {
 
         <div className="flex flex-col gap-4">
           <h1>Tech Stack</h1>
-          <div className="flex flex-wrap items-center gap-2 w-full">
+          <div className="flex w-full flex-wrap items-center gap-2">
             {techStack?.map((tech: string, index: number) => (
               <Button
                 variant="secondary"
@@ -111,7 +111,7 @@ export default function ProjectData() {
               <Link href={gitHub} target="_blank">
                 <Button variant="secondary">
                   <span className="flex items-center gap-3">
-                    <FaGithub className="w-4 h-4" /> GitHub
+                    <FaGithub className="h-4 w-4" /> GitHub
                   </span>
                 </Button>
               </Link>
@@ -121,7 +121,7 @@ export default function ProjectData() {
               <Link href={deployedLink} target="_blank">
                 <Button variant="secondary">
                   <span className="flex items-center gap-2">
-                    <TbExternalLink className="w-4 h-4" /> Demo
+                    <TbExternalLink className="h-4 w-4" /> Demo
                   </span>
                 </Button>
               </Link>
@@ -131,7 +131,7 @@ export default function ProjectData() {
 
         <div className="flex flex-col gap-4">
           <h1>Tags</h1>
-          <div className="flex flex-wrap items-center gap-2 w-full">
+          <div className="flex w-full flex-wrap items-center gap-2">
             {tags?.map((tag, index) => (
               <Button
                 variant="secondary"

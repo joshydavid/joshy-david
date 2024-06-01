@@ -1,14 +1,14 @@
 "use client";
 
-import Link from "next/link";
-import ToggleSwitch from "../ToggleSwitch";
-import { navLinks } from "@/data";
+import ToggleSwitch from "@/components/ToggleSwitch";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { navLinks } from "@/data";
+import Link from "next/link";
 
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 

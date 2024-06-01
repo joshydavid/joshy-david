@@ -1,23 +1,25 @@
-type urls = {
+import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "@/constant";
+
+export type UrlsType = {
   label: string;
   isPDF: boolean;
   path: string;
 };
 
-export const urls: urls[] = [
+export const urls: UrlsType[] = [
   {
     label: "Resume",
     isPDF: true,
-    path: "/Joshua_David.pdf",
+    path: RESUME_URL,
   },
   {
     label: "LinkedIn",
     isPDF: false,
-    path: "https://www.linkedin.com/in/joshuadavidang/",
+    path: LINKEDIN_URL,
   },
   {
     label: "GitHub",
     isPDF: false,
-    path: "https://github.com/joshuadavidang",
+    path: GITHUB_URL,
   },
 ];

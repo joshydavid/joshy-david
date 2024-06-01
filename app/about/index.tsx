@@ -10,8 +10,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { NAME } from "@/constant";
-import { internships, urls } from "@/data";
+import { NAME, POSITION } from "@/constant";
+import { UrlsType, internships, urls } from "@/data";
 import Project from "@/project/page";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
@@ -26,10 +26,10 @@ export default function About() {
           <AvatarFallback>Joshua</AvatarFallback>
         </Avatar>
 
-        <div className="flex flex-col gap-1.5 mt-8">
+        <div className="mt-8 flex flex-col gap-1.5">
           <h1>{NAME}</h1>
           <h4>Junior @ Singapore Management University</h4>
-          <h4>Software Engineer</h4>
+          <h4>{POSITION}</h4>
         </div>
       </div>
 
@@ -41,12 +41,12 @@ export default function About() {
         </h4>
 
         <div className="flex flex-row gap-4">
-          {urls.map(({ label, isPDF, path }) => (
+          {urls.map(({ label, isPDF, path }: UrlsType) => (
             <div
-              className="flex items-center gap-1 text-sm cursor-pointer dark:text-lightGray hover:text-gray dark:hover:text-white"
+              className="flex cursor-pointer items-center gap-1 text-sm hover:text-gray dark:text-lightGray dark:hover:text-white"
               key={label}
             >
-              <ArrowTopRightIcon className="w-5 h-5" />
+              <ArrowTopRightIcon className="h-5 w-5" />
               {!isPDF ? (
                 <Link key={label} href={path} target="_blank">
                   {label}
@@ -69,7 +69,7 @@ export default function About() {
           .slice(0, 1)
           .map(({ company, position, timeline, icon, achievements }) => (
             <Dialog key={company}>
-              <DialogTrigger className="flex flex-row gap-7 cursor-pointer hover:opacity-90 text-left">
+              <DialogTrigger className="flex cursor-pointer flex-row gap-7 text-left hover:opacity-90">
                 <div className="flex flex-col gap-1.5">
                   <div className="flex items-center gap-2">
                     <Ping />
@@ -84,7 +84,7 @@ export default function About() {
               <DialogContent>
                 <DialogHeader>
                   <DialogTitle>
-                    <div className="flex gap-5 items-center justify-center pb-5">
+                    <div className="flex items-center justify-center gap-5 pb-5">
                       <Image src={icon} width={50} height={50} alt={company} />
                       {company}
                     </div>
@@ -106,7 +106,7 @@ export default function About() {
           .slice(1, internships.length)
           .map(({ company, position, timeline, icon, achievements }) => (
             <Dialog key={company}>
-              <DialogTrigger className="flex flex-row gap-7 cursor-pointer hover:opacity-90 text-left">
+              <DialogTrigger className="flex cursor-pointer flex-row gap-7 text-left hover:opacity-90">
                 <div className="flex flex-col gap-1.5">
                   <h4>
                     {position} @ {company}
@@ -118,7 +118,7 @@ export default function About() {
               <DialogContent>
                 <DialogHeader>
                   <DialogTitle>
-                    <div className="flex gap-5 items-center justify-center pb-5">
+                    <div className="flex items-center justify-center gap-5 pb-5">
                       <Image
                         src={icon}
                         width={50}
@@ -141,7 +141,6 @@ export default function About() {
             </Dialog>
           ))}
       </div>
-
       <Project />
     </div>
   );
