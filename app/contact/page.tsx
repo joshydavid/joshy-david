@@ -28,7 +28,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col gap-5 w-screen md:w-11/12">
+    <div className="flex w-screen flex-col gap-5 md:w-11/12">
       <h1>Contact</h1>
       <h4>Let's Chat.</h4>
 

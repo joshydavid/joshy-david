@@ -14,12 +14,12 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 export default function Dropdown() {
   return (
-    <div className="flex justify-end items-center gap-7 w-full md:hidden pt-8 pr-8">
+    <div className="flex w-full items-center justify-end gap-7 pr-8 pt-8 md:hidden">
       <ToggleSwitch />
 
       <DropdownMenu>
         <DropdownMenuTrigger>
-          <HamburgerMenuIcon className="w-6 h-6" />
+          <HamburgerMenuIcon className="h-6 w-6" />
         </DropdownMenuTrigger>
 
         <DropdownMenuContent>
