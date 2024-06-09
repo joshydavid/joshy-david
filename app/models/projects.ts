@@ -22,6 +22,7 @@ export enum TechStack {
   KOA_JS = "Koa.js",
   MONGODB = "MongoDB",
   NEXT_JS = "Next.js",
+  NEST_JS = "Nest.js",
   OPENAI = "Open AI",
   POSTGRESQL = "PostgreSQL",
   PYTHON = "Python",
