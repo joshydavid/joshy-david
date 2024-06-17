@@ -1,14 +1,14 @@
 ## Coding Portfolio
 
-![Issue](https://img.shields.io/github/issues/joshuadavidang/joshua-david)
-![Pull Request](https://img.shields.io/github/issues-pr/joshuadavidang/joshua-david)
-![Release Badge](https://img.shields.io/github/v/release/joshuadavidang/joshua-david)
-<img src="https://github.com/joshuadavidang/joshua-david/assets/54788382/d62d2a96-b32f-4148-908b-7019a409d679" alt="portfolio" width="600" />
+![Issue](https://img.shields.io/github/issues/joshydavid/joshua-david)
+![Pull Request](https://img.shields.io/github/issues-pr/joshydavid/joshua-david)
+![Release Badge](https://img.shields.io/github/v/release/joshydavid/joshua-david)
+<img src="https://github.com/joshydavid/joshua-david/assets/54788382/d62d2a96-b32f-4148-908b-7019a409d679" alt="portfolio" width="600" />
 <br />
 <br />
 
 - [View Project](https://joshuadavid.dev)
-- [Report Bug](https://github.com/joshuadavidang/joshua-david/issues/new/choose)
+- [Report Bug](https://github.com/joshydavid/joshua-david/issues/new/choose)
 
 ## Tech Stack
 
@@ -24,7 +24,7 @@
 1. Clone the project
 
    ```
-   git clone https://github.com/joshuadavidang/joshua-david.git
+   git clone https://github.com/joshydavid/joshua-david.git
    ```
 
 2. Install dependencies
