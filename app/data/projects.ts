@@ -22,7 +22,7 @@ export const projects: ProjectType[] = [
     description: "Web builder that automates the process of app creation",
     tags: [2019, ProjectTag.SCHOOL_PROJECT],
     icon: Sayocode,
-    gitHub: "https://github.com/joshuadavidang/",
+    gitHub: "https://github.com/joshydavid/",
     techStack: [
       TechStack.REACT,
       TechStack.EXPRESS_JS,
@@ -39,7 +39,7 @@ export const projects: ProjectType[] = [
       "Designed and developed a responsive coding portfolio, built on top of Next.js & Tailwind CSS, deployed to Vercel.",
     tags: [2022, ProjectTag.PERSONAL_PROJECT, ProjectTag.LEGACY],
     icon: LegacyCodingPortfolio,
-    gitHub: "https://github.com/joshuadavidang/joshua-david",
+    gitHub: "https://github.com/joshydavid/joshua-david",
     techStack: [
       TechStack.TYPESCRIPT,
       TechStack.NEXT_JS,
@@ -98,7 +98,7 @@ export const projects: ProjectType[] = [
     tags: [2024, ProjectTag.PERSONAL_PROJECT],
     icon: CodingPortfolio,
     detailedImage: CodingPortfolioAll,
-    gitHub: "https://github.com/joshuadavidang/joshuadavid",
+    gitHub: "https://github.com/joshydavid/joshuadavid",
     techStack: [
       TechStack.TYPESCRIPT,
       TechStack.NEXT_JS,
@@ -118,7 +118,7 @@ export const projects: ProjectType[] = [
       "Full-stack URL shortener web app, designed to transform long URLs into neat and shareable links.",
     tags: [2024, ProjectTag.PERSONAL_PROJECT],
     icon: ShortenSG,
-    gitHub: "https://github.com/joshuadavidang/ShortenSG",
+    gitHub: "https://github.com/joshydavid/ShortenSG",
     techStack: [
       TechStack.TYPESCRIPT,
       TechStack.NEXT_JS,
@@ -140,7 +140,7 @@ export const projects: ProjectType[] = [
     achievements: ["Grade: A"],
     tags: [2024, ProjectTag.SCHOOL_PROJECT],
     icon: BookLah,
-    gitHub: "https://github.com/joshuadavidang/BookLah",
+    gitHub: "https://github.com/joshydavid/BookLah",
     techStack: [
       TechStack.TYPESCRIPT,
       TechStack.NEXT_JS,
