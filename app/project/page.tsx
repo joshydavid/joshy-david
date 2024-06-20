@@ -18,7 +18,7 @@ export default function Project() {
 
   return (
     <div className="flex flex-col gap-3">
-      <h1>Projects</h1>
+      <h1 className="underline underline-offset-[5px]">Projects</h1>
       <h4 className="mb-4">Projects I have done over the years.</h4>
       {sortedProjects.map(({ id, slug, name, icon, tags }: ProjectType) => {
         return (
