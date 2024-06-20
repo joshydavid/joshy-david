@@ -8,7 +8,7 @@ export const internships: Internships[] = [
     id: 1,
     company: "GovTech Singapore",
     position: "Software Engineer Intern",
-    timeline: "Jan 2024 - Present",
+    timeline: "Jan 2024 - Jul 2024",
     icon: GovTech,
     achievements: [
       "Government Digital Services (GDS) - CrowdTaskSG",
@@ -16,6 +16,7 @@ export const internships: Internships[] = [
       "Lead front-end engineer for Sparks portal.",
       `Technologies: ${TechStack.TYPESCRIPT}, ${TechStack.NEXT_JS}, ${TechStack.TAILWIND_CSS}, ${TechStack.TYPEORM}, ${TechStack.KOA_JS}, ${TechStack.POSTGRESQL}, ${TechStack.AMAZON_WEB_SERVICES}`,
     ],
+    completed: true,
   },
   {
     id: 2,
@@ -28,5 +29,6 @@ export const internships: Internships[] = [
       "Developed comprehensive unit test cases using Jest to ensure code quality and identify potential issues early in the development cycle.",
       `Technologies: ${TechStack.VUE_JS}, ${TechStack.JAVASCRIPT}, ${TechStack.JEST}, ${TechStack.DOCKER}`,
     ],
+    completed: true,
   },
 ];

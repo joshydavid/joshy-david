@@ -5,4 +5,5 @@ export interface Internships {
   timeline: string;
   icon: any;
   achievements: string[];
+  completed: boolean;
 }
