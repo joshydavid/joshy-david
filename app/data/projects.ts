@@ -186,7 +186,7 @@ export const projects: ProjectType[] = [
     name: "Scan",
     slug: "scan",
     description:
-      "One of the greenfield GovTech internship projects I've worked on, Sparks is a product recommender app that helps government agency users discover a suite of products built in-house.",
+      "Problem Statement - How might we improve this method of identifying healthier purchases so that HPB can reward individuals for making healthier choice purchases, regardless of where they shop?",
     achievements: [
       "Developed a minimum viable product in less than a week with another Software Engineer Intern.",
       "Pitched and presented solution to a panel of judges from GovTech & Health Promotion Board (HPB).",
