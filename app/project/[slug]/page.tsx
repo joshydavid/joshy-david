@@ -32,6 +32,7 @@ export default function ProjectData() {
     gitHub,
     deploymentStatus,
     deployedLink,
+    isMobile,
   } = project || {};
 
   const achievementLabel =
@@ -53,16 +54,8 @@ export default function ProjectData() {
       </div>
 
       <div className="flex flex-col gap-10">
-        <div className="flex flex-col">
-          <Image
-            alt={name}
-            src={detailedImage ? detailedImage : icon}
-            sizes="100vw"
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-          />
+        <div className={cn("flex flex-col", isMobile && "w-1/2")}>
+          <Image alt={name} src={detailedImage ? detailedImage : icon} />
         </div>
 
         <div className="mt-4 flex flex-col gap-4">

@@ -5,9 +5,10 @@ export enum DeploymentStatus {
 }
 
 export enum ProjectTag {
-  GOVTECH_INTERNSHIP_PROJECT = "GovTech Internship Project",
+  GOVTECH_PROJECT = "GovTech Project",
   SCHOOL_PROJECT = "School Project",
-  PERSONAL_PROJECT = "Personal Project",
+  PET_PROJECT = "Pet Project",
+  HACKATHON = "Hackathon",
   LEGACY = "Legacy",
 }
 
@@ -40,14 +41,15 @@ export enum TechStack {
 export interface ProjectType {
   id: number;
   slug: string;
-  name: any;
+  name: string;
   description: string;
   achievements?: string[];
   detailedImage?: any;
-  tags: any[];
+  tags: (string | number)[];
   icon: any;
   gitHub?: string;
   techStack: string[];
   deploymentStatus: DeploymentStatus;
   deployedLink?: any;
+  isMobile?: boolean;
 }
