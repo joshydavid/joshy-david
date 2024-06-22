@@ -12,6 +12,7 @@ import CodingPortfolioAll from "@/public/projects/portfolio-2.0-ecosystem.png";
 import CodingPortfolio from "@/public/projects/portfolio-2.0.png";
 import Sayless from "@/public/projects/sayless-ecosystem.png";
 import Sayocode from "@/public/projects/sayocode.png";
+import Scan from "@/public/projects/scan.png";
 import Sparks from "@/public/projects/sparks.png";
 
 export const projects: ProjectType[] = [
@@ -37,7 +38,7 @@ export const projects: ProjectType[] = [
     slug: "portfolio",
     description:
       "Designed and developed a responsive coding portfolio, built on top of Next.js & Tailwind CSS, deployed to Vercel.",
-    tags: [2022, ProjectTag.PERSONAL_PROJECT, ProjectTag.LEGACY],
+    tags: [2022, ProjectTag.PET_PROJECT, ProjectTag.LEGACY],
     icon: LegacyCodingPortfolio,
     gitHub: "https://github.com/joshydavid/joshua-david",
     techStack: [
@@ -54,7 +55,7 @@ export const projects: ProjectType[] = [
     name: "Custom Web App",
     slug: "cwa",
     description: "Developed a custom personal brand web app for clients.",
-    tags: [2023, ProjectTag.PERSONAL_PROJECT],
+    tags: [2023, ProjectTag.PET_PROJECT],
     icon: Client,
     gitHub: "https://celineongjw.com",
     techStack: [
@@ -95,7 +96,7 @@ export const projects: ProjectType[] = [
     slug: "portfolio-v2",
     description:
       "Version 2.0 - Redesigned and redeveloped an updated version of my coding portfolio, built on top of Next.js 14.0, Tailwind CSS, Shadcn deployed to Vercel.",
-    tags: [2024, ProjectTag.PERSONAL_PROJECT],
+    tags: [2024, ProjectTag.PET_PROJECT],
     icon: CodingPortfolio,
     detailedImage: CodingPortfolioAll,
     gitHub: "https://github.com/joshydavid/joshuadavid",
@@ -116,7 +117,7 @@ export const projects: ProjectType[] = [
     slug: "shortensg",
     description:
       "Full-stack URL shortener web app, designed to transform long URLs into neat and shareable links.",
-    tags: [2024, ProjectTag.PERSONAL_PROJECT],
+    tags: [2024, ProjectTag.PET_PROJECT],
     icon: ShortenSG,
     gitHub: "https://github.com/joshydavid/ShortenSG",
     techStack: [
@@ -165,7 +166,7 @@ export const projects: ProjectType[] = [
       "Collaborated with 2 software engineers and 1 UX designer to develop and launch Sparks within 2 months.",
       "Presented Sparks to public officers from the Ministry of Culture, Community and Youth (MCCY) at a tech showcase held at GovTech Hive office.",
     ],
-    tags: [2024, ProjectTag.GOVTECH_INTERNSHIP_PROJECT],
+    tags: [2024, ProjectTag.GOVTECH_PROJECT],
     icon: Sparks,
     techStack: [
       TechStack.TYPESCRIPT,
@@ -179,5 +180,31 @@ export const projects: ProjectType[] = [
     ],
     deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://sparks.crowdtask.gov.sg",
+  },
+  {
+    id: 9,
+    name: "Scan",
+    slug: "scan",
+    description:
+      "One of the greenfield GovTech internship projects I've worked on, Sparks is a product recommender app that helps government agency users discover a suite of products built in-house.",
+    achievements: [
+      "Developed a minimum viable product in less than a week with another Software Engineer Intern.",
+      "Pitched and presented solution to a panel of judges from GovTech & Health Promotion Board (HPB).",
+      "HPB expressed significant interest in adopting the solution.",
+    ],
+    tags: [2024, ProjectTag.GOVTECH_PROJECT, ProjectTag.HACKATHON],
+    icon: Scan,
+    techStack: [
+      TechStack.TYPESCRIPT,
+      TechStack.NEXT_JS,
+      TechStack.NEST_JS,
+      TechStack.TAILWIND_CSS,
+      TechStack.SHADCN_UI,
+      "Optical Character Recognition (OCR)",
+      "Vector Similarity Search",
+    ],
+    deploymentStatus: DeploymentStatus.DEPLOYED,
+    deployedLink: "https://gt-scan.vercel.app/login",
+    isMobile: true,
   },
 ];
