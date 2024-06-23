@@ -1,9 +1,9 @@
 import {
   DeploymentStatus,
+  Project,
   ProjectTag,
-  ProjectType,
   TechStack,
-} from "@/models/projects";
+} from "@/models/project";
 import BookLah from "@/public/projects/BookLah.png";
 import ShortenSG from "@/public/projects/ShortenSG.png";
 import Client from "@/public/projects/client.png";
@@ -15,7 +15,7 @@ import Sayocode from "@/public/projects/sayocode.png";
 import Scan from "@/public/projects/scan.png";
 import Sparks from "@/public/projects/sparks.png";
 
-export const projects: ProjectType[] = [
+export const projects: Project[] = [
   {
     id: 1,
     name: "Project Sayocode",

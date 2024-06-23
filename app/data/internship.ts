@@ -1,9 +1,9 @@
-import { Internships } from "@/models/internships";
-import { TechStack } from "@/models/projects";
+import { Internship } from "@/models/internship";
+import { TechStack } from "@/models/project";
 import GovTech from "@/public/companies/GovTech.png";
 import PigeonLab from "@/public/companies/PigeonLab.png";
 
-export const internships: Internships[] = [
+export const internships: Internship[] = [
   {
     id: 1,
     company: "GovTech Singapore",

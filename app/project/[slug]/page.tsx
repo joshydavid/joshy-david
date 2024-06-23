@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data";
 import { cn } from "@/lib/utils";
-import { DeploymentStatus, ProjectType } from "@/models/projects";
+import { DeploymentStatus } from "@/models/project";
 import { CaretRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,7 +17,7 @@ export default function ProjectData() {
   const path = usePathname();
   const data = path.split("/");
   const slug = data.slice(-1)[0];
-  const project: ProjectType = useMemo(() => {
+  const project = useMemo(() => {
     return projects.find((project) => project.slug === slug)!;
   }, [slug]);
 

@@ -1,4 +1,4 @@
-export interface Internships {
+export interface Internship {
   id: number;
   company: string;
   position: string;
