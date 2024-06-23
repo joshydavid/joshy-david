@@ -38,7 +38,7 @@ export enum TechStack {
   VUE_JS = "Vue.js",
 }
 
-export interface ProjectType {
+export interface Project {
   id: number;
   slug: string;
   name: string;

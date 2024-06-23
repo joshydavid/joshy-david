@@ -3,13 +3,13 @@
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data";
 import { cn } from "@/lib/utils";
-import { ProjectType } from "@/models/projects";
+import { Project as ProjectModel } from "@/models/project";
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
 
 export default function Project() {
-  const sortProjects = (data: ProjectType[]) => {
+  const sortProjects = (data: ProjectModel[]) => {
     return data.sort((a: any, b: any) => b.id - a.id);
   };
 
@@ -22,7 +22,7 @@ export default function Project() {
       <h1 className="underline underline-offset-[5px]">Projects</h1>
       <h4 className="mb-4">Projects I have done over the years.</h4>
       {sortedProjects.map(
-        ({ id, slug, name, icon, tags, isMobile }: ProjectType) => {
+        ({ id, slug, name, icon, tags, isMobile }: ProjectModel) => {
           return (
             <Link href={`/project/${slug}`} key={id}>
               <div className="mb-12 flex cursor-pointer flex-col items-start gap-8 rounded-xl hover:opacity-90 dark:bg-black dark:text-white md:mb-3 md:flex-row md:items-center">

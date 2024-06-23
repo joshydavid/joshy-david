@@ -11,7 +11,9 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { NAME, POSITION } from "@/constant";
-import { UrlsType, internships, urls } from "@/data";
+import { internships, urls } from "@/data";
+import { Internship } from "@/models/internship";
+import { Url } from "@/models/url";
 import Project from "@/project/page";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
@@ -47,7 +49,7 @@ export default function About() {
           </h4>
 
           <div className="flex flex-row gap-4">
-            {urls.map(({ label, isPDF, path }: UrlsType) => (
+            {urls.map(({ label, isPDF, path }: Url) => (
               <div
                 className="flex cursor-pointer items-center gap-1 text-sm hover:text-gray dark:text-lightGray dark:hover:text-white"
                 key={label}
@@ -80,7 +82,14 @@ export default function About() {
           </div>
         )}
         {internships.map(
-          ({ company, position, timeline, icon, achievements, completed }) => {
+          ({
+            company,
+            position,
+            timeline,
+            icon,
+            achievements,
+            completed,
+          }: Internship) => {
             return (
               !completed && (
                 <Dialog key={company}>

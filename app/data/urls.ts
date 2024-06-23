@@ -1,12 +1,7 @@
 import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "@/constant";
+import { Url } from "@/models/url";
 
-export type UrlsType = {
-  label: string;
-  isPDF: boolean;
-  path: string;
-};
-
-export const urls: UrlsType[] = [
+export const urls: Url[] = [
   {
     label: "Resume",
     isPDF: true,

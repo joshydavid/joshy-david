@@ -1,9 +1,6 @@
-type navLinks = {
-  label: string;
-  path: string;
-};
+import { navLink } from "@/models/navLink";
 
-export const navLinks: navLinks[] = [
+export const navLinks: navLink[] = [
   {
     label: "About",
     path: "/",
