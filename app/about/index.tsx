@@ -104,11 +104,9 @@ export default function About() {
                           alt={company}
                         />
                       </div>
-                      <div className="flex flex-col gap-1.5">
+                      <div className="flex flex-col gap-1">
                         {company}
-                        <h4>
-                          {position} @ {company}
-                        </h4>
+                        <h4>{position}</h4>
                         <h4 className="dark:text-lightGray">{timeline}</h4>
                       </div>
                     </div>
