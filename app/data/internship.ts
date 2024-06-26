@@ -3,6 +3,8 @@ import { TechStack } from "@/models/project";
 import GovTech from "@/public/companies/GovTech.png";
 import PigeonLab from "@/public/companies/PigeonLab.png";
 
+// TODO: Update icon
+
 export const internships: Internship[] = [
   {
     id: 1,
