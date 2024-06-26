@@ -14,7 +14,6 @@ import { NAME, POSITION } from "@/constant";
 import { internships, urls } from "@/data";
 import { mentorships } from "@/data/mentorship";
 import { sortData } from "@/lib/utils";
-import { Internship } from "@/models/internship";
 import { Url } from "@/models/url";
 import Project from "@/project/page";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
@@ -30,112 +29,46 @@ export default function About() {
     return (
       <div className="flex flex-col gap-3">
         <h1 className="mb-2 underline underline-offset-[5px]">Experience</h1>
-        <h2>Currently</h2>
-        {presentInternshipCount === 0 && (
-          <div className="flex items-center gap-2">
-            <Ping />
-            <h4>Looking for Summer Internship (May - Aug 2025)</h4>
-          </div>
-        )}
         {internships.map(
-          ({
-            company,
-            position,
-            timeline,
-            icon,
-            achievements,
-            completed,
-          }: Internship) => {
+          ({ company, position, timeline, icon, achievements }) => {
             return (
-              !completed && (
-                <Dialog key={company}>
-                  <DialogTrigger className="flex cursor-pointer flex-row gap-7 text-left hover:opacity-90">
-                    <div className="flex flex-col gap-1.5">
-                      <div className="flex items-center gap-2">
-                        <Ping />
-                        <h4>
-                          {position} @ {company}
-                        </h4>
-                      </div>
+              <Dialog key={company}>
+                <DialogTrigger className="mb-3 flex cursor-pointer text-left hover:opacity-90">
+                  <div className="flex items-center gap-6">
+                    <div>
+                      <Image src={icon} width={40} height={40} alt={company} />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      {company}
+                      <h4>{position}</h4>
                       <h4 className="dark:text-lightGray">{timeline}</h4>
                     </div>
-                  </DialogTrigger>
+                  </div>
+                </DialogTrigger>
 
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>
-                        <div className="flex items-center justify-center gap-5 pb-5">
-                          <Image
-                            src={icon}
-                            width={50}
-                            height={50}
-                            alt={company}
-                          />
-                          {company}
-                        </div>
-                      </DialogTitle>
-                      <DialogDescription>
-                        {achievements.map((achievement) => (
-                          <li key={achievement} className="py-1">
-                            {achievement}
-                          </li>
-                        ))}
-                      </DialogDescription>
-                    </DialogHeader>
-                  </DialogContent>
-                </Dialog>
-              )
-            );
-          },
-        )}
-        <h2 className="mb-1.5 mt-4">Previously</h2>
-        {internships.map(
-          ({ company, position, timeline, icon, achievements, completed }) => {
-            return (
-              completed && (
-                <Dialog key={company}>
-                  <DialogTrigger className="mb-3 flex cursor-pointer text-left hover:opacity-90">
-                    <div className="flex items-center gap-6">
-                      <div>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>
+                      <div className="flex items-center justify-center gap-5 pb-5">
                         <Image
                           src={icon}
-                          width={40}
-                          height={40}
+                          width={50}
+                          height={50}
                           alt={company}
                         />
-                      </div>
-                      <div className="flex flex-col gap-1">
                         {company}
-                        <h4>{position}</h4>
-                        <h4 className="dark:text-lightGray">{timeline}</h4>
                       </div>
-                    </div>
-                  </DialogTrigger>
-
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>
-                        <div className="flex items-center justify-center gap-5 pb-5">
-                          <Image
-                            src={icon}
-                            width={50}
-                            height={50}
-                            alt={company}
-                          />
-                          {company}
-                        </div>
-                      </DialogTitle>
-                      <DialogDescription>
-                        {achievements.map((achievement) => (
-                          <li key={achievement} className="py-1">
-                            {achievement}
-                          </li>
-                        ))}
-                      </DialogDescription>
-                    </DialogHeader>
-                  </DialogContent>
-                </Dialog>
-              )
+                    </DialogTitle>
+                    <DialogDescription>
+                      {achievements.map((achievement) => (
+                        <li key={achievement} className="py-1">
+                          {achievement}
+                        </li>
+                      ))}
+                    </DialogDescription>
+                  </DialogHeader>
+                </DialogContent>
+              </Dialog>
             );
           },
         )}
@@ -222,6 +155,12 @@ export default function About() {
             ))}
           </div>
         </div>
+        {presentInternshipCount === 0 && (
+          <div className="flex items-center gap-2">
+            <Ping />
+            <h4>Looking for Summer Internship (May - Aug 2025)</h4>
+          </div>
+        )}
       </div>
 
       {renderInternshipExperience()}
