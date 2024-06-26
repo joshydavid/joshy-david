@@ -2,19 +2,15 @@
 
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data";
-import { cn } from "@/lib/utils";
+import { cn, sortData } from "@/lib/utils";
 import { Project as ProjectModel } from "@/models/project";
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
 
 export default function Project() {
-  const sortProjects = (data: ProjectModel[]) => {
-    return data.sort((a: any, b: any) => b.id - a.id);
-  };
-
   const sortedProjects = useMemo(() => {
-    return sortProjects(projects.slice());
+    return sortData(projects.slice());
   }, []);
 
   return (

@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/dialog";
 import { NAME, POSITION } from "@/constant";
 import { internships, urls } from "@/data";
+import { mentorships } from "@/data/mentorship";
+import { sortData } from "@/lib/utils";
 import { Internship } from "@/models/internship";
 import { Url } from "@/models/url";
 import Project from "@/project/page";
@@ -27,7 +29,7 @@ export default function About() {
   const renderInternshipExperience = () => {
     return (
       <div className="flex flex-col gap-3">
-        <h1 className="underline underline-offset-[5px]">Experience</h1>
+        <h1 className="mb-2 underline underline-offset-[5px]">Experience</h1>
         <h2>Currently</h2>
         {presentInternshipCount === 0 && (
           <div className="flex items-center gap-2">
@@ -92,7 +94,7 @@ export default function About() {
             return (
               completed && (
                 <Dialog key={company}>
-                  <DialogTrigger className="flex cursor-pointer flex-row gap-7 text-left hover:opacity-90">
+                  <DialogTrigger className="mb-3 flex cursor-pointer text-left hover:opacity-90">
                     <div className="flex items-center gap-6">
                       <div>
                         <Image
@@ -136,6 +138,39 @@ export default function About() {
                   </DialogContent>
                 </Dialog>
               )
+            );
+          },
+        )}
+      </div>
+    );
+  };
+
+  const renderMentorshipExperience = () => {
+    const sortedMentorships = sortData(mentorships.slice());
+
+    return (
+      <div className="flex flex-col gap-3">
+        <h1 className="mb-2 underline underline-offset-[5px]">Others</h1>
+        {sortedMentorships.map(
+          ({ id, organisation, position, timeline, icon, link }) => {
+            return (
+              <Link href={link} target="_blank" key={id}>
+                <div className="mb-3 flex items-center gap-6 hover:opacity-90">
+                  <div>
+                    <Image
+                      src={icon}
+                      width={40}
+                      height={40}
+                      alt={organisation}
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    {organisation}
+                    <h4>{position}</h4>
+                    <h4 className="dark:text-lightGray">{timeline}</h4>
+                  </div>
+                </div>
+              </Link>
             );
           },
         )}
@@ -192,6 +227,7 @@ export default function About() {
       </div>
 
       {renderInternshipExperience()}
+      {renderMentorshipExperience()}
       <Project />
     </div>
   );
