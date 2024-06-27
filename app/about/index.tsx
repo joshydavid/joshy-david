@@ -26,10 +26,12 @@ export default function About() {
   ).length;
 
   const renderInternshipExperience = () => {
+    const sortedInternships = sortData(internships.slice());
+
     return (
       <div className="flex flex-col gap-3">
-        <h1 className="mb-2">Experience</h1>
-        {internships.map(
+        <h1 className="mb-1">Experience</h1>
+        {sortedInternships.map(
           ({ company, position, timeline, icon, achievements }) => {
             return (
               <Dialog key={company}>
@@ -38,7 +40,7 @@ export default function About() {
                     <div>
                       <Image src={icon} width={40} height={40} alt={company} />
                     </div>
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col gap-0.5">
                       {company}
                       <h4>{position}</h4>
                       <h4 className="dark:text-lightGray">{timeline}</h4>
@@ -81,7 +83,7 @@ export default function About() {
 
     return (
       <div className="flex flex-col gap-3">
-        <h1 className="mb-2">Others</h1>
+        <h1 className="mb-1">Others</h1>
         {sortedMentorships.map(
           ({ id, organisation, position, timeline, icon, link }) => {
             return (
@@ -95,7 +97,7 @@ export default function About() {
                       alt={organisation}
                     />
                   </div>
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-0.5">
                     {organisation}
                     <h4>{position}</h4>
                     <h4 className="dark:text-lightGray">{timeline}</h4>
@@ -127,10 +129,10 @@ export default function About() {
 
         <div className="flex flex-col gap-4">
           <h4 className="leading-relaxed">
-            Hey I'm Joshua! I enjoy back-end engineering, with a strong interest
-            in building complex and large-scale systems. Outside of work, I
-            enjoy working out at the gym and going for a quick run around the
-            city.
+            Hey, I'm Joshua! I enjoy back-end engineering, with a strong
+            interest in building complex and large-scale systems. Outside of
+            work, I enjoy working out at the gym and going for a quick run
+            around the city.
           </h4>
 
           <div className="flex flex-row gap-4">

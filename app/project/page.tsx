@@ -15,7 +15,7 @@ export default function Project() {
 
   return (
     <div className="flex flex-col gap-3">
-      <h1 className="mb-4">Projects</h1>
+      <h1 className="mb-2">Projects</h1>
       {sortedProjects.map(
         ({ id, slug, name, icon, tags, isMobile }: ProjectModel) => {
           return (
