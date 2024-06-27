@@ -28,7 +28,7 @@ export default function About() {
   const renderInternshipExperience = () => {
     return (
       <div className="flex flex-col gap-3">
-        <h1 className="mb-2 underline underline-offset-[5px]">Experience</h1>
+        <h1 className="mb-2">Experience</h1>
         {internships.map(
           ({ company, position, timeline, icon, achievements }) => {
             return (
@@ -81,7 +81,7 @@ export default function About() {
 
     return (
       <div className="flex flex-col gap-3">
-        <h1 className="mb-2 underline underline-offset-[5px]">Others</h1>
+        <h1 className="mb-2">Others</h1>
         {sortedMentorships.map(
           ({ id, organisation, position, timeline, icon, link }) => {
             return (
@@ -127,7 +127,7 @@ export default function About() {
 
         <div className="flex flex-col gap-4">
           <h4 className="leading-relaxed">
-            Hey I'm Joshua! I enjoy back-end development, with a strong interest
+            Hey I'm Joshua! I enjoy back-end engineering, with a strong interest
             in building complex and large-scale systems. Outside of work, I
             enjoy working out at the gym and going for a quick run around the
             city.
@@ -158,7 +158,7 @@ export default function About() {
         {presentInternshipCount === 0 && (
           <div className="flex items-center gap-2">
             <Ping />
-            <h4>Looking for Summer Internship (May - Aug 2025)</h4>
+            <h4>Looking for Summer Internship (2025)</h4>
           </div>
         )}
       </div>
