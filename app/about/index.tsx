@@ -30,7 +30,7 @@ export default function About() {
 
     return (
       <div className="flex flex-col gap-3">
-        <h1 className="mb-1">Experience</h1>
+        <h1>Experience</h1>
         {sortedInternships.map(
           ({ company, position, timeline, icon, achievements }) => {
             return (
@@ -83,7 +83,7 @@ export default function About() {
 
     return (
       <div className="flex flex-col gap-3">
-        <h1 className="mb-1">Others</h1>
+        <h1>Others</h1>
         {sortedMentorships.map(
           ({ id, organisation, position, timeline, icon, link }) => {
             return (
