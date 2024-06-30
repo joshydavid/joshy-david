@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { ThemeProvider } from "./ThemeProvider";
 import Navigation from "./components/Navigation";
-import ScrollToTop from "./components/ScrollToTop";
 import "./globals.css";
 
 const raleway = Raleway({
@@ -34,7 +33,6 @@ export default function RootLayout({ children }: ChildrenProps) {
     >
       <body className="bg-white dark:bg-black">
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <ScrollToTop />
           <Navigation />
           <div className="flex min-h-screen bg-white px-6 py-8 pb-24 text-black dark:bg-black dark:text-white md:mx-auto md:w-1/2 md:pt-12 lg:w-1/3">
             {children}

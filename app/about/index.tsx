@@ -10,7 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { NAME, POSITION } from "@/constant";
+import { HEADLINE, NAME, POSITION } from "@/constant";
 import { internships, urls } from "@/data";
 import { mentorships } from "@/data/mentorship";
 import { sortData } from "@/lib/utils";
@@ -62,7 +62,7 @@ export default function About() {
                       </div>
                     </DialogTitle>
                     <DialogDescription>
-                      {achievements.map((achievement) => (
+                      {achievements.map((achievement: string) => (
                         <li key={achievement} className="py-1">
                           {achievement}
                         </li>
@@ -160,11 +160,10 @@ export default function About() {
         {presentInternshipCount === 0 && (
           <div className="flex items-center gap-2">
             <Ping />
-            <h4>Looking for Summer Internship (2025)</h4>
+            <h4>{HEADLINE}</h4>
           </div>
         )}
       </div>
-
       {renderInternshipExperience()}
       {renderMentorshipExperience()}
       <Project />
