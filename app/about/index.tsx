@@ -22,7 +22,7 @@ import Link from "next/link";
 
 export default function About() {
   const presentInternshipCount = internships.filter(
-    (internship) => !internship.completed,
+    (internship) => !internship.isCompleted,
   ).length;
 
   const renderInternshipExperience = () => {
@@ -111,6 +111,8 @@ export default function About() {
     );
   };
 
+  const { position, company } = internships[internships.length - 1];
+
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-6">
@@ -129,7 +131,7 @@ export default function About() {
 
         <div className="flex flex-col gap-4">
           <h4 className="leading-relaxed">
-            Hey, I'm Joshua! I enjoy back-end engineering, with a strong
+            Hey, I'm Joshua! I enjoy back-end development, with a strong
             interest in building complex and large-scale systems. Outside of
             work, I enjoy working out at the gym and going for a quick run
             around the city.
@@ -157,12 +159,19 @@ export default function About() {
             ))}
           </div>
         </div>
-        {presentInternshipCount === 0 && (
-          <div className="flex items-center gap-2">
-            <Ping />
-            <h4>{HEADLINE}</h4>
-          </div>
-        )}
+
+        <div className="flex items-center gap-2">
+          <Ping />
+          <h4>
+            {presentInternshipCount === 0 ? (
+              <>{HEADLINE}</>
+            ) : (
+              <p>
+                {position} @ {company}
+              </p>
+            )}
+          </h4>
+        </div>
       </div>
       {renderInternshipExperience()}
       {renderMentorshipExperience()}
