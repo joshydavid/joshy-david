@@ -2,13 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data";
-import { cn } from "@/lib/utils";
+import { cn, scrollToTop } from "@/lib/utils";
 import { DeploymentStatus } from "@/models/project";
 import { CaretRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbExternalLink } from "react-icons/tb";
 
@@ -33,10 +33,11 @@ export default function ProjectData() {
     deploymentStatus,
     deployedLink,
     isMobile,
-  } = project || {};
+  } = project;
 
-  const achievementLabel =
-    achievements?.length === 1 ? "Achievement" : "Achievements";
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
     <div className="flex w-screen flex-col gap-5 md:w-11/12">
@@ -67,7 +68,9 @@ export default function ProjectData() {
 
         {achievements && (
           <div className="flex flex-col gap-4">
-            <h1>{achievementLabel}</h1>
+            <h1>
+              {achievements?.length === 1 ? "Achievement" : "Achievements"}
+            </h1>
             <ul
               className={cn(
                 "flex flex-col gap-1.5 text-sm",
@@ -111,7 +114,7 @@ export default function ProjectData() {
             )}
 
             {deploymentStatus === DeploymentStatus.DEPLOYED ? (
-              <Link href={deployedLink} target="_blank">
+              <Link href={String(deployedLink)} target="_blank">
                 <Button variant="secondary">
                   <span className="flex items-center gap-2">
                     <TbExternalLink className="h-4 w-4" /> Demo
