@@ -50,6 +50,6 @@ export interface Project {
   gitHub?: string;
   techStack: string[];
   deploymentStatus: DeploymentStatus;
-  deployedLink?: any;
+  deployedLink?: string;
   isMobile?: boolean;
 }

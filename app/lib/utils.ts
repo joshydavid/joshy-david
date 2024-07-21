@@ -8,3 +8,10 @@ export function cn(...inputs: ClassValue[]) {
 export function sortData<T extends { id: number }>(data: T[]): T[] {
   return data.sort((a, b) => b.id - a.id);
 }
+
+export function scrollToTop(): void {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
