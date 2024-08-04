@@ -183,7 +183,7 @@ export const projects: Project[] = [
   },
   {
     id: 9,
-    name: "Scan",
+    name: "Scan!",
     slug: "scan",
     description:
       "Problem Statement - How might we improve this method of identifying healthier purchases so that HPB can reward individuals for making healthier choice purchases, regardless of where they shop?",
