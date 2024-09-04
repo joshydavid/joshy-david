@@ -14,7 +14,7 @@ import Sayless from "@/public/projects/sayless-ecosystem.png";
 import Sayocode from "@/public/projects/sayocode.png";
 import Scan from "@/public/projects/scan.png";
 import Sparks from "@/public/projects/sparks.png";
-import TrailsOne from "@/public/projects/trailsOne.png";
+import TrailsOne from "@/public/projects/trailsCDC.png";
 
 export const projects: Project[] = [
   {
