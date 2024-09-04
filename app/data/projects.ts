@@ -13,9 +13,8 @@ import CodingPortfolio from "@/public/projects/portfolio-2.0.png";
 import Sayless from "@/public/projects/sayless-ecosystem.png";
 import Sayocode from "@/public/projects/sayocode.png";
 import Scan from "@/public/projects/scan.png";
-import TrailsOne from "@/public/projects/trailsOne.png";
-
 import Sparks from "@/public/projects/sparks.png";
+import TrailsOne from "@/public/projects/trailsOne.png";
 
 export const projects: Project[] = [
   {
