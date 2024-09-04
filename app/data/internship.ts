@@ -27,7 +27,7 @@ export const internships: Internship[] = [
       "Full Stack Software Engineer Intern @ Government Digital Services (GDS) - CrowdTaskSG",
       "Contributed to 4 projects, with 2 being greenfield initiatives that I helped conceptualised and developed.",
       "Lead front-end engineer for Sparks portal.",
-      "Lead back-end engineer for Project X.",
+      "Lead back-end engineer for Walking Trails @ CDC.",
       `Technologies: ${TechStack.TYPESCRIPT}, ${TechStack.NEXT_JS}, ${TechStack.TAILWIND_CSS}, ${TechStack.TYPEORM}, ${TechStack.KOA_JS}, ${TechStack.POSTGRESQL}, ${TechStack.AMAZON_WEB_SERVICES}`,
     ],
     isCompleted: true,

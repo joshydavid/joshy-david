@@ -14,6 +14,7 @@ import Sayless from "@/public/projects/sayless-ecosystem.png";
 import Sayocode from "@/public/projects/sayocode.png";
 import Scan from "@/public/projects/scan.png";
 import Sparks from "@/public/projects/sparks.png";
+import TrailsOne from "@/public/projects/trailsCDC.png";
 
 export const projects: Project[] = [
   {
@@ -205,6 +206,32 @@ export const projects: Project[] = [
     ],
     deploymentStatus: DeploymentStatus.DEPLOYED,
     deployedLink: "https://gt-scan.vercel.app/login",
+    isMobile: true,
+  },
+  {
+    id: 10,
+    name: "Walking Trails @ CDC",
+    slug: "walking-trails-cdc",
+    description:
+      "An innovative phygital initiative by the five Community Development Councils (CDCs), in collaboration with Government Technology Agency (GovTech) to promote community engagement and an active lifestyle by blending brisk-walking with digital gamification.",
+    achievements: [
+      "Lead back-end engineer.",
+      "Designed and implemented scalable database schemas and indexing strategies to optimise performance and ensure data integrity.",
+      "Developed and deployed the greenfield app within 3 months, in partnership with the five Community Development Councils (CDCs).",
+    ],
+    tags: [2024, ProjectTag.GOVTECH_PROJECT],
+    icon: TrailsOne,
+    techStack: [
+      TechStack.TYPESCRIPT,
+      TechStack.KOA_JS,
+      TechStack.NEXT_JS,
+      TechStack.TAILWIND_CSS,
+      TechStack.TYPEORM,
+      TechStack.POSTGRESQL,
+      TechStack.AMAZON_WEB_SERVICES,
+    ],
+    deploymentStatus: DeploymentStatus.DEPLOYED,
+    deployedLink: "https://www.crowdtask.gov.sg/",
     isMobile: true,
   },
 ];

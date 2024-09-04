@@ -131,10 +131,10 @@ export default function About() {
 
         <div className="flex flex-col gap-4">
           <h4 className="leading-relaxed">
-            Hey, I'm Joshua! I enjoy back-end development, with a strong
-            interest in building complex and large-scale systems. Outside of
-            work, I enjoy working out at the gym and going for a quick run
-            around the city.
+            Hey, I'm Joshua! I'm passionate about all things software
+            engineering, with a strong interest in building complex and
+            large-scale systems. Outside of work, I enjoy working out at the gym
+            and going for a quick run around the city.
           </h4>
 
           <div className="flex flex-row gap-4">
