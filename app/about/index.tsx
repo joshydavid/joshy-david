@@ -138,23 +138,15 @@ export default function About() {
           </h4>
 
           <div className="flex flex-row gap-4">
-            {urls.map(({ label, isPDF, path }: Url) => (
+            {urls.map(({ label, path }: Url) => (
               <div
                 className="flex cursor-pointer items-center gap-1 text-sm hover:text-gray dark:text-lightGray dark:hover:text-white"
                 key={label}
               >
                 <ArrowTopRightIcon className="h-5 w-5" />
-                {!isPDF ? (
-                  <Link key={label} href={path} target="_blank">
-                    {label}
-                  </Link>
-                ) : (
-                  <span>
-                    <a download href={path}>
-                      {label}
-                    </a>
-                  </span>
-                )}
+                <Link key={label} href={path} target="_blank">
+                  {label}
+                </Link>
               </div>
             ))}
           </div>
