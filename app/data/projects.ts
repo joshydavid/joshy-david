@@ -231,7 +231,7 @@ export const projects: Project[] = [
       TechStack.AMAZON_WEB_SERVICES,
     ],
     deploymentStatus: DeploymentStatus.DEPLOYED,
-    deployedLink: "https://www.crowdtask.gov.sg/",
+    deployedLink: "https://www.crowdtask.gov.sg/quest/walking-trails-cdc",
     isMobile: true,
   },
 ];
