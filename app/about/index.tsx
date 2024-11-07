@@ -10,7 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { HEADLINE, NAME, POSITION } from "@/constant";
+import { BIO, HEADLINE, NAME, POSITION } from "@/constant";
 import { internships, urls } from "@/data";
 import { mentorships } from "@/data/mentorship";
 import { sortData } from "@/lib/utils";
@@ -130,13 +130,7 @@ export default function About() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h4 className="leading-relaxed">
-            Hey, I'm Joshua! I'm passionate about all things software
-            engineering, with a strong interest in building complex and
-            large-scale distributed systems. Outside of work, I enjoy working
-            out at the gym and going for a quick run around the city.
-          </h4>
-
+          <h4 className="leading-relaxed">{BIO}</h4>
           <div className="flex flex-row gap-4">
             {urls.map(({ label, path }: Url) => (
               <div
