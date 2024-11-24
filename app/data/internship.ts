@@ -1,3 +1,4 @@
+import { POSITION } from "@/constant";
 import { Internship } from "@/models/internship";
 import { TechStack } from "@/models/project";
 import GovTech from "@/public/companies/GovTech.png";
@@ -6,8 +7,8 @@ import PigeonLab from "@/public/companies/PigeonLab.png";
 export const internships: Internship[] = [
   {
     id: 1,
-    company: "Pigeonhole Live (PigeonLab)",
-    position: "Software Engineer Intern",
+    company: "Pigeonhole Live",
+    position: `${POSITION} Intern`,
     timeline: "Jan 2023 - Mar 2023",
     icon: PigeonLab,
     achievements: [
@@ -20,7 +21,7 @@ export const internships: Internship[] = [
   {
     id: 2,
     company: "GovTech Singapore",
-    position: "Software Engineer Intern",
+    position: `${POSITION} Intern`,
     timeline: "Jan 2024 - Jul 2024",
     icon: GovTech,
     achievements: [
