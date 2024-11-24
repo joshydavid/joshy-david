@@ -19,6 +19,7 @@ import Project from "@/project/page";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
+import { v4 as uuidv4 } from "uuid";
 
 export default function About() {
   const presentInternshipCount = internships.filter(
@@ -129,23 +130,6 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <h4 className="leading-relaxed">{BIO}</h4>
-          <div className="flex flex-row gap-4">
-            {urls.map(({ label, path }: Url) => (
-              <div
-                className="flex cursor-pointer items-center gap-1 text-sm hover:text-gray dark:text-lightGray dark:hover:text-white"
-                key={label}
-              >
-                <ArrowTopRightIcon className="h-5 w-5" />
-                <Link key={label} href={path} target="_blank">
-                  {label}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div className="flex items-center gap-2">
           <Ping />
           <h4>
@@ -157,6 +141,28 @@ export default function About() {
               </p>
             )}
           </h4>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          {BIO.map((bio: string) => (
+            <h4 key={uuidv4()} className="leading-relaxed">
+              {bio}
+            </h4>
+          ))}
+        </div>
+
+        <div className="flex flex-row gap-4">
+          {urls.map(({ label, path }: Url) => (
+            <div
+              className="flex cursor-pointer items-center gap-1 text-sm hover:text-gray dark:text-lightGray dark:hover:text-white"
+              key={label}
+            >
+              <ArrowTopRightIcon className="h-5 w-5" />
+              <Link key={label} href={path} target="_blank">
+                {label}
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
       {renderInternshipExperience()}
