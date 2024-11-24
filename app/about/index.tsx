@@ -19,6 +19,7 @@ import Project from "@/project/page";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
+import { v4 as uuidv4 } from "uuid";
 
 export default function About() {
   const presentInternshipCount = internships.filter(
@@ -143,8 +144,8 @@ export default function About() {
         </div>
 
         <div className="flex flex-col gap-4">
-          {BIO.map((bio: string, index: number) => (
-            <h4 key={index} className="leading-relaxed">
+          {BIO.map((bio: string) => (
+            <h4 key={uuidv4()} className="leading-relaxed">
               {bio}
             </h4>
           ))}
