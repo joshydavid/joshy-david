@@ -63,11 +63,17 @@ export default function About() {
                       </div>
                     </DialogTitle>
                     <DialogDescription>
-                      {achievements.map((achievement: string) => (
-                        <li key={achievement} className="py-1">
-                          {achievement}
-                        </li>
-                      ))}
+                      {achievements.length === 1 ? (
+                        <>{achievements[0]}</>
+                      ) : (
+                        <>
+                          {achievements.map((achievement: string) => (
+                            <li key={achievement} className="py-1">
+                              {achievement}
+                            </li>
+                          ))}
+                        </>
+                      )}
                     </DialogDescription>
                   </DialogHeader>
                 </DialogContent>

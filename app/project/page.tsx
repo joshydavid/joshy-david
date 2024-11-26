@@ -7,6 +7,7 @@ import { Project as ProjectModel } from "@/models/project";
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Project() {
   const sortedProjects = useMemo(() => {
@@ -36,8 +37,8 @@ export default function Project() {
                 <div className="flex flex-col gap-2 dark:text-lightGray">
                   <h2>{name}</h2>
                   <div className="flex flex-wrap gap-2">
-                    {tags.map((tag, index) => (
-                      <Badge key={index}>{tag}</Badge>
+                    {tags.map((tag) => (
+                      <Badge key={uuidv4()}>{tag}</Badge>
                     ))}
                   </div>
                 </div>
