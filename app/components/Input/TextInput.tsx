@@ -13,7 +13,7 @@ function TextInput({
   placeholder,
   onKeyDown,
   ...props
-}: TextInputProps) {
+}: Readonly<TextInputProps>) {
   return (
     <input
       type={type}

@@ -6,8 +6,8 @@ export default function NotFound() {
       <h2 className="text-red-600 dark:text-red-500">Page Not Found</h2>
       <p>Could not find requested resource.</p>
       <Link href="/">
-        Return
-        <span className="pl-1.5 underline underline-offset-4 dark:hover:text-lightGray">
+        Return{" "}
+        <span className="underline underline-offset-4 dark:hover:text-lightGray">
           Home
         </span>
       </Link>
