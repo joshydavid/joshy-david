@@ -57,7 +57,7 @@ export default function ProjectData() {
 
       <div className="flex flex-col gap-10">
         <div className={cn("flex flex-col", isMobile && "w-1/2")}>
-          <Image alt={name} src={detailedImage ? detailedImage : icon} />
+          <Image alt={name} src={detailedImage || icon} />
         </div>
 
         <div className="mt-4 flex flex-col gap-4">
