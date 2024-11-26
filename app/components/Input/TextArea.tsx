@@ -5,7 +5,11 @@ type TextAreaProps = {
   onKeyDown: KeyDownEvent;
 };
 
-function TextArea({ placeholder, onKeyDown, ...props }: TextAreaProps) {
+function TextArea({
+  placeholder,
+  onKeyDown,
+  ...props
+}: Readonly<TextAreaProps>) {
   return (
     <textarea
       name="message"

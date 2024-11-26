@@ -24,7 +24,7 @@ type ChildrenProps = {
   children: React.ReactNode;
 };
 
-export default function RootLayout({ children }: ChildrenProps) {
+export default function RootLayout({ children }: Readonly<ChildrenProps>) {
   return (
     <html
       lang="en"

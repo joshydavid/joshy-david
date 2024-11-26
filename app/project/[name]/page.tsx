@@ -43,12 +43,12 @@ export default function ProjectData() {
   return (
     <div className="flex w-screen flex-col gap-5 md:w-11/12">
       <div className="flex gap-1 text-sm">
-        <p
+        <button
           className="cursor-pointer underline-offset-4 hover:underline"
           onClick={() => router.back()}
         >
           Project
-        </p>
+        </button>
         <p>
           <CaretRightIcon className="h-5 w-5 text-slate-400" />
         </p>
