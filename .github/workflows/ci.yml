@@ -27,3 +27,6 @@ jobs:
 
       - name: Format using prettier
         run: bun run prettier
+
+      - name: Build the project
+        run: bun run build
