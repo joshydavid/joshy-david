@@ -43,7 +43,7 @@ export default function About() {
                     </div>
                     <div className="flex flex-col gap-0.5">
                       <h3>{position}</h3>
-                      <h3>{company}</h3>
+                      <h4>{company}</h4>
                       <p className="text-sm dark:text-lightGray">{timeline}</p>
                     </div>
                   </div>
@@ -106,7 +106,7 @@ export default function About() {
                   </div>
                   <div className="flex flex-col gap-0.5">
                     <h3>{position}</h3>
-                    <h3>{organisation}</h3>
+                    <h4>{organisation}</h4>
                     <p className="text-sm dark:text-lightGray">{timeline}</p>
                   </div>
                 </div>
