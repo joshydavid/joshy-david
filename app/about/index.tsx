@@ -36,15 +36,15 @@ export default function About() {
           ({ company, position, timeline, icon, achievements }) => {
             return (
               <Dialog key={company}>
-                <DialogTrigger className="mb-3 flex cursor-pointer text-left hover:opacity-90">
+                <DialogTrigger className="mb-3 mt-2 flex cursor-pointer text-left hover:opacity-90">
                   <div className="flex items-center gap-6">
                     <div>
                       <Image src={icon} width={40} height={40} alt={company} />
                     </div>
                     <div className="flex flex-col gap-0.5">
-                      {company}
-                      <h4>{position}</h4>
-                      <h4 className="dark:text-lightGray">{timeline}</h4>
+                      <h3>{position}</h3>
+                      <h3>{company}</h3>
+                      <p className="text-sm dark:text-lightGray">{timeline}</p>
                     </div>
                   </div>
                 </DialogTrigger>
@@ -95,7 +95,7 @@ export default function About() {
           ({ id, organisation, position, timeline, icon, link }) => {
             return (
               <Link href={link} target="_blank" key={id}>
-                <div className="mb-3 flex items-center gap-6 hover:opacity-90">
+                <div className="mb-3 mt-2 flex items-center gap-6 hover:opacity-90">
                   <div>
                     <Image
                       src={icon}
@@ -105,9 +105,9 @@ export default function About() {
                     />
                   </div>
                   <div className="flex flex-col gap-0.5">
-                    {organisation}
-                    <h4>{position}</h4>
-                    <h4 className="dark:text-lightGray">{timeline}</h4>
+                    <h3>{position}</h3>
+                    <h3>{organisation}</h3>
+                    <p className="text-sm dark:text-lightGray">{timeline}</p>
                   </div>
                 </div>
               </Link>
