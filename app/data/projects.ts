@@ -6,12 +6,10 @@ import {
 } from "@/models/project";
 import BookLah from "@/public/projects/BookLah.png";
 import ShortenSG from "@/public/projects/ShortenSG.png";
-import Client from "@/public/projects/client.png";
 import LegacyCodingPortfolio from "@/public/projects/legacy-portfolio.png";
 import CodingPortfolioAll from "@/public/projects/portfolio-2.0-ecosystem.png";
 import CodingPortfolio from "@/public/projects/portfolio-2.0.png";
 import Sayless from "@/public/projects/sayless-ecosystem.png";
-import Sayocode from "@/public/projects/sayocode.png";
 import Scan from "@/public/projects/scan.png";
 import Sparks from "@/public/projects/sparks.png";
 import TrailsOne from "@/public/projects/trailsCDC.png";
@@ -19,22 +17,6 @@ import TrailsOne from "@/public/projects/trailsCDC.png";
 export const projects: Project[] = [
   {
     id: 1,
-    name: "Project Sayocode",
-    slug: "sayocode",
-    description: "Web builder that automates the process of app creation",
-    tags: [2019, ProjectTag.SCHOOL_PROJECT],
-    icon: Sayocode,
-    gitHub: "https://github.com/joshydavid/",
-    techStack: [
-      TechStack.REACT,
-      TechStack.EXPRESS_JS,
-      TechStack.MONGODB,
-      "Bootstrap",
-    ],
-    deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
-  },
-  {
-    id: 2,
     name: "Coding Portfolio",
     slug: "portfolio",
     description:
@@ -52,25 +34,7 @@ export const projects: Project[] = [
     deployedLink: "https://legacy.joshuadavid.dev",
   },
   {
-    id: 3,
-    name: "Custom Web App",
-    slug: "cwa",
-    description: "Developed a custom personal brand web app for clients.",
-    tags: [2023, ProjectTag.PET_PROJECT],
-    icon: Client,
-    gitHub: "https://celineongjw.com",
-    techStack: [
-      TechStack.TYPESCRIPT,
-      TechStack.NEXT_JS,
-      TechStack.TAILWIND_CSS,
-      TechStack.VERCEL,
-      TechStack.SUPABASE,
-    ],
-    deploymentStatus: DeploymentStatus.DEPLOYED,
-    deployedLink: "https://celineongjw.com",
-  },
-  {
-    id: 4,
+    id: 2,
     name: "Sayless",
     slug: "sayless",
     description:
@@ -92,7 +56,7 @@ export const projects: Project[] = [
     deployedLink: "https://sayless.space",
   },
   {
-    id: 5,
+    id: 3,
     name: "Coding Portfolio 2.0",
     slug: "portfolio-v2",
     description:
@@ -113,7 +77,7 @@ export const projects: Project[] = [
     deployedLink: "https://joshuadavid.dev",
   },
   {
-    id: 6,
+    id: 4,
     name: "ShortenSG",
     slug: "shortensg",
     description:
@@ -134,7 +98,7 @@ export const projects: Project[] = [
     deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
   },
   {
-    id: 7,
+    id: 5,
     name: "BookLah!",
     slug: "booklah",
     description:
@@ -157,7 +121,7 @@ export const projects: Project[] = [
     deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
   },
   {
-    id: 8,
+    id: 6,
     name: "Sparks Portal",
     slug: "sparks",
     description:
@@ -183,7 +147,7 @@ export const projects: Project[] = [
     deployedLink: "https://sparks.crowdtask.gov.sg",
   },
   {
-    id: 9,
+    id: 7,
     name: "Scan!",
     slug: "scan",
     description:
@@ -209,7 +173,7 @@ export const projects: Project[] = [
     isMobile: true,
   },
   {
-    id: 10,
+    id: 8,
     name: "Walking Trails @ CDC",
     slug: "walking-trails-cdc",
     description:
