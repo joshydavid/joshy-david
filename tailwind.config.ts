@@ -22,6 +22,7 @@ const config = {
         black: "#000000",
         white: "#FFFFFF",
         gray: "#1F1D1D",
+        ashGray: "#F3F4F6",
         lightGray: "#FAFAFA",
         green: "#16A34A",
         border: "hsl(var(--border))",

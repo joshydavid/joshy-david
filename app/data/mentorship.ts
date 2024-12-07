@@ -1,5 +1,6 @@
 import { Mentorship } from "@/models/mentorship";
 import Hack from "@/public/companies/Hack.png";
+import ProjectHeartCode from "@/public/companies/ProjectHeartCode.png";
 
 export const mentorships: Mentorship[] = [
   {
@@ -8,6 +9,14 @@ export const mentorships: Mentorship[] = [
     position: "Software Engineer Mentor",
     timeline: "May 2024 - Jul 2024",
     icon: Hack,
-    link: "https://www.linkedin.com/company/smuhack/",
+    link: "https://www.linkedin.com/company/smuhack",
+  },
+  {
+    id: 2,
+    organisation: "SMU Project HeartCode",
+    position: "Software Engineer Mentor",
+    timeline: "Oct 2024 - Dec 2024",
+    icon: ProjectHeartCode,
+    link: "https://heartcode.scis.smu.edu.sg",
   },
 ];
