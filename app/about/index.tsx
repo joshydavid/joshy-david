@@ -1,7 +1,7 @@
 "use client";
 
 import Ping from "@/components/Ping";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
   DialogContent,
