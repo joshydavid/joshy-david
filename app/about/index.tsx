@@ -1,7 +1,7 @@
 "use client";
 
 import Ping from "@/components/Ping";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
   DialogContent,
@@ -124,9 +124,11 @@ export default function About() {
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-6">
         <div>
-          <Avatar>
-            <AvatarImage src="/joshua.png" />
-            <AvatarFallback>Joshua</AvatarFallback>
+          <Avatar className="h-36 w-36">
+            <AvatarImage
+              src="/joshua-memoji.png"
+              className="bg-ashGray dark:bg-gray"
+            />
           </Avatar>
 
           <div className="mt-8 flex flex-col gap-1.5">
