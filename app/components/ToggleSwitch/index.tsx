@@ -1,6 +1,7 @@
 "use client";
 
 import { Switch } from "@/components/ui/switch";
+import { Theme } from "@/constant";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -8,7 +9,7 @@ export default function ToggleSwitch() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  const enabled = theme === "dark";
+  const enabled = theme === Theme.DARK;
 
   useEffect(() => {
     setMounted(true);
@@ -21,7 +22,9 @@ export default function ToggleSwitch() {
   return (
     <Switch
       checked={enabled}
-      onCheckedChange={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onCheckedChange={() =>
+        setTheme(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK)
+      }
     />
   );
 }
