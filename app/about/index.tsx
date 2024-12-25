@@ -16,6 +16,7 @@ import { mentorships } from "@/data/mentorship";
 import { sortData } from "@/lib/utils";
 import { Url } from "@/models/url";
 import Project from "@/project/page";
+import JoshMemoji from "@/public/joshua-memoji.png";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
@@ -119,16 +120,14 @@ export default function About() {
   };
 
   const { position, company } = internships[internships.length - 1];
+  const { src } = JoshMemoji;
 
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-6">
         <div>
           <Avatar className="h-36 w-36">
-            <AvatarImage
-              src="/joshua-memoji.png"
-              className="bg-ashGray dark:bg-gray"
-            />
+            <AvatarImage src={src} className="bg-ashGray dark:bg-gray" />
           </Avatar>
 
           <div className="mt-8 flex flex-col gap-1.5">
