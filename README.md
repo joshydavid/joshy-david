@@ -2,7 +2,7 @@
 
 ![Issue](https://img.shields.io/github/issues/joshydavid/joshua-david)
 ![Pull Request](https://img.shields.io/github/issues-pr/joshydavid/joshua-david)
-![Release Badge](https://img.shields.io/github/v/release/joshydavid/joshua-david)  
+![Release Badge](https://img.shields.io/github/v/release/joshydavid/joshua-david)
 <img src="https://github.com/joshydavid/joshua-david/assets/54788382/d62d2a96-b32f-4148-908b-7019a409d679" alt="portfolio" width="600" />
 <br />
 <br />
