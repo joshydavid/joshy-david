@@ -36,7 +36,7 @@ export default function About() {
         {sortedInternships.map(
           ({ company, position, timeline, icon, achievements }) => {
             return (
-              <Dialog key={company}>
+              <Dialog key={uuidv4()}>
                 <DialogTrigger className="mb-3 mt-2 flex cursor-pointer text-left hover:opacity-90">
                   <div className="flex items-center gap-6">
                     <div>
