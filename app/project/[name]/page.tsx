@@ -11,7 +11,6 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo } from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbExternalLink } from "react-icons/tb";
-import { v4 as uuidv4 } from "uuid";
 
 export default function ProjectData() {
   const router = useRouter();
@@ -78,8 +77,8 @@ export default function ProjectData() {
                 achievements.length > 1 && "list-disc pl-5",
               )}
             >
-              {achievements.map((achievement) => (
-                <li key={uuidv4()}>{achievement}</li>
+              {achievements.map((achievement: string, i: number) => (
+                <li key={`${achievement}-${i}`}>{achievement}</li>
               ))}
             </ul>
           </div>
@@ -88,11 +87,11 @@ export default function ProjectData() {
         <div className="flex flex-col gap-4">
           <h1>Tech Stack</h1>
           <div className="flex w-full flex-wrap items-center gap-2">
-            {techStack?.map((tech: string) => (
+            {techStack?.map((tech: string, i: number) => (
               <Button
                 variant="secondary"
                 size="sm"
-                key={uuidv4()}
+                key={`${tech}-${i}`}
                 className="cursor-text"
               >
                 <span className="text-xs">{tech}</span>
@@ -129,11 +128,11 @@ export default function ProjectData() {
         <div className="flex flex-col gap-4">
           <h1>Tags</h1>
           <div className="flex w-full flex-wrap items-center gap-2">
-            {tags?.map((tag) => (
+            {tags?.map((tag, i: number) => (
               <Button
                 variant="secondary"
                 size="sm"
-                key={uuidv4()}
+                key={`${tag}-${i}`}
                 className="cursor-text"
               >
                 <span className="text-xs">{tag}</span>

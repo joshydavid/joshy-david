@@ -20,7 +20,6 @@ import JoshMemoji from "@/public/joshua-memoji.png";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
-import { v4 as uuidv4 } from "uuid";
 
 export default function About() {
   const presentInternshipCount = internships.filter(
@@ -34,9 +33,9 @@ export default function About() {
       <div className="flex flex-col gap-3">
         <h1>Experience</h1>
         {sortedInternships.map(
-          ({ company, position, timeline, icon, achievements }) => {
+          ({ id, company, position, timeline, icon, achievements }) => {
             return (
-              <Dialog key={uuidv4()}>
+              <Dialog key={`${company}-${id}`}>
                 <DialogTrigger className="mb-3 mt-2 flex cursor-pointer text-left hover:opacity-90">
                   <div className="flex items-center gap-6">
                     <div>
@@ -151,8 +150,8 @@ export default function About() {
         </div>
 
         <div className="flex flex-col gap-4">
-          {BIO.map((bio: string) => (
-            <h4 key={uuidv4()} className="leading-relaxed">
+          {BIO.map((bio: string, i: number) => (
+            <h4 key={`${bio}-${i}`} className="leading-relaxed">
               {bio}
             </h4>
           ))}
