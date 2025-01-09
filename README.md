@@ -33,11 +33,11 @@
 
 3. Set up environment variables
 
-- Get a free API key at [Supabase](https://supabase.com)
+   Get a free API key at [Supabase](https://supabase.com)
 
-```
-cp .env.sample .env.local
-```
+   ```
+   cp .env.sample .env.local
+   ```
 
 4. Run the project in development environment
 
