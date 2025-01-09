@@ -6,10 +6,11 @@ export enum DeploymentStatus {
 
 export enum ProjectTag {
   GOVTECH_PROJECT = "GovTech Project",
+  INFORMATION_SECURITY = "Information Security",
   SCHOOL_PROJECT = "School Project",
+  SOFTWARE_ENGINEERING = "Software Engineering",
   PET_PROJECT = "Pet Project",
   HACKATHON = "Hackathon",
-  LEGACY = "Legacy",
 }
 
 export enum TechStack {
