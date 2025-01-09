@@ -21,7 +21,7 @@ export const projects: Project[] = [
     slug: "portfolio",
     description:
       "Designed and developed a responsive coding portfolio, built on top of Next.js & Tailwind CSS, deployed to Vercel.",
-    tags: [2022, ProjectTag.PET_PROJECT, ProjectTag.LEGACY],
+    tags: [2022, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.PET_PROJECT],
     icon: LegacyCodingPortfolio,
     gitHub: "https://github.com/joshydavid/joshua-david",
     techStack: [
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     description:
       "A gamified web app connecting people to share excess food. Upload receipts to add items to inventory or complete quests to earn vouchers.",
     achievements: ["Grade: A+"],
-    tags: [2023, ProjectTag.SCHOOL_PROJECT],
+    tags: [2023, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.SCHOOL_PROJECT],
     icon: Sayless,
     gitHub: "https://github.com/SMU-IS/SayLess",
     techStack: [
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     slug: "portfolio-v2",
     description:
       "Version 2.0 - Redesigned and redeveloped an updated version of my coding portfolio, built on top of Next.js 14.0, Tailwind CSS, Shadcn deployed to Vercel.",
-    tags: [2024, ProjectTag.PET_PROJECT],
+    tags: [2024, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.PET_PROJECT],
     icon: CodingPortfolio,
     detailedImage: CodingPortfolioAll,
     gitHub: "https://github.com/joshydavid/joshuadavid",
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     slug: "shortensg",
     description:
       "Full-stack URL shortener web app, designed to transform long URLs into neat and shareable links.",
-    tags: [2024, ProjectTag.PET_PROJECT],
+    tags: [2024, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.PET_PROJECT],
     icon: ShortenSG,
     gitHub: "https://github.com/joshydavid/ShortenSG",
     techStack: [
@@ -104,7 +104,7 @@ export const projects: Project[] = [
     description:
       "Full-stack concert booking web app, utilising Microservice architecture.",
     achievements: ["Grade: A"],
-    tags: [2024, ProjectTag.SCHOOL_PROJECT],
+    tags: [2024, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.SCHOOL_PROJECT],
     icon: BookLah,
     gitHub: "https://github.com/joshydavid/BookLah",
     techStack: [
@@ -131,7 +131,7 @@ export const projects: Project[] = [
       "Collaborated with 2 software engineers and 1 UX designer to develop and launch Sparks within 2 months.",
       "Presented Sparks to public officers from the Ministry of Culture, Community and Youth (MCCY) at a tech showcase held at GovTech Hive office.",
     ],
-    tags: [2024, ProjectTag.GOVTECH_PROJECT],
+    tags: [2024, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.GOVTECH_PROJECT],
     icon: Sparks,
     techStack: [
       TechStack.TYPESCRIPT,
@@ -157,7 +157,12 @@ export const projects: Project[] = [
       "Pitched and presented solution to a panel of judges from GovTech & Health Promotion Board (HPB).",
       "HPB expressed significant interest in adopting the solution.",
     ],
-    tags: [2024, ProjectTag.GOVTECH_PROJECT, ProjectTag.HACKATHON],
+    tags: [
+      2024,
+      ProjectTag.SOFTWARE_ENGINEERING,
+      ProjectTag.GOVTECH_PROJECT,
+      ProjectTag.HACKATHON,
+    ],
     icon: Scan,
     techStack: [
       TechStack.TYPESCRIPT,
@@ -183,7 +188,7 @@ export const projects: Project[] = [
       "Designed and implemented scalable database schemas and indexing strategies to optimise performance and ensure data integrity.",
       "Developed and deployed the greenfield app within 3 months, in partnership with the five Community Development Councils (CDCs).",
     ],
-    tags: [2024, ProjectTag.GOVTECH_PROJECT],
+    tags: [2024, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.GOVTECH_PROJECT],
     icon: TrailsOne,
     techStack: [
       TechStack.TYPESCRIPT,

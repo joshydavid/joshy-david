@@ -33,7 +33,7 @@ export default function Project() {
                   />
                 </div>
 
-                <div className="flex flex-col gap-2 dark:text-lightGray">
+                <div className="flex flex-col gap-2 dark:text-lightGray md:w-1/2">
                   <h2>{name}</h2>
                   <div className="flex flex-wrap gap-2">
                     {tags.map((tag, i: number) => (
