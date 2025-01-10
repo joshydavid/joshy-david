@@ -17,7 +17,8 @@ export const metadata: Metadata = {
     description:
       "Information Systems Penultimate @ Singapore Management University",
     authors: "Joshua David",
-    images: "https://joshuadavid.dev/og.png",
+    images:
+      "https://joshydavid.s3.us-east-1.amazonaws.com/Joshy_Open_Graph.png",
   },
 };
 
