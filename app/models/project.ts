@@ -42,6 +42,13 @@ export enum TechStack {
   VUE_JS = "Vue.js",
 }
 
+export enum SecurityTool {
+  SPLUNK = "Splunk",
+  SNORT = "Snort",
+  BURP_SUITE = "Burp Suite",
+  WIRESHARK = "Wireshark",
+}
+
 export interface Project {
   id: number;
   slug: string;
