@@ -1,12 +1,26 @@
 import { POSITION } from "@/constant";
 import { Internship } from "@/models/internship";
 import { TechStack } from "@/models/project";
+import BSG from "@/public/companies/BSG.png";
 import GovTech from "@/public/companies/GovTech.png";
 import PigeonLab from "@/public/companies/PigeonLab.png";
 
 export const internships: Internship[] = [
   {
     id: 1,
+    company: "Blockchain Solutions",
+    position: `${POSITION} Intern`,
+    timeline: "May 2022 - Aug 2022",
+    icon: BSG,
+    achievements: [
+      "Spearheaded front-end development of a NFT marketplace which led to 30% increase in user engagement and 20% increase in new user sign-ups.",
+      "Developed more than 10 reusable components to ensure consistency across the application, leading to 30% decrease in development time.",
+      `Technologies: ${TechStack.REACT}, ${TechStack.NEXT_JS}, ${TechStack.EXPRESS_JS}, ${TechStack.TAILWIND_CSS}, ${TechStack.MONGODB}`,
+    ],
+    isCompleted: true,
+  },
+  {
+    id: 2,
     company: "Pigeonhole Live",
     position: `${POSITION} Intern`,
     timeline: "Jan 2023 - Mar 2023",
@@ -19,7 +33,7 @@ export const internships: Internship[] = [
     isCompleted: true,
   },
   {
-    id: 2,
+    id: 3,
     company: "GovTech Singapore",
     position: `${POSITION} Intern`,
     timeline: "Jan 2024 - Jul 2024",
