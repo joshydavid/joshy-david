@@ -34,7 +34,7 @@ export const internships: Internship[] = [
   },
   {
     id: 3,
-    company: "GovTech Singapore",
+    company: "GovTech",
     position: `${POSITION} Intern`,
     timeline: "Jan 2024 - Jul 2024",
     icon: GovTech,
