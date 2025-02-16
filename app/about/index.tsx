@@ -52,7 +52,7 @@ export default function About() {
                 <DialogContent>
                   <DialogHeader>
                     <DialogTitle>
-                      <div className="flex items-center justify-center gap-5 pb-5">
+                      <div className="flex items-center justify-center gap-5">
                         <Image
                           src={icon}
                           width={50}
@@ -62,7 +62,7 @@ export default function About() {
                         {company}
                       </div>
                     </DialogTitle>
-                    <DialogDescription>
+                    <DialogDescription className="pt-3">
                       {achievements.length === 1 ? (
                         <>{achievements[0]}</>
                       ) : (
