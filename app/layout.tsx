@@ -33,10 +33,10 @@ export default function RootLayout({ children }: Readonly<ChildrenProps>) {
       className={raleway.className}
       suppressHydrationWarning={true}
     >
-      <body className="bg-white dark:bg-black">
+      <body className="bg-white dark:bg-stone-950">
         <ThemeProvider attribute="class" defaultTheme={Theme.DARK}>
           <Navigation />
-          <div className="flex min-h-screen bg-white px-6 py-8 pb-24 text-black dark:bg-black dark:text-white md:mx-auto md:w-1/2 md:pt-12 lg:w-1/3">
+          <div className="flex min-h-screen bg-white px-6 py-8 pb-24 text-black dark:bg-stone-950 dark:text-white md:mx-auto md:w-1/2 md:pt-12 lg:w-1/3">
             {children}
           </div>
         </ThemeProvider>

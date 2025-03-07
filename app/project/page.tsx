@@ -20,7 +20,7 @@ export default function Project() {
         ({ id, slug, name, icon, tags, isMobile }: ProjectModel) => {
           return (
             <Link href={`/project/${slug}`} key={id}>
-              <div className="mb-12 mt-2 flex cursor-pointer flex-col items-start gap-8 rounded-xl hover:opacity-90 dark:bg-black dark:text-white md:mb-3 md:flex-row md:items-center">
+              <div className="mb-12 mt-2 flex cursor-pointer flex-col items-start gap-8 rounded-xl hover:opacity-90 dark:bg-stone-950 dark:text-white md:mb-3 md:flex-row md:items-center">
                 <div className="w-full rounded-xl bg-ashGray p-4 dark:bg-gray md:w-1/3">
                   <Image
                     src={icon}
