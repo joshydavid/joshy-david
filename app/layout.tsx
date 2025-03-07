@@ -2,23 +2,24 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { ThemeProvider } from "./ThemeProvider";
 import Navigation from "./components/Navigation";
-import { Theme } from "./constant";
+import { BIO, EXTERNAL_LINKS, Theme } from "./constant";
 import "./globals.css";
 
 const raleway = Raleway({
   subsets: ["latin"],
 });
 
+const { OPEN_GRAPH } = EXTERNAL_LINKS;
+const { NAME, DESCRIPTION } = BIO;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://joshuadavid.dev"),
-  title: "Joshua David",
+  title: NAME,
   openGraph: {
-    title: "Joshua David",
-    description:
-      "Information Systems Penultimate @ Singapore Management University",
-    authors: "Joshua David",
-    images:
-      "https://joshydavid.s3.us-east-1.amazonaws.com/Joshy_Open_Graph.png",
+    title: NAME,
+    description: DESCRIPTION,
+    authors: NAME,
+    images: OPEN_GRAPH,
   },
 };
 

@@ -1,17 +1,18 @@
-import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "@/constant";
+import { EXTERNAL_LINKS } from "@/constant";
 import { Url } from "@/models/url";
 
+const { RESUME, LINKEDIN, GITHUB } = EXTERNAL_LINKS;
 export const urls: Url[] = [
   {
     label: "Resume",
-    path: RESUME_URL,
+    path: RESUME,
   },
   {
     label: "LinkedIn",
-    path: LINKEDIN_URL,
+    path: LINKEDIN,
   },
   {
     label: "GitHub",
-    path: GITHUB_URL,
+    path: GITHUB,
   },
 ];

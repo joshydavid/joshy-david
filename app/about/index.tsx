@@ -10,7 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { BIO, HEADLINE, NAME, POSITION } from "@/constant";
+import { BIO } from "@/constant";
 import { internships, urls } from "@/data";
 import { mentorships } from "@/data/mentorship";
 import { sortData } from "@/lib/utils";
@@ -118,7 +118,8 @@ export default function About() {
     );
   };
 
-  const { position, company } = internships[internships.length - 1];
+  const { NAME, DESCRIPTION, POSITION, HEADLINE, DETAILS } = BIO;
+  const { company } = internships[internships.length - 1];
   const { src } = JoshMemoji;
 
   return (
@@ -131,7 +132,7 @@ export default function About() {
 
           <div className="mt-8 flex flex-col gap-1.5">
             <h1>{NAME}</h1>
-            <h4>Junior @ Singapore Management University</h4>
+            <h4>{DESCRIPTION}</h4>
             <h4>{POSITION}</h4>
           </div>
         </div>
@@ -142,15 +143,13 @@ export default function About() {
             {presentInternshipCount === 0 ? (
               <>{HEADLINE}</>
             ) : (
-              <p>
-                {position} @ {company}
-              </p>
+              <p>SWE Intern @ {company}</p>
             )}
           </h4>
         </div>
 
         <div className="flex flex-col gap-4">
-          {BIO.map((bio: string, i: number) => (
+          {DETAILS.map((bio: string, i: number) => (
             <h4 key={`${bio}-${i}`} className="leading-relaxed">
               {bio}
             </h4>
