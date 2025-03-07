@@ -1,10 +1,11 @@
-import { POSITION } from "@/constant";
+import { BIO } from "@/constant";
 import { Internship } from "@/models/internship";
 import { TechStack } from "@/models/project";
 import BSG from "@/public/companies/BSG.png";
 import GovTech from "@/public/companies/GovTech.png";
 import PigeonLab from "@/public/companies/PigeonLab.png";
 
+const { POSITION } = BIO;
 export const internships: Internship[] = [
   {
     id: 1,
