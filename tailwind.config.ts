@@ -21,6 +21,7 @@ const config = {
       colors: {
         ashGray: "#F3F4F6",
         lightGray: "#FAFAFA",
+        skyBlue: "#26DDF9",
         gray: "#1F1D1D",
         green: "#16A34A",
         border: "hsl(var(--border))",
