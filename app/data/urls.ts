@@ -1,5 +1,5 @@
 import { EXTERNAL_LINKS } from "@/constant";
-import { Url } from "@/models/url";
+import { Url } from "@/models";
 
 const { RESUME, LINKEDIN, GITHUB } = EXTERNAL_LINKS;
 export const urls: Url[] = [

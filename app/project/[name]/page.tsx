@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data";
 import { cn, scrollToTop } from "@/lib/utils";
-import { DeploymentStatus } from "@/models/project";
+import { DeploymentStatus } from "@/models";
 import { CaretRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";

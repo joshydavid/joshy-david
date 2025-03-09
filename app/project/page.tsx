@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data";
 import { cn, sortData } from "@/lib/utils";
-import { Project as ProjectModel } from "@/models/project";
+import { Project as ProjectModel } from "@/models";
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";

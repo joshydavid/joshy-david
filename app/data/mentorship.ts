@@ -1,4 +1,4 @@
-import { Mentorship } from "@/models/mentorship";
+import { Mentorship } from "@/models";
 import Hack from "@/public/companies/Hack.png";
 import ProjectHeartCode from "@/public/companies/ProjectHeartCode.png";
 

@@ -1,9 +1,4 @@
-import {
-  DeploymentStatus,
-  Project,
-  ProjectTag,
-  TechStack,
-} from "@/models/project";
+import { DeploymentStatus, Project, ProjectTag, TechStack } from "@/models";
 import BookLah from "@/public/projects/BookLah.png";
 import ShortenSG from "@/public/projects/ShortenSG.png";
 import LegacyCodingPortfolio from "@/public/projects/legacy-portfolio.png";
