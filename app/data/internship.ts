@@ -1,6 +1,5 @@
 import { BIO } from "@/constant";
-import { Internship } from "@/models/internship";
-import { TechStack } from "@/models/project";
+import { Internship, TechStack } from "@/models";
 import BSG from "@/public/companies/BSG.png";
 import GovTech from "@/public/companies/GovTech.png";
 import PigeonLab from "@/public/companies/PigeonLab.png";

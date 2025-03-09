@@ -14,7 +14,7 @@ import { BIO } from "@/constant";
 import { internships, urls } from "@/data";
 import { mentorships } from "@/data/mentorship";
 import { sortData } from "@/lib/utils";
-import { Url } from "@/models/url";
+import { Url } from "@/models";
 import Project from "@/project/page";
 import JoshMemoji from "@/public/joshua-memoji.png";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";

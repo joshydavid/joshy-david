@@ -6,7 +6,6 @@ export enum DeploymentStatus {
 
 export enum ProjectTag {
   GOVTECH_PROJECT = "GovTech Project",
-  INFORMATION_SECURITY = "Information Security",
   SCHOOL_PROJECT = "School Project",
   SOFTWARE_ENGINEERING = "Software Engineering",
   PET_PROJECT = "Pet Project",
@@ -40,13 +39,6 @@ export enum TechStack {
   TYPESCRIPT = "TypeScript",
   VERCEL = "Vercel",
   VUE_JS = "Vue.js",
-}
-
-export enum SecurityTool {
-  SPLUNK = "Splunk",
-  SNORT = "Snort",
-  BURP_SUITE = "Burp Suite",
-  WIRESHARK = "Wireshark",
 }
 
 export interface Project {

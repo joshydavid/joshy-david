@@ -1,5 +1,4 @@
-import { Bio } from "@/models/bio";
-import { ExternalLinks } from "@/models/externalLinks";
+import { Bio, ExternalLinks } from "@/models";
 
 export const BIO: Bio = {
   NAME: "Joshua David",
