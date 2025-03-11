@@ -1,5 +1,3 @@
-"use client";
-
 import ToggleSwitch from "@/components/ToggleSwitch";
 import { format } from "date-fns";
 

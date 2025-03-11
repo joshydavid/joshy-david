@@ -138,7 +138,7 @@ export default function About() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Ping bgColor="bg-green dark:bg-skyBlue" />
+          <Ping bgColor="bg-green dark:bg-brightSun" />
           <h4>
             {presentInternshipCount === 0 ? (
               <>{HEADLINE}</>
