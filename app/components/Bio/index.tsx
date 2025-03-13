@@ -16,7 +16,7 @@ export default function Bio() {
     isLoading,
   } = useQuery({ queryKey: ["bioData"], queryFn: retrieveBio });
 
-  if (isLoading) return <BeatLoader color="white" size="13px" />;
+  if (isLoading) return <BeatLoader color="white" size="10px" />;
   if (error) return <div>{error.message}</div>;
   const { NAME, POSITION, HEADLINE, DESCRIPTION, DETAILS }: iBio = bioData;
 
