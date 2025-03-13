@@ -1,7 +1,6 @@
 "use client";
 
-import Ping from "@/components/Ping";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import Bio from "@/components/Bio";
 import {
   Dialog,
   DialogContent,
@@ -10,22 +9,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { BIO } from "@/constant";
-import { internships, urls } from "@/data";
+import { internships } from "@/data";
 import { mentorships } from "@/data/mentorship";
 import { sortData } from "@/lib/utils";
-import { Url } from "@/models";
 import Project from "@/project/page";
-import JoshMemoji from "@/public/joshua-memoji.png";
-import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function About() {
-  const presentInternshipCount = internships.filter(
-    (internship) => !internship.isCompleted,
-  ).length;
-
   const renderInternshipExperience = () => {
     const sortedInternships = sortData(internships.slice());
 
@@ -118,58 +109,9 @@ export default function About() {
     );
   };
 
-  const { NAME, DESCRIPTION, POSITION, HEADLINE, DETAILS } = BIO;
-  const { company } = internships[internships.length - 1];
-  const { src } = JoshMemoji;
-
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex flex-col gap-6">
-        <div>
-          <Avatar className="h-36 w-36">
-            <AvatarImage src={src} className="bg-ashGray dark:bg-gray" />
-          </Avatar>
-
-          <div className="mt-8 flex flex-col gap-1.5">
-            <h1>{NAME}</h1>
-            <h4>{DESCRIPTION}</h4>
-            <h4>{POSITION}</h4>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <Ping bgColor="bg-green dark:bg-brightSun" />
-          <h4>
-            {presentInternshipCount === 0 ? (
-              <>{HEADLINE}</>
-            ) : (
-              <p>SWE Intern @ {company}</p>
-            )}
-          </h4>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          {DETAILS.map((bio: string, i: number) => (
-            <h4 key={`${bio}-${i}`} className="leading-relaxed">
-              {bio}
-            </h4>
-          ))}
-        </div>
-
-        <div className="flex flex-row gap-4">
-          {urls.map(({ label, path }: Url) => (
-            <div
-              className="flex cursor-pointer items-center gap-1 text-sm hover:text-gray dark:text-lightGray dark:hover:text-white"
-              key={label}
-            >
-              <ArrowTopRightIcon className="h-5 w-5" />
-              <Link key={label} href={path} target="_blank">
-                {label}
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Bio />
       {renderInternshipExperience()}
       {renderMentorshipExperience()}
       <Project />
