@@ -1,14 +1,12 @@
-import { Bio, ExternalLinks } from "@/models";
+import { ExternalLinks } from "@/models";
 
-export const BIO: Bio = {
+export const BIO = {
   NAME: "Joshua David",
-  POSITION: "Software Engineer",
-  HEADLINE: "Available for Software Engineering Internship (2025)",
   DESCRIPTION: "Junior @ Singapore Management University",
-  DETAILS: [
-    "I'm Joshua, a junior at Singapore Management University pursuing a Bachelor's in Information Systems. I'm passionate about all things software engineering with a deep interest in building large-scale distributed systems.",
-    "Outside of work, I enjoy working out, reading and making a perfect cup of coffee.",
-  ],
+};
+
+export const APIs = {
+  BIO_AWS: "https://joshydavid.s3.us-east-1.amazonaws.com/Joshua.json",
 };
 
 export const EXTERNAL_LINKS: ExternalLinks = {
