@@ -32,7 +32,7 @@ export default function Bio() {
         <AvatarImage src={src} className="bg-ashGray dark:bg-gray" />
       </Avatar>
 
-      <div className="mt-8 flex flex-col gap-1.5">
+      <div className="mt-2 flex flex-col gap-1.5">
         <h1>{NAME}</h1>
         <h4>{DESCRIPTION}</h4>
         <h4>{POSITION}</h4>
