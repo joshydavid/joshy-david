@@ -1,15 +1,14 @@
-import { BIO } from "@/constant";
 import { Internship, TechStack } from "@/models";
 import BSG from "@/public/companies/BSG.png";
 import GovTech from "@/public/companies/GovTech.png";
 import PigeonLab from "@/public/companies/PigeonLab.png";
 
-const { POSITION } = BIO;
+const POSITION = "Software Engineer Intern";
 export const internships: Internship[] = [
   {
     id: 1,
     company: "Blockchain Solutions",
-    position: `${POSITION} Intern`,
+    position: `${POSITION}`,
     timeline: "May 2022 - Aug 2022",
     icon: BSG,
     achievements: [
@@ -22,7 +21,7 @@ export const internships: Internship[] = [
   {
     id: 2,
     company: "Pigeonhole Live",
-    position: `${POSITION} Intern`,
+    position: `${POSITION}`,
     timeline: "Jan 2023 - Mar 2023",
     icon: PigeonLab,
     achievements: [
@@ -35,7 +34,7 @@ export const internships: Internship[] = [
   {
     id: 3,
     company: "GovTech",
-    position: `${POSITION} Intern`,
+    position: `${POSITION}`,
     timeline: "Jan 2024 - Jul 2024",
     icon: GovTech,
     achievements: [
