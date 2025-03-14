@@ -1,7 +1,10 @@
 import { Avatar } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
+import { v4 as uuidv4 } from "uuid";
 
 export default function BioSkeleton() {
+  const skeletons = Array.from({ length: 3 }).map(() => uuidv4());
+
   return (
     <div className="flex flex-col gap-6">
       <Avatar className="h-36 w-36">
@@ -25,11 +28,8 @@ export default function BioSkeleton() {
       </div>
 
       <div className="flex flex-row gap-2">
-        {Array.from({ length: 3 }).map((_, index) => (
-          <div
-            key={`${index}-h-5-w-20-skeleton`}
-            className="flex items-center gap-1"
-          >
+        {skeletons.map((id) => (
+          <div key={id} className="flex items-center gap-1">
             <Skeleton className="h-5 w-20" />
           </div>
         ))}
