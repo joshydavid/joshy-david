@@ -1,29 +1,23 @@
-import { retrieveBio } from "@/api/retrieveBio";
 import Ping from "@/components/Ping";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { internships, urls } from "@/data";
-import { Bio as iBio, Url } from "@/models";
+import { urls } from "@/data";
+import { Bio as iBio, Internship, Url } from "@/models";
 import JoshMemoji from "@/public/joshua-memoji.png";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
-import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import BeatLoader from "react-spinners/BeatLoader";
 
-export default function Bio() {
-  const {
-    data: bioData,
-    error,
-    isLoading,
-  } = useQuery({ queryKey: ["bioData"], queryFn: retrieveBio });
+interface BioProps {
+  data: iBio;
+  internshipData: Internship[];
+}
 
-  if (isLoading) return <BeatLoader color="white" size="10px" />;
-  if (error) return <div>{error.message}</div>;
-  const { NAME, POSITION, HEADLINE, DESCRIPTION, DETAILS }: iBio = bioData;
+export default function Bio({ data, internshipData }: BioProps) {
+  const { NAME, POSITION, HEADLINE, DESCRIPTION, DETAILS }: iBio = data;
 
-  const presentInternshipCount = internships.filter(
-    (internship) => !internship.isCompleted,
+  const presentInternshipCount = internshipData.filter(
+    (internshipData) => !internshipData.isCompleted,
   ).length;
-  const { company } = internships[internships.length - 1];
+  const { company } = internshipData[internshipData.length - 1];
   const { src } = JoshMemoji;
 
   return (

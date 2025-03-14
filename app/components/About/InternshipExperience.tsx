@@ -1,6 +1,5 @@
 "use client";
 
-import { retrieveInternships } from "@/api/retrieveInternship";
 import {
   Dialog,
   DialogContent,
@@ -10,21 +9,17 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { sortData } from "@/lib/utils";
-import { useQuery } from "@tanstack/react-query";
+import { Internship } from "@/models";
 import Image from "next/image";
-import BeatLoader from "react-spinners/BeatLoader";
 
-export default function InternshipExperience() {
-  const {
-    data: internshipData,
-    error,
-    isLoading,
-  } = useQuery({ queryKey: ["internshipData"], queryFn: retrieveInternships });
+interface InternshipExperienceProps {
+  data: Internship[];
+}
 
-  if (isLoading) return <BeatLoader color="white" size="10px" />;
-  if (error) return <div>{error.message}</div>;
-
-  const sortedInternships = sortData(internshipData.slice());
+export default function InternshipExperience({
+  data,
+}: Readonly<InternshipExperienceProps>) {
+  const sortedInternships = sortData(data.slice());
 
   return (
     <div className="flex flex-col gap-3">
