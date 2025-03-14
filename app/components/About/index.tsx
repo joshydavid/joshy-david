@@ -1,13 +1,16 @@
 "use client";
 
+import { retrieveBio } from "@/api/retrieveBio";
 import { retrieveInternships } from "@/api/retrieveInternship";
+import {
+  BioSkeleton,
+  InternshipExperienceSkeleton,
+} from "@/components/Skeletons";
 import Project from "@/project/page";
 import { useQuery } from "@tanstack/react-query";
-import BeatLoader from "react-spinners/BeatLoader";
 import Bio from "./Bio";
 import InternshipExperience from "./InternshipExperience";
 import MentorshipExperience from "./MentorshipExperience";
-import { retrieveBio } from "@/api/retrieveBio";
 
 export default function About() {
   const {
@@ -25,7 +28,14 @@ export default function About() {
   const isLoading = bioLoading || internshipLoading;
   const error = bioError || internshipError;
 
-  if (isLoading) return <BeatLoader color="white" size="10px" />;
+  if (isLoading)
+    return (
+      <div className="flex flex-col gap-10">
+        <BioSkeleton />
+        <InternshipExperienceSkeleton />
+      </div>
+    );
+
   if (error) return <div>{error.message}</div>;
 
   return (
