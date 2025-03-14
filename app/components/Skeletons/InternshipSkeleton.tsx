@@ -7,11 +7,10 @@ export default function InternshipExperienceSkeleton() {
       <Skeleton className="h-8 w-32" />
 
       {Array.from({ length: 3 }).map((_, index) => (
-        <Dialog key={index}>
+        <Dialog key={`${index}-internship-skeleton`}>
           <DialogTrigger className="mb-3 mt-2 flex cursor-pointer text-left">
             <div className="flex items-center gap-6">
               <Skeleton className="h-10 w-10 rounded-md" />
-
               <div className="flex flex-col gap-2">
                 <Skeleton className="h-5 w-48" />
                 <Skeleton className="h-5 w-32" />

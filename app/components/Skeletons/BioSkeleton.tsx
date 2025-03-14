@@ -26,7 +26,10 @@ export default function BioSkeleton() {
 
       <div className="flex flex-row gap-2">
         {Array.from({ length: 3 }).map((_, index) => (
-          <div key={index} className="flex items-center gap-1">
+          <div
+            key={`${index}-h-5-w-20-skeleton`}
+            className="flex items-center gap-1"
+          >
             <Skeleton className="h-5 w-20" />
           </div>
         ))}
