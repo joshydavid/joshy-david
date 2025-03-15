@@ -1,11 +1,12 @@
-import { ExternalLinks } from "@/models";
+import { ApiEndpoints, BioMetaData, ExternalLinks } from "@/models";
 
-export const BIO = {
+export const BIO: BioMetaData = {
   NAME: "Joshua David",
   DESCRIPTION: "Junior @ Singapore Management University",
+  SITE_URL: "https://joshuadavid.dev",
 };
 
-export const APIs = {
+export const APIs: ApiEndpoints = {
   BIO_AWS: "https://joshydavid.s3.us-east-1.amazonaws.com/Joshua.json",
   INTERNSHIP_AWS:
     "https://joshydavid.s3.us-east-1.amazonaws.com/Companies.json",

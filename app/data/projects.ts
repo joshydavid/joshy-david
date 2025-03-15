@@ -59,7 +59,7 @@ export const projects: Project[] = [
     tags: [2024, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.PET_PROJECT],
     icon: CodingPortfolio,
     detailedImage: CodingPortfolioAll,
-    gitHub: "https://github.com/joshydavid/joshuadavid",
+    gitHub: "https://github.com/joshydavid/joshua-david",
     techStack: [
       TechStack.TYPESCRIPT,
       TechStack.NEXT_JS,
