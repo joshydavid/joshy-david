@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
+import { ReactNode } from "react";
 import Navigation from "./components/Navigation";
 import { BIO, EXTERNAL_LINKS, Theme } from "./constant";
 import "./globals.css";
@@ -11,10 +12,10 @@ const raleway = Raleway({
 });
 
 const { OPEN_GRAPH } = EXTERNAL_LINKS;
-const { NAME, DESCRIPTION } = BIO;
+const { NAME, DESCRIPTION, SITE_URL } = BIO;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://joshuadavid.dev"),
+  metadataBase: new URL(SITE_URL),
   title: NAME,
   openGraph: {
     title: NAME,
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 };
 
 type ChildrenProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export default function RootLayout({ children }: Readonly<ChildrenProps>) {

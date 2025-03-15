@@ -1,17 +1,18 @@
-import { ExternalLinks } from "@/models";
+import { iAPIs, iExternalLinks } from "@/models";
 
-export const BIO = {
+export const BIO: { NAME: string; DESCRIPTION: string; SITE_URL: string } = {
   NAME: "Joshua David",
   DESCRIPTION: "Junior @ Singapore Management University",
+  SITE_URL: "https://joshuadavid.dev",
 };
 
-export const APIs = {
+export const APIs: iAPIs = {
   BIO_AWS: "https://joshydavid.s3.us-east-1.amazonaws.com/Joshua.json",
   INTERNSHIP_AWS:
     "https://joshydavid.s3.us-east-1.amazonaws.com/Companies.json",
 };
 
-export const EXTERNAL_LINKS: ExternalLinks = {
+export const EXTERNAL_LINKS: iExternalLinks = {
   RESUME:
     "https://joshydavid.s3.us-east-1.amazonaws.com/Joshua_David_Resume.pdf",
   OPEN_GRAPH:

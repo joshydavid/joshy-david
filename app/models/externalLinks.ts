@@ -1,4 +1,4 @@
-export interface ExternalLinks {
+export interface iExternalLinks {
   RESUME: string;
   OPEN_GRAPH: string;
   LINKEDIN: string;
