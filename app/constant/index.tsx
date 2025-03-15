@@ -19,7 +19,7 @@ export const EXTERNAL_LINKS: ExternalLinks = {
     "https://joshydavid.s3.us-east-1.amazonaws.com/Joshua_David_Resume.pdf",
   OPEN_GRAPH:
     "https://joshydavid.s3.us-east-1.amazonaws.com/Joshy_Open_Graph.png",
-  LINKEDIN: "https://www.linkedin.com/in/joshydavid",
+  LINKEDIN: "https://linkedin.com/in/joshydavid",
   GITHUB: "https://github.com/joshydavid",
 };
 
