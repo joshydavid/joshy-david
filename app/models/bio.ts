@@ -1,7 +1,14 @@
-export interface Bio {
+interface BaseBio {
   NAME: string;
+  DESCRIPTION: string;
+}
+
+export interface Bio extends BaseBio {
   POSITION: string;
   HEADLINE: string;
-  DESCRIPTION: string;
   DETAILS: string[];
+}
+
+export interface BioMetaData extends BaseBio {
+  SITE_URL: string;
 }
