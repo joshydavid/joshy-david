@@ -2,8 +2,12 @@ import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { Skeleton } from "@/components/ui/skeleton";
 import { v4 as uuidv4 } from "uuid";
 
-export default function InternshipExperienceSkeleton() {
-  const skeletons = Array.from({ length: 3 }).map(() => uuidv4());
+interface itemCountProps {
+  itemCount: number;
+}
+
+export default function ExperienceSkeleton({ itemCount }: itemCountProps) {
+  const skeletons = Array.from({ length: itemCount }).map(() => uuidv4());
 
   return (
     <div className="flex flex-col gap-3">

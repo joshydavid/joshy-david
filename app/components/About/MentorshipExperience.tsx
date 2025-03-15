@@ -1,12 +1,17 @@
 "use client";
 
-import { mentorships } from "@/data/mentorship";
 import { sortData } from "@/lib/utils";
+import { Mentorship } from "@/models";
 import Image from "next/image";
 import Link from "next/link";
+interface MentorshipExperienceProps {
+  data: Mentorship[];
+}
 
-export default function MentorshipExperience() {
-  const sortedMentorships = sortData(mentorships.slice());
+export default function MentorshipExperience({
+  data,
+}: Readonly<MentorshipExperienceProps>) {
+  const sortedMentorships = sortData(data.slice());
 
   return (
     <div className="flex flex-col gap-3">

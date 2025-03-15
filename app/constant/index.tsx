@@ -10,6 +10,8 @@ export const APIs: ApiEndpoints = {
   BIO_AWS: "https://joshydavid.s3.us-east-1.amazonaws.com/Joshua.json",
   INTERNSHIP_AWS:
     "https://joshydavid.s3.us-east-1.amazonaws.com/Companies.json",
+  MENTORSHIP_AWS:
+    "https://joshydavid.s3.us-east-1.amazonaws.com/Mentorship.json",
 };
 
 export const EXTERNAL_LINKS: ExternalLinks = {
