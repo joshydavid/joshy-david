@@ -45,7 +45,7 @@ export default function About() {
   if (isLoading)
     return (
       <div className="flex flex-col gap-10">
-        <BioSkeleton />
+        <BioSkeleton itemCount={3} />
         <ExperienceSkeleton itemCount={3} />
         <ExperienceSkeleton itemCount={2} />
       </div>
