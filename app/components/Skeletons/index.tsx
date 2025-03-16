@@ -1,2 +1,2 @@
-export { default as BioSkeleton } from "./BioSkeleton";
-export { default as ExperienceSkeleton } from "./ExperienceSkeleton";
+export * from "./BioSkeleton";
+export * from "./ExperienceSkeleton";

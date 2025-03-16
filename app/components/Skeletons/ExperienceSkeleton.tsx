@@ -6,13 +6,11 @@ interface itemCountProps {
   itemCount: number;
 }
 
-export default function ExperienceSkeleton({ itemCount }: itemCountProps) {
+export const ExperienceSkeleton = ({ itemCount }: itemCountProps) => {
   const skeletons = Array.from({ length: itemCount }).map(() => uuidv4());
-
   return (
     <div className="flex flex-col gap-3">
       <Skeleton className="h-8 w-32" />
-
       {skeletons.map((id) => (
         <Dialog key={id}>
           <DialogTrigger className="mb-3 mt-2 flex cursor-pointer text-left">
@@ -29,4 +27,4 @@ export default function ExperienceSkeleton({ itemCount }: itemCountProps) {
       ))}
     </div>
   );
-}
+};
