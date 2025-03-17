@@ -6,7 +6,7 @@ interface itemCountProps {
   itemCount: number;
 }
 
-export const ExperienceSkeleton = ({ itemCount }: itemCountProps) => {
+export const ExperienceSkeleton = ({ itemCount }: Readonly<itemCountProps>) => {
   const skeletons = Array.from({ length: itemCount }).map(() => uuidv4());
   return (
     <div className="flex flex-col gap-3">
