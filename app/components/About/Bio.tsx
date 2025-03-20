@@ -33,7 +33,7 @@ export default function Bio({ data, internshipData }: BioProps) {
       </div>
 
       <div className="flex items-center gap-2">
-        <Ping bgColor="bg-green dark:bg-brightSun" />
+        <Ping bgColor="bg-green" />
         <h4>
           {presentInternshipCount === 0 ? (
             <>{HEADLINE}</>
