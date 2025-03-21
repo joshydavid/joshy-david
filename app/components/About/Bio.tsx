@@ -26,7 +26,7 @@ export default function Bio({ data, companyData }: Readonly<BioProps>) {
         <AvatarImage src={src} className="bg-ashGray dark:bg-gray" />
       </Avatar>
 
-      <div className="mt-2 flex flex-col gap-1.5">
+      <div className="mt-2 flex flex-col gap-2">
         <h1>{NAME}</h1>
         <div className="flex items-center gap-2">
           <Ping bgColor="bg-pictonBlue" />
@@ -41,7 +41,7 @@ export default function Bio({ data, companyData }: Readonly<BioProps>) {
       </div>
 
       <div className="flex flex-col gap-4">
-        {DETAILS?.map((bio: string, i: number) => (
+        {DETAILS.map((bio: string, i: number) => (
           <h4 key={`${bio}-${i}`} className="leading-relaxed">
             {bio}
           </h4>
