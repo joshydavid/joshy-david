@@ -16,9 +16,7 @@ export const BioSkeleton = ({ itemCount }: Readonly<BioSkeletonProps>) => {
       <div className="mt-2 flex flex-col gap-3">
         <Skeleton className="h-6 w-48" />
         <Skeleton className="h-6 w-full" />
-        <Skeleton className="h-6 w-36" />
       </div>
-      <Skeleton className="h-6 w-full" />
       <div className="flex flex-col gap-3">
         <Skeleton className="h-6 w-full" />
         <Skeleton className="h-6 w-3/4" />
