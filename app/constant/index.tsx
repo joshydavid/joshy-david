@@ -2,6 +2,7 @@ import { ApiEndpoints, BioMetaData, ExternalLinks } from "@/models";
 
 export const BIO: BioMetaData = {
   NAME: "Joshua David",
+  DESCRIPTION: "Junior @ Singapore Management University",
   SITE_URL: "https://joshuadavid.dev",
 };
 
