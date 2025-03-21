@@ -9,22 +9,20 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { sortData } from "@/lib/utils";
-import { Internship } from "@/models";
+import { Company } from "@/models";
 import Image from "next/image";
 
-interface InternshipExperienceProps {
-  data: Internship[];
+interface JobExperienceProps {
+  data: Company[];
 }
 
-export default function InternshipExperience({
-  data,
-}: Readonly<InternshipExperienceProps>) {
-  const sortedInternships = sortData(data.slice());
+export default function JobExperience({ data }: Readonly<JobExperienceProps>) {
+  const sortedJobs = sortData(data.slice());
 
   return (
     <div className="flex flex-col gap-3">
       <h1>Experience</h1>
-      {sortedInternships.map(
+      {sortedJobs.map(
         ({ id, company, position, timeline, icon, achievements }: any) => {
           return (
             <Dialog key={`${company}-${id}`}>
