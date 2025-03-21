@@ -6,11 +6,11 @@ import { APIs } from "@/constant";
 import Project from "@/project/page";
 import { useQuery } from "@tanstack/react-query";
 import Bio from "./Bio";
-import InternshipExperience from "./InternshipExperience";
+import JobExperience from "./JobExperience";
 import MentorshipExperience from "./MentorshipExperience";
 
 export default function About() {
-  const { BIO_AWS, INTERNSHIP_AWS, MENTORSHIP_AWS } = APIs;
+  const { BIO_AWS, COMPANY_AWS, MENTORSHIP_AWS } = APIs;
 
   const {
     data: bioData,
@@ -22,12 +22,12 @@ export default function About() {
   });
 
   const {
-    data: internshipData,
-    error: internshipError,
-    isLoading: internshipLoading,
+    data: companyData,
+    error: companyError,
+    isLoading: companyLoading,
   } = useQuery({
-    queryKey: ["internshipData"],
-    queryFn: () => getRequest(INTERNSHIP_AWS),
+    queryKey: ["companyData"],
+    queryFn: () => getRequest(COMPANY_AWS),
   });
 
   const {
@@ -39,8 +39,8 @@ export default function About() {
     queryFn: () => getRequest(MENTORSHIP_AWS),
   });
 
-  const isLoading = bioLoading || internshipLoading || mentorshipLoading;
-  const error = bioError || internshipError || mentorshipError;
+  const isLoading = bioLoading || companyLoading || mentorshipLoading;
+  const error = bioError || companyError || mentorshipError;
 
   if (isLoading)
     return (
@@ -55,8 +55,8 @@ export default function About() {
 
   return (
     <div className="flex flex-col gap-10">
-      <Bio data={bioData} internshipData={internshipData} />
-      <InternshipExperience data={internshipData} />
+      <Bio data={bioData} companyData={companyData} />
+      <JobExperience data={companyData} />
       <MentorshipExperience data={mentorshipData} />
       <Project />
     </div>

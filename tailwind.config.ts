@@ -23,6 +23,7 @@ const config = {
         lightGray: "#FAFAFA",
         gray: "#1F1D1D",
         green: "#16A34A",
+        pictonBlue: "#38BDF8",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

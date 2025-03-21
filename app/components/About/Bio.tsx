@@ -1,23 +1,23 @@
 import Ping from "@/components/Ping";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { urls } from "@/data";
-import { Bio as iBio, Internship, Url } from "@/models";
+import { Company, Bio as iBio, Url } from "@/models";
 import JoshMemoji from "@/public/joshua-memoji.png";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 interface BioProps {
   data: iBio;
-  internshipData: Internship[];
+  companyData: Company[];
 }
 
-export default function Bio({ data, internshipData }: BioProps) {
-  const { NAME, POSITION, HEADLINE, DESCRIPTION, DETAILS }: iBio = data;
+export default function Bio({ data, companyData }: Readonly<BioProps>) {
+  const { NAME, DETAILS }: iBio = data;
 
-  const presentInternshipCount = internshipData.filter(
-    (internshipData) => !internshipData.isCompleted,
+  const presentInternshipCount = companyData.filter(
+    (companyData) => !companyData.isCompleted,
   ).length;
-  const { company } = internshipData[internshipData.length - 1];
+  const { company } = companyData[companyData.length - 1];
   const { src } = JoshMemoji;
 
   return (
@@ -26,25 +26,22 @@ export default function Bio({ data, internshipData }: BioProps) {
         <AvatarImage src={src} className="bg-ashGray dark:bg-gray" />
       </Avatar>
 
-      <div className="mt-2 flex flex-col gap-1.5">
+      <div className="mt-2 flex flex-col gap-2">
         <h1>{NAME}</h1>
-        <h4>{DESCRIPTION}</h4>
-        <h4>{POSITION}</h4>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <Ping bgColor="bg-green" />
-        <h4>
-          {presentInternshipCount === 0 ? (
-            <>{HEADLINE}</>
-          ) : (
-            <p>SWE Intern @ {company}</p>
-          )}
-        </h4>
+        <div className="flex items-center gap-2">
+          <Ping bgColor="bg-pictonBlue" />
+          <h4>
+            {presentInternshipCount === 0 ? (
+              <>Available for Software Engineering Internship (2025)</>
+            ) : (
+              <p>SWE Intern @ {company}</p>
+            )}
+          </h4>
+        </div>
       </div>
 
       <div className="flex flex-col gap-4">
-        {DETAILS?.map((bio: string, i: number) => (
+        {DETAILS.map((bio: string, i: number) => (
           <h4 key={`${bio}-${i}`} className="leading-relaxed">
             {bio}
           </h4>
