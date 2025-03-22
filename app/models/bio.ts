@@ -1,10 +1,10 @@
 interface BaseBio {
   NAME: string;
-  HEADLINE: string;
   DESCRIPTION: string;
 }
 
 export interface Bio extends BaseBio {
+  HEADLINE: string;
   DETAILS: string[];
 }
 
