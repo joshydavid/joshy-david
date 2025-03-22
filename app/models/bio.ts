@@ -1,5 +1,6 @@
 interface BaseBio {
   NAME: string;
+  HEADLINE: string;
   DESCRIPTION: string;
 }
 

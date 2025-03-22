@@ -12,12 +12,8 @@ interface BioProps {
 }
 
 export default function Bio({ data, companyData }: Readonly<BioProps>) {
-  const { NAME, DETAILS }: iBio = data;
-
-  const presentInternshipCount = companyData.filter(
-    (companyData) => !companyData.isCompleted,
-  ).length;
-  const { company } = companyData[companyData.length - 1];
+  const { NAME, HEADLINE, DETAILS }: iBio = data;
+  const { company, isCompleted } = companyData[companyData.length - 1];
   const { src } = JoshMemoji;
 
   return (
@@ -30,13 +26,7 @@ export default function Bio({ data, companyData }: Readonly<BioProps>) {
         <h1>{NAME}</h1>
         <div className="flex items-center gap-2">
           <Ping bgColor="bg-pictonBlue" />
-          <h4>
-            {presentInternshipCount === 0 ? (
-              <>Available for Software Engineering Internship (2025)</>
-            ) : (
-              <p>SWE Intern @ {company}</p>
-            )}
-          </h4>
+          <h4>{isCompleted ? <>{HEADLINE}</> : <>SWE Intern @ {company}</>}</h4>
         </div>
       </div>
 
