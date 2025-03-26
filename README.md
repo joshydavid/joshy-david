@@ -14,9 +14,9 @@
 
 - [Next.js](https://nextjs.org)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Shadcn UI](https://ui.shadcn.com/)
+- [Shadcn UI](https://ui.shadcn.com)
 - [TanStack Query](https://tanstack.com/query)
-- [Amazon Web Services](https://aws.amazon.com)
+- [Amazon Web Services](https://aws.amazon.com/s3)
 
 ## 🆕 Getting Started
 
