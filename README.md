@@ -1,4 +1,4 @@
-## 🐧 Coding Portfolio
+## 🚀 Coding Portfolio
 
 ![Issue](https://img.shields.io/github/issues/joshydavid/joshua-david)
 ![Pull Request](https://img.shields.io/github/issues-pr/joshydavid/joshua-david)
