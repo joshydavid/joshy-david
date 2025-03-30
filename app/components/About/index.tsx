@@ -2,7 +2,7 @@
 
 import { getRequest } from "@/api/getRequest";
 import { BioSkeleton, ExperienceSkeleton } from "@/components/Skeletons";
-import { APIs } from "@/constant";
+import { APIs, QUERY_KEYS } from "@/constant";
 import Project from "@/project/page";
 import { useQuery } from "@tanstack/react-query";
 import Bio from "./Bio";
@@ -17,7 +17,7 @@ export default function About() {
     error: bioError,
     isLoading: bioLoading,
   } = useQuery({
-    queryKey: ["bioData"],
+    queryKey: [QUERY_KEYS.BIO_DATA],
     queryFn: () => getRequest(BIO_AWS),
   });
 
@@ -26,7 +26,7 @@ export default function About() {
     error: companyError,
     isLoading: companyLoading,
   } = useQuery({
-    queryKey: ["companyData"],
+    queryKey: [QUERY_KEYS.COMPANY_DATA],
     queryFn: () => getRequest(COMPANY_AWS),
   });
 
@@ -35,7 +35,7 @@ export default function About() {
     error: mentorshipError,
     isLoading: mentorshipLoading,
   } = useQuery({
-    queryKey: ["mentorshipData"],
+    queryKey: [QUERY_KEYS.MENTORSHIP_DATA],
     queryFn: () => getRequest(MENTORSHIP_AWS),
   });
 
