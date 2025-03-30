@@ -22,13 +22,13 @@ export const EXTERNAL_LINKS: ExternalLinks = {
   GITHUB: "https://github.com/joshydavid",
 };
 
-export enum Theme {
-  "DARK" = "dark",
-  "LIGHT" = "light",
-}
-
 export enum QUERY_KEYS {
   BIO_DATA = "bioData",
   COMPANY_DATA = "companyData",
   MENTORSHIP_DATA = "mentorshipData",
+}
+
+export enum Theme {
+  "DARK" = "dark",
+  "LIGHT" = "light",
 }

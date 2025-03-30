@@ -40,7 +40,7 @@ export default function About() {
   });
 
   const isLoading = bioLoading || companyLoading || mentorshipLoading;
-  const error = bioError || companyError || mentorshipError;
+  const isError = bioError || companyError || mentorshipError;
 
   if (isLoading)
     return (
@@ -51,7 +51,7 @@ export default function About() {
       </div>
     );
 
-  if (error) return <div>{error.message}</div>;
+  if (isError) return <div>{isError.message}</div>;
 
   return (
     <div className="flex flex-col gap-10">
