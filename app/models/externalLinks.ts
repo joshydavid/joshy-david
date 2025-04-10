@@ -1,5 +1,7 @@
+import { StaticImageData } from "next/image";
+
 export interface ExternalLinks {
-  PROFILE_PICTURE: string;
+  PROFILE_PICTURE: StaticImageData;
   RESUME: string;
   OPEN_GRAPH: string;
   LINKEDIN: string;
