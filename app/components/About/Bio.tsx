@@ -1,8 +1,8 @@
 import Ping from "@/components/Ping";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { EXTERNAL_LINKS } from "@/constant";
 import { urls } from "@/data";
 import { Company, Bio as iBio, Url } from "@/models";
-import JoshMemoji from "@/public/joshua-memoji.png";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
@@ -14,12 +14,14 @@ interface BioProps {
 export default function Bio({ data, companyData }: Readonly<BioProps>) {
   const { NAME, HEADLINE, DETAILS }: iBio = data;
   const { company, isCompleted } = companyData[companyData.length - 1];
-  const { src } = JoshMemoji;
 
   return (
     <div className="flex flex-col gap-6">
       <Avatar className="h-36 w-36">
-        <AvatarImage src={src} className="bg-ashGray dark:bg-gray" />
+        <AvatarImage
+          src={EXTERNAL_LINKS.PROFILE_PICTURE}
+          className="bg-ashGray dark:bg-gray"
+        />
       </Avatar>
 
       <div className="mt-2 flex flex-col gap-2">

@@ -14,6 +14,7 @@ export const APIs: ApiEndpoints = {
 };
 
 export const EXTERNAL_LINKS: ExternalLinks = {
+  PROFILE_PICTURE: "https://joshydavid.s3.us-east-1.amazonaws.com/Josh.png",
   RESUME:
     "https://joshydavid.s3.us-east-1.amazonaws.com/Joshua_David_Resume.pdf",
   OPEN_GRAPH:
