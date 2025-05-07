@@ -69,7 +69,7 @@ export const projects: Project[] = [
       TechStack.SUPABASE,
     ],
     deploymentStatus: DeploymentStatus.DEPLOYED,
-    deployedLink: "https://joshuadavid.dev",
+    deployedLink: "https://joshydavid.com",
   },
   {
     id: 4,

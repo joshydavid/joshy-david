@@ -7,7 +7,7 @@
 <br />
 <br />
 
-- [View Project](https://joshuadavid.dev)
+- [View Project](https://joshydavid.com)
 - [Report Bug](https://github.com/joshydavid/joshua-david/issues/new/choose)
 
 ## 🚧 Tech Stack

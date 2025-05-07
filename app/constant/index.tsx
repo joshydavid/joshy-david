@@ -4,7 +4,7 @@ import Josh from "@/public/Josh.png";
 export const BIO: BioMetaData = {
   NAME: "Joshua David",
   DESCRIPTION: "Junior @ Singapore Management University",
-  SITE_URL: "https://joshuadavid.dev",
+  SITE_URL: "https://joshydavid.com",
 };
 
 export const APIs: ApiEndpoints = {
