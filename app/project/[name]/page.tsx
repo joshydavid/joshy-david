@@ -26,6 +26,7 @@ export default function ProjectData() {
     icon,
     description,
     achievements,
+    features,
     detailedImage,
     tags,
     techStack,
@@ -66,6 +67,42 @@ export default function ProjectData() {
           <p className="text-sm leading-relaxed">{description}</p>
         </div>
 
+        <div className="flex flex-col gap-4">
+          <h1>View Project</h1>
+          <div className="flex gap-4">
+            {gitHub && (
+              <Link href={gitHub} target="_blank">
+                <Button variant="secondary" size="sm">
+                  <span className="flex items-center gap-3 text-xs">
+                    <FaGithub className="h-4 w-4" /> GitHub
+                  </span>
+                </Button>
+              </Link>
+            )}
+
+            {deploymentStatus === DeploymentStatus.DEPLOYED ? (
+              <Link href={String(deployedLink)} target="_blank">
+                <Button variant="secondary" size="sm">
+                  <span className="flex items-center gap-2 text-xs">
+                    <TbExternalLink className="h-4 w-4" /> Demo
+                  </span>
+                </Button>
+              </Link>
+            ) : null}
+          </div>
+        </div>
+
+        {features && (
+          <div className="flex flex-col gap-4">
+            <h1>Features</h1>
+            <ul className="flex list-disc flex-col gap-1.5 pl-5 text-sm">
+              {features.map((feature: string, i: number) => (
+                <li key={`${feature}-${i}`}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {achievements && (
           <div className="flex flex-col gap-4">
             <h1>
@@ -97,31 +134,6 @@ export default function ProjectData() {
                 <span className="text-xs">{tech}</span>
               </Button>
             ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          <h1>View Project</h1>
-          <div className="flex gap-4">
-            {gitHub && (
-              <Link href={gitHub} target="_blank">
-                <Button variant="secondary">
-                  <span className="flex items-center gap-3">
-                    <FaGithub className="h-4 w-4" /> GitHub
-                  </span>
-                </Button>
-              </Link>
-            )}
-
-            {deploymentStatus === DeploymentStatus.DEPLOYED ? (
-              <Link href={String(deployedLink)} target="_blank">
-                <Button variant="secondary">
-                  <span className="flex items-center gap-2">
-                    <TbExternalLink className="h-4 w-4" /> Demo
-                  </span>
-                </Button>
-              </Link>
-            ) : null}
           </div>
         </div>
 

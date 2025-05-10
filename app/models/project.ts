@@ -50,6 +50,7 @@ export interface Project {
   slug: string;
   name: string;
   description: string;
+  features?: string[];
   achievements?: string[];
   detailedImage?: any;
   tags: (string | number)[];

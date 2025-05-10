@@ -37,7 +37,9 @@ export default function Project() {
                   <h2>{name}</h2>
                   <div className="flex flex-wrap gap-2">
                     {tags.map((tag, i: number) => (
-                      <Badge key={`${tag}-${i}`}>{tag}</Badge>
+                      <Badge variant="secondary" key={`${tag}-${i}`}>
+                        {tag}
+                      </Badge>
                     ))}
                   </div>
                 </div>
