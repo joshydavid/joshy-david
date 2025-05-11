@@ -41,7 +41,7 @@ export default function ProjectData() {
   }, []);
 
   return (
-    <div className="flex w-screen flex-col gap-5 md:w-11/12">
+    <div className="flex w-screen flex-col gap-8 md:w-11/12">
       <div className="flex gap-1 text-sm">
         <button
           className="cursor-pointer underline-offset-4 hover:underline"
