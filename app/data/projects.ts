@@ -207,18 +207,15 @@ export const projects: Project[] = [
       "Brew Intelligence — your personal coffee companion. Whether you’re pulling a perfect espresso, dialing in a V60, or experimenting with your coffee setup, Brew Intelligence is here to help you brew better.",
     features: [
       "Browse a curated coffee bean library featuring origins, roast profiles, tasting notes, and processing methods.",
-      "Unlock expert recipes, including Jeff Hoffman’s precision brews—from his world championship V60 to clever AeroPress ratios and beyond.",
       "Add your own recipes and fine-tune them over time—track your tweaks, dial-ins.",
       "Track your personal coffee beans—log roast dates, origin details, and freshness reminders to keep every cup at its peak.",
       "Chat with Brew Intelligence to get real-time support guidance, from dialing in espresso to troubleshooting your pour-over.",
     ],
     achievements: [
-      "Designed, developed and launched Brew Intelligence from 0-1 as the sole developer within 4 months.",
+      "Designed, developed and launched Brew Intelligence from 0-1 as the sole developer within 3 months.",
       "Architected a scalable Java backend to handle real-time user queries and image uploads efficiently.",
-      "Engineered a responsive UI with Next.js, adapting seamlessly across mobile and desktop for coffee enthusiasts on the go.",
-      "Built an OpenCV-powered grind size analyzer to detect particle distribution from photos, enhancing brew troubleshooting.",
-      "Integrated LLM to analyze grind results and deliver tailored brewing advice, elevating user experience.",
-      "Reduced app latency by 10% through streamlined Next.js rendering and caching strategies.",
+      "Integrated Large Language Models to analyze grind results and deliver tailored brewing advice, elevating user experience.",
+      "Reduced application latency by 10% through implementation of client-side and back-end redis caching techniques.",
     ],
 
     tags: [2025, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.PET_PROJECT],
