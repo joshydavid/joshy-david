@@ -207,13 +207,14 @@ export const projects: Project[] = [
       "Brew Intelligence — your personal coffee companion. Whether you’re pulling a perfect espresso, dialing in a V60, or experimenting with your coffee setup, Brew Intelligence is here to help you brew better.",
     features: [
       "Browse a curated coffee bean library featuring origins, roast profiles, tasting notes, and processing methods.",
-      "Add your own recipes and fine-tune them over time—track your tweaks, dial-ins.",
-      "Track your personal coffee beans—log roast dates, origin details, and freshness reminders to keep every cup at its peak.",
-      "Chat with Brew Intelligence to get real-time support guidance, from dialing in espresso to troubleshooting your pour-over.",
+      "Add your own recipes and fine-tune them over time.",
+      "Track your personal coffee beans—log roast dates, origin details, and freshness reminders to keep every cup fresh.",
+      "Chat with Brew Intelligence to get support guidance, from dialing in espresso to troubleshooting your pour-over.",
     ],
     achievements: [
-      "Designed, developed and launched Brew Intelligence from 0-1 as the sole developer within 3 months.",
-      "Architected a scalable Java backend to handle real-time user queries and image uploads efficiently.",
+      "Designed, developed and launched Brew Intelligence from 0-1 as the sole developer over the summer break.",
+      "Developed a modular, object-oriented Java backend leveraging MVC architecture and design patterns for scalable and maintainable real-time query and image processing.",
+      "Deployed token-bucket rate limiting (50 requests/minute) to prevent API abuse and maintain backend stability.",
       "Integrated Large Language Models to analyze grind results and deliver tailored brewing advice, elevating user experience.",
       "Reduced application latency by 10% through implementation of client-side and back-end redis caching techniques.",
     ],
@@ -224,7 +225,7 @@ export const projects: Project[] = [
     techStack: [
       TechStack.JAVA,
       TechStack.SPRING_BOOT,
-      TechStack.OPENCV,
+      TechStack.LARGE_LANGUAGE_MODELS,
       TechStack.REACT,
       TechStack.TAILWIND_CSS,
       TechStack.POSTGRESQL,
