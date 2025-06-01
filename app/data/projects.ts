@@ -213,12 +213,11 @@ export const projects: Project[] = [
     ],
     achievements: [
       "Designed, developed and launched Brew Intelligence from 0-1 as the sole developer over the summer break.",
-      "Developed a modular, object-oriented Java backend leveraging MVC architecture and design patterns for scalable and maintainable real-time query and image processing.",
+      "Developed a modular, object-oriented Java backend leveraging MVC architecture and design patterns for scalable backend.",
       "Deployed token-bucket rate limiting (50 requests/minute) to prevent API abuse and maintain backend stability.",
-      "Integrated Large Language Models to analyze grind results and deliver tailored brewing advice, elevating user experience.",
-      "Reduced application latency by 10% through implementation of client-side and back-end redis caching techniques.",
+      "Integrated Large Language Models to analyse grind results and deliver tailored brewing advice.",
+      "Implemented client-side and backend redis caching techniques, leading to 10% reduction in application latency.",
     ],
-
     tags: [2025, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.PET_PROJECT],
     icon: BI,
     gitHub: "https://github.com/joshydavid/brew-intelligence",
