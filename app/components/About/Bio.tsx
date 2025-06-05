@@ -13,7 +13,8 @@ interface BioProps {
 
 export default function Bio({ data, companyData }: Readonly<BioProps>) {
   const { NAME, HEADLINE, DETAILS }: iBio = data;
-  const { company, isCompleted } = companyData[companyData.length - 1];
+  const { company, position, isCompleted } =
+    companyData[companyData.length - 1];
 
   return (
     <div className="flex flex-col gap-6">
@@ -28,7 +29,15 @@ export default function Bio({ data, companyData }: Readonly<BioProps>) {
         <h1>{NAME}</h1>
         <div className="flex items-center gap-2">
           <Ping bgColor="bg-pictonBlue" />
-          <h4>{isCompleted ? <>{HEADLINE}</> : <>SWE Intern @ {company}</>}</h4>
+          <h4>
+            {isCompleted ? (
+              <>{HEADLINE}</>
+            ) : (
+              <>
+                {position} @ {company}
+              </>
+            )}
+          </h4>
         </div>
       </div>
 
