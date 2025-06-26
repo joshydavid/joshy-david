@@ -3,7 +3,7 @@ import Josh from "@/public/Josh.png";
 
 export const BIO: BioMetaData = {
   NAME: "Joshua David",
-  DESCRIPTION: "Junior @ Singapore Management University",
+  DESCRIPTION: "Senior @ Singapore Management University",
   SITE_URL: "https://joshydavid.com",
 };
 
@@ -32,6 +32,6 @@ export enum QUERY_KEYS {
 }
 
 export enum Theme {
-  "DARK" = "dark",
-  "LIGHT" = "light",
+  DARK = "dark",
+  LIGHT = "light",
 }
