@@ -59,17 +59,12 @@ export default function ProjectData() {
         <div className={cn("flex flex-col", isMobile && "w-1/2")}>
           <Image alt={name} src={detailedImage || icon} />
         </div>
-
         <div className="mt-4 flex flex-col gap-4">
           <h1>
             {name} ({tags[0]})
           </h1>
           <p className="text-sm leading-relaxed">{description}</p>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          <h1>View Project</h1>
-          <div className="flex gap-4">
+          <div className="mt-2 flex gap-4">
             {gitHub && (
               <Link href={gitHub} target="_blank">
                 <Button variant="secondary" size="sm">
