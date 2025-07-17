@@ -84,7 +84,8 @@ export default function ProjectData() {
               <Link href={String(deployedLink)} target="_blank">
                 <Button variant="secondary" size="sm">
                   <span className="flex items-center gap-2 text-xs">
-                    <TbExternalLink className="h-4 w-4" /> Demo
+                    <TbExternalLink className="h-4 w-4" />
+                    View Project
                   </span>
                 </Button>
               </Link>

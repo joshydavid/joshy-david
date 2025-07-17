@@ -14,6 +14,10 @@ export enum ProjectTag {
 
 export enum TechStack {
   AMAZON_WEB_SERVICES = "Amazon Web Services",
+  AWS_EC2 = "AWS EC2",
+  AWS_AMPLIFY = "AWS Amplify",
+  AWS_RDS = "AWS RDS",
+  AWS_S3 = "AWS S3",
   DOCKER = "Docker",
   EXPRESS_JS = "Express.js",
   FLASK = "Flask",
