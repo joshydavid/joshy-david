@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { ReactNode } from "react";
@@ -45,6 +47,8 @@ export default function RootLayout({ children }: Readonly<ChildrenProps>) {
             </div>
           </ThemeProvider>
         </TanStackProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
