@@ -25,7 +25,7 @@ export default function Bio({ data, companyData }: Readonly<BioProps>) {
         />
       </Avatar>
 
-      <div className="mt-1 flex flex-col gap-1.5">
+      <div className="mt-1 flex flex-col gap-1">
         <h1>{NAME}</h1>
         <div className="flex items-center gap-2">
           <Ping bgColor="bg-pictonBlue" />
