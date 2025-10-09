@@ -25,6 +25,8 @@ export const EXTERNAL_LINKS: ExternalLinks = {
   GITHUB: "https://github.com/joshydavid",
 };
 
+export const PROGRAMMING_LANGUAGE: string[] = ["Go (Golang)", "Java", "Python"];
+
 export enum QUERY_KEYS {
   BIO_DATA = "bioData",
   COMPANY_DATA = "companyData",
