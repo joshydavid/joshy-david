@@ -1,6 +1,6 @@
 import Ping from "@/components/Ping";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { EXTERNAL_LINKS } from "@/constant";
+import { EXTERNAL_LINKS, PROGRAMMING_LANGUAGE } from "@/constant";
 import { urls } from "@/data";
 import { Company, Bio as iBio, Url } from "@/models";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
@@ -25,7 +25,7 @@ export default function Bio({ data, companyData }: Readonly<BioProps>) {
         />
       </Avatar>
 
-      <div className="mt-2 flex flex-col gap-2">
+      <div className="mt-1 flex flex-col gap-1.5">
         <h1>{NAME}</h1>
         <div className="flex items-center gap-2">
           <Ping bgColor="bg-pictonBlue" />
@@ -39,6 +39,7 @@ export default function Bio({ data, companyData }: Readonly<BioProps>) {
             )}
           </h4>
         </div>
+        <h4>{PROGRAMMING_LANGUAGE.join(", ")}</h4>
       </div>
 
       <div className="flex flex-col gap-4">
