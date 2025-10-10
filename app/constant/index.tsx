@@ -1,8 +1,8 @@
-import { ApiEndpoints, BioMetaData, ExternalLinks } from "@/models";
+import { ApiEndpoints, BioMetaData, ExternalLinks, TechStack } from "@/models";
 import Josh from "@/public/Josh.png";
 
 export const BIO: BioMetaData = {
-  NAME: "Joshua David",
+  NAME: "Joshua Ang",
   DESCRIPTION: "Senior @ Singapore Management University",
   SITE_URL: "https://joshydavid.com",
 };
@@ -25,7 +25,11 @@ export const EXTERNAL_LINKS: ExternalLinks = {
   GITHUB: "https://github.com/joshydavid",
 };
 
-export const PROGRAMMING_LANGUAGE: string[] = ["Go (Golang)", "Java", "Python"];
+export const PROGRAMMING_LANGUAGE: string[] = [
+  TechStack.GO,
+  TechStack.JAVA,
+  TechStack.PYTHON,
+];
 
 export enum QUERY_KEYS {
   BIO_DATA = "bioData",
