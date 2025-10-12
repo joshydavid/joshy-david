@@ -19,7 +19,7 @@ export const projects: Project[] = [
       "Designed and developed a responsive coding portfolio, built on top of Next.js & Tailwind CSS, deployed to Vercel.",
     tags: [2022, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.PET_PROJECT],
     icon: LegacyCodingPortfolio,
-    gitHub: "https://github.com/joshydavid/joshua-david",
+    gitHub: "https://github.com/joshydavid/joshy-david",
     techStack: [
       TechStack.TYPESCRIPT,
       TechStack.NEXT_JS,
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     tags: [2024, ProjectTag.SOFTWARE_ENGINEERING, ProjectTag.PET_PROJECT],
     icon: CodingPortfolio,
     detailedImage: CodingPortfolioAll,
-    gitHub: "https://github.com/joshydavid/joshua-david",
+    gitHub: "https://github.com/joshydavid/joshy-david",
     techStack: [
       TechStack.TYPESCRIPT,
       TechStack.NEXT_JS,
