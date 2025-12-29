@@ -17,8 +17,7 @@ export const APIs: ApiEndpoints = {
 export const EXTERNAL_LINKS: ExternalLinks = {
   // PROFILE_PICTURE: "https://joshydavid.s3.us-east-1.amazonaws.com/Josh.png",
   PROFILE_PICTURE: Josh,
-  RESUME:
-    "https://joshydavid.s3.us-east-1.amazonaws.com/Joshua_David_Resume.pdf",
+  RESUME: "https://joshydavid.s3.us-east-1.amazonaws.com/Joshua_Ang_Resume.pdf",
   OPEN_GRAPH:
     "https://joshydavid.s3.us-east-1.amazonaws.com/Joshy_Open_Graph.png",
   LINKEDIN: "https://linkedin.com/in/joshydavid",
