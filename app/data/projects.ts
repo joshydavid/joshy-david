@@ -1,6 +1,7 @@
 import { DeploymentStatus, Project, ProjectTag, TechStack } from "@/models";
 import BookLah from "@/public/projects/BookLah.png";
 import ShortenSG from "@/public/projects/ShortenSG.png";
+import AgentM from "@/public/projects/agent-m.png";
 import BI from "@/public/projects/bi.png";
 import LegacyCodingPortfolio from "@/public/projects/legacy-portfolio.png";
 import CodingPortfolioAll from "@/public/projects/portfolio-2.0-ecosystem.png";
@@ -240,10 +241,10 @@ export const projects: Project[] = [
   },
   {
     id: 10,
-    name: "Agentic AI Trading Portfolio",
-    slug: "agentic-ai-trading-portfolio",
+    name: "Agent M",
+    slug: "agent-m",
     description:
-      "A dynamic, fully autonomous trading portfolio companion designed to navigate the complex digital financial landscape. Leveraging a multi-agent AI architecture, the platform transforms real-time market data, traditional news, and internet sentiment into personalised, actionable investment decisions.",
+      "A dynamic & fully autonomous agentic AI trading portfolio companion designed to navigate the complex digital financial landscape. Leveraging a multi-agent AI architecture, the platform transforms real-time market data, traditional news, and internet sentiment into personalised, actionable investment decisions.",
     features: [
       "Multi-Agent AI Architecture: Sophisticated multi-agent system for autonomous investment decisions.",
       "Real-Time Data Ingestion: Scrapes financial news and internet sentiment from Yahoo, Reddit, and X.",
@@ -260,7 +261,7 @@ export const projects: Project[] = [
       ProjectTag.SOFTWARE_ENGINEERING,
       ProjectTag.SCHOOL_PROJECT,
     ],
-    icon: BookLah,
+    icon: AgentM,
     gitHub: "https://github.com/SMU-IS/agentic-ai-trading-be",
     techStack: [
       TechStack.FAST_API,
