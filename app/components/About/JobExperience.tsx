@@ -38,7 +38,6 @@ export default function JobExperience({ data }: Readonly<JobExperienceProps>) {
                   </div>
                 </div>
               </DialogTrigger>
-
               <DialogContent>
                 <DialogHeader>
                   <DialogTitle>
@@ -47,13 +46,13 @@ export default function JobExperience({ data }: Readonly<JobExperienceProps>) {
                       {company}
                     </div>
                   </DialogTitle>
-                  <DialogDescription className="pt-3">
+                  <DialogDescription className="px-5 pt-3">
                     {achievements.length === 1 ? (
                       <>{achievements[0]}</>
                     ) : (
                       <>
                         {achievements.map((achievement: string) => (
-                          <li key={achievement} className="py-1">
+                          <li key={achievement} className="py-0.5">
                             {achievement}
                           </li>
                         ))}
