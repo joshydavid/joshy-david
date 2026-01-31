@@ -1,5 +1,5 @@
 import Ping from "@/components/Ping";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { EXTERNAL_LINKS, PROGRAMMING_LANGUAGE } from "@/constant";
 import { urls } from "@/data";
 import { Company, Bio as iBio, Url } from "@/models";
@@ -20,9 +20,10 @@ export default function Bio({ data, companyData }: Readonly<BioProps>) {
     <div className="flex flex-col gap-6">
       <Avatar className="h-36 w-36">
         <AvatarImage
-          src={EXTERNAL_LINKS.PROFILE_PICTURE.src}
+          src={EXTERNAL_LINKS.PROFILE_PICTURE}
           className="bg-ashGray dark:bg-gray"
         />
+        <AvatarFallback className="animate-pulse bg-muted" />
       </Avatar>
 
       <div className="mt-1 flex flex-col gap-1">
