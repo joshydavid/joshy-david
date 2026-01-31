@@ -1,5 +1,4 @@
 import { ApiEndpoints, BioMetaData, ExternalLinks, TechStack } from "@/models";
-import Josh from "@/public/Josh.png";
 
 export const BIO: BioMetaData = {
   NAME: "Joshua Ang",
@@ -15,8 +14,7 @@ export const APIs: ApiEndpoints = {
 };
 
 export const EXTERNAL_LINKS: ExternalLinks = {
-  // PROFILE_PICTURE: "https://joshydavid.s3.us-east-1.amazonaws.com/Josh.png",
-  PROFILE_PICTURE: Josh,
+  PROFILE_PICTURE: "https://joshydavid.s3.us-east-1.amazonaws.com/Josh.png",
   RESUME: "https://joshydavid.s3.us-east-1.amazonaws.com/Joshua_Ang_Resume.pdf",
   OPEN_GRAPH:
     "https://joshydavid.s3.us-east-1.amazonaws.com/Joshy_Open_Graph.png",
