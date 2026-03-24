@@ -280,6 +280,7 @@ export const projects: Project[] = [
       TechStack.KUBERNETES,
       TechStack.KONG_GATEWAY,
     ],
-    deploymentStatus: DeploymentStatus.NOT_DEPLOYED,
+    deploymentStatus: DeploymentStatus.DEPLOYED,
+    deployedLink: "https://main.d3f0x7kvo77xiu.amplifyapp.com",
   },
 ];
