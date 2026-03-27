@@ -1,7 +1,7 @@
 import { DeploymentStatus, Project, ProjectTag, TechStack } from "@/models";
 import BookLah from "@/public/projects/BookLah.png";
 import ShortenSG from "@/public/projects/ShortenSG.png";
-import AgentM from "@/public/projects/agent-m.png";
+import AgentM from "@/public/projects/agentic-m.png";
 import BI from "@/public/projects/bi.png";
 import LegacyCodingPortfolio from "@/public/projects/legacy-portfolio.png";
 import CodingPortfolioAll from "@/public/projects/portfolio-2.0-ecosystem.png";
@@ -269,18 +269,20 @@ export const projects: Project[] = [
       TechStack.GO,
       TechStack.LANG_CHAIN,
       TechStack.LANG_GRAPH,
-      TechStack.LARGE_LANGUAGE_MODELS,
-      TechStack.RAG,
-      TechStack.REACT,
+      TechStack.NEXT_JS,
       TechStack.TAILWIND_CSS,
       TechStack.QDRANT,
       TechStack.POSTGRESQL,
+      TechStack.MONGODB,
       TechStack.REDIS,
       TechStack.DOCKER,
       TechStack.KUBERNETES,
       TechStack.KONG_GATEWAY,
+      TechStack.LARGE_LANGUAGE_MODELS,
+      TechStack.AMAZON_WEB_SERVICES,
+      TechStack.RAG,
     ],
     deploymentStatus: DeploymentStatus.DEPLOYED,
-    deployedLink: "https://main.d3f0x7kvo77xiu.amplifyapp.com",
+    deployedLink: "https://agentic-m.com",
   },
 ];
