@@ -19,10 +19,7 @@ export default function Bio({ data, companyData }: Readonly<BioProps>) {
   return (
     <div className="flex flex-col gap-6">
       <Avatar className="h-36 w-36">
-        <AvatarImage
-          src={EXTERNAL_LINKS.PROFILE_PICTURE}
-          className="bg-ashGray dark:bg-gray"
-        />
+        <AvatarImage src={EXTERNAL_LINKS.PROFILE_PICTURE} />
         <AvatarFallback className="animate-pulse bg-muted" />
       </Avatar>
 
